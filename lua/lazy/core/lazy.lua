@@ -22,8 +22,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- Changes location of lazy-lock.json from
     -- default ~/.config/nvim/lazy-lock.json
-    -- to ~/.config/nvim/lua/lazy/lazy-lock.json
-    lockfile = "~/.config/nvim/lua/lazy/lazy-lock.json",
+    -- to ~/.config/nvim/lua/lazy/core/lazy-lock.json
+    lockfile = "~/.config/nvim/lua/lazy/core/lazy-lock.json",
 	spec = {
         -- Choses a files/directorys in lua directory where
         -- lazy.nvim package manager loads files

@@ -51,7 +51,7 @@ vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><ESC>", { desc = "Sav
 
 -- Just quit everything
 -- gonna give error if you have not saved changes
-vim.keymap.set("n", "<leader>q", "<cmd>qa<CR>", { desc = "Quit NVim" })
+vim.keymap.set("n", "<C-q>", "<cmd>qa<CR>", { desc = "Quit NVim" })
 
 -- Force quit everything
 -- gonna ignore not saved changes, Can make lost of data!

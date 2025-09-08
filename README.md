@@ -30,10 +30,10 @@ For Installation of NV-GOD, You need to choose a correct NV-GOD-Starter for your
 - Minimal setup (work in progress)
 - Scratch Setup (work in progress)
 
-Just create a your own repo on github using NV-GOD-Starter which you choosed as a Template on github, after making it, go over a installation instructions of your template what you choosed()
+Just create a your own repo on github using NV-GOD-Starter which you choosed as a Template on github, after making it, go over a installation instructions of your template what you choosed
 
 Mostly you just need to clone it from github with git
-It gonna allow you to save your own NV-GOD configuration on github, For better managment of your NV-GOD configuratio using git :)
+It gonna allow you to save your own NV-GOD configuration on github, For better managment of your NV-GOD configuration using git :)
 
 ## Future Features which I plan to make:
 

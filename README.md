@@ -88,5 +88,5 @@ But it gonna be a little bit different on other cases with other package manager
 
 </pre>
 
-- I am not a religious person
+- I am not a religious person actually
 - I use MS-Edge on Gentoo, btw

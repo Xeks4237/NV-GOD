@@ -9,6 +9,7 @@ You can say "but what about kickstart.nvim?" I know about it, it's a beautifull 
 - Latest version of Git (For Stuff releted to plugins and to install NV-GOD)
 - [Nerd Font](https://www.nerdfonts.com/) **_(optional but recommended, just choose one which you like, for example JetBrainsMono NF)_**
 - a **C** compiler(gcc for example) for compiling different stuff releted to the most popular plugins like treesitter
+- npm for some plugins
 
 ## Installation
 
@@ -20,7 +21,7 @@ You can say "but what about kickstart.nvim?" I know about it, it's a beautifull 
   mv ~/.local/share/nvim/ ~/.local/share/nvim-backup/
   ```
 
-For Installation of NV-GOD, You need to choose a correct NV-GOD-Starter for your needs, with type of a default setup, minimalistic with only essentials, full featured IDE instalation, or a setup to start from scratch with only configs
+For Installation of NV-GOD, You need to choose a correct NV-GOD-Starter for your needs, with type of a default setup, minimalistic with only essentials, full featured IDE installation, or a setup to start from scratch with only configs
 
 - IDE setup (work in progress)
 - Minimal setup (work in progress)
@@ -29,7 +30,7 @@ For Installation of NV-GOD, You need to choose a correct NV-GOD-Starter for your
 Just create a your own repo on github using NV-GOD-Starter which you choosed as a Template on github, after making it, go over a instalation instructions of your template what you choosed
 
 Mostly you just need to clone it with git
-It gonna allow you to save your own configuration on github for better managment of NV-GOD using git :)
+It gonna allow you to save your own NV-GOD configuration on github for better managment of NV-GOD using git :)
 
 ## Future Features which I plan to make:
 
@@ -43,8 +44,8 @@ It gonna allow you to save your own configuration on github for better managment
 
 ---
 
-There's a great video created by Me with the explanation of everything about NV-GOD, "future link"
-(gonna make a video later😅, after making at least NV-GOD 1.0)
+There's a great video created by Me with the explanation of everything about NV-GOD
+(gonna make a video later😅, after making at least NV-GOD v1.0)
 
 ## 📂 File Structure
 
@@ -83,4 +84,5 @@ But it gonna be a little bit different on other cases with other package manager
 
 </pre>
 
-And no I am not a religious person, because I use gentoo, btw
+And no I am not a religious person
+and I use gentoo, btw

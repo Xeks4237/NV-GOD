@@ -43,7 +43,7 @@ It gonna allow you to save your own NV-GOD configuration on github, For better m
 
 - Made it as much MODULAR as possible
 
-- Made it More Easy configure for new users and pro NVim enjoyers than LazyVim, NV-Chad, and AstroNVim Distros
+- Made it as much Easy to configure for new users and pro NVim enjoyers than LazyVim, NV-Chad, and AstroNVim Distros
 
 ---
 
@@ -52,7 +52,8 @@ There's a great video created by Me with the explanation of everything about NV-
 
 ## 📂 File Structure
 
-This is a Main File Structure of NV-GOD, which I plan to make, If you want to add something or change default settings on your NV-GOD installation(Information about it gonna be on future WIKI page of NV-GOD)
+This is a Main File Structure of NV-GOD, which I plan to make, If you want to add something or change default settings on your NV-GOD installation...
+(Information about it gonna be on future WIKI page of NV-GOD)
 
 Package Manager on this example is a [lazy.nvim](https://github.com/folke/lazy.nvim)
 But it gonna be a little bit different on other cases with other package managers(But similar)
@@ -87,5 +88,5 @@ But it gonna be a little bit different on other cases with other package manager
 
 </pre>
 
-And no I am not a religious person
-and I use gentoo, btw
+- I am not a religious person
+- I use MS-Edge on Gentoo, btw

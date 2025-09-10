@@ -1,7 +1,7 @@
 THIS REPO IS DISCONTINUED
 
 All Distros of NeoVim and NeoVim byself sucks,
-I am moving to vscode 😭
+I am moving to vscode 😭(code-oss more exactly)
 
 NV-GOD is a Best NeoVim Distro
 

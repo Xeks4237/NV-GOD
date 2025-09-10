@@ -12,7 +12,7 @@ require("configs.core.keymaps")
 
 -- Loads a file what BootStraps of lazy.nvim package manager
 -- Which is gonna load other stuff like plugins and colorschemes
-require("lazy.core.lazy")
+require("lazy.lazy")
 
 -- tmp command to set catppuccin-mocha theme
 vim.cmd.colorscheme "catppuccin-mocha"

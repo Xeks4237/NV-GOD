@@ -1,9 +1,4 @@
-THIS REPO IS DISCONTINUED
-
-All Distros of NeoVim and NeoVim byself sucks,
-I am moving to vscode 😭(code-oss more exactly)
-
-NV-GOD is a Best NeoVim Distro
+NV-GOD is a Best NeoVim Distro (in future, work in progress...)
 
 NV-GOD is creted by Me, because other distros of NeoVim like LazyVim or AstroNVim uses their own repos like a some pack with different pre-configured options, plugins, autocmds and etc. It's a easy and good choise for devs and new users but for advanced users like me who wants to use their work like a base for their own configs, it's a big headache to work with.
 
@@ -87,9 +82,8 @@ But it gonna be a little bit different on other cases with other package manager
    └── lazy
        ├── plugins.lua
        ├── colorschemes.lua
-       └── core
-           ├── lazy.lua
-           └── lazy-lock.json
+       ├── lazy.lua
+       └── lazy-lock.json
 
 </pre>
 

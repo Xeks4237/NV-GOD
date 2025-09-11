@@ -25,7 +25,7 @@ And for advanced users like me who wants to use their work like a base for their
 ## Installation
 
 - Before Starting Installation, PLEASE backup your old config of NVim if it exists
-- This command Just gonna rename directory with your old nvim config from "nvim" to "nvim-backup":
+- This command Just gonna rename directorys with your old nvim config and installed plugins from "nvim" to "nvim-backup":
 
   ```sh
   mv ~/.config/nvim/ ~/.config/nvim-backup/

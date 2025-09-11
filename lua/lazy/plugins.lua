@@ -73,15 +73,6 @@ return {
         end,
     },
     {
-        "nvim-neo-tree/neo-tree.nvim",
-        name = "neotree",
-        lazy = true,
-        event = "VeryLazy",
-        opts = function()
-            return require("configs.plugins.neotree")
-        end,
-    },
-    {
         "MunifTanjim/nui.nvim",
         name = "nui",
         lazy = true,

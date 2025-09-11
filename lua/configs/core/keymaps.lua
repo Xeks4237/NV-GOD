@@ -43,8 +43,8 @@ vim.keymap.set("n", "<C-Tab>", "<cmd>tabnext<CR>", { desc = "Next Tab" })
 vim.keymap.set("n", "<C-S-Tab>", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
 vim.keymap.set("n", "<leader>tw", "<cmd>tabclose<CR>", { desc = "Close Tab" })
 
--- Opens side panel with NeoTree explorer
-vim.keymap.set("n", "<C-e>", "<cmd>Neotree<CR>")
+-- tmp key to open panel with bulitin file explorer of NeoVim
+vim.keymap.set("n", "<C-e>", "<cmd>Ex<CR>")
 
 -- Save file with CTRL + s
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<CR><ESC>", { desc = "Save File" })

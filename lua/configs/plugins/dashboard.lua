@@ -15,9 +15,10 @@ local function get_logo()
         ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
         ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
         ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
+        btw
 ]]
-    -- Adds 8 empty lines above the logo and 2 below to center the logo
-    return vim.split(string.rep("\n", 8) .. logo .. "\n\n", "\n")
+    -- Adds 4 empty lines above the logo and 2 below to center the logo
+    return vim.split(string.rep("\n", 4) .. logo .. "\n\n", "\n")
 end
 
 -- First part of this file, sets needed to us ASCII art in get_logo()
@@ -65,6 +66,14 @@ return {
                 action = "ene | startinsert",
             },
             {
+                -- Button to view recent files
+                -- In UI of telescope
+                icon = " ",
+                desc = "Recent Files",
+                key = "r",
+                action = "Telescope oldfiles",
+            },
+            {
                 -- Button to find files using telescope
                 icon = " ",
                 desc = "Find File",
@@ -77,15 +86,6 @@ return {
                 desc = "Find Text",
                 key = "g",
                 action = "Telescope live_grep", -- Opens Telescope live grep
-            },
-            {
-                -- Button to access Neovim config files
-                -- in ui of telescope
-                icon = " ",
-                desc = "Config",
-                key = "c",
-                -- Opens Telescope in config directory of nvim
-                action = "Telescope find_files cwd=~/.config/nvim",
             },
             {
                 -- Button to open lazy.nvim plugin manager
@@ -102,12 +102,13 @@ return {
                 action = "Mason",
             },
             {
-                -- Button to view recent files
-                -- In UI of telescope
-                icon = " ",
-                desc = "Recent Files",
-                key = "r",
-                action = "Telescope oldfiles",
+                -- Button to access Neovim config files
+                -- in ui of telescope
+                icon = " ",
+                desc = "Config",
+                key = "c",
+                -- Opens Telescope in config directory of nvim
+                action = "Telescope find_files cwd=~/.config/nvim",
             },
             {
                 -- Button to quit Neovim

@@ -125,7 +125,7 @@ return {
             -- Calculate startup time in milliseconds
             local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
             -- Return footer text with plugin count and startup time
-            return { "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
+            return { "⚡ Loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
         end,
     },
 

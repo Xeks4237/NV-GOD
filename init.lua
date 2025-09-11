@@ -16,3 +16,4 @@ require("lazy.lazy")
 
 -- tmp command to set catppuccin-mocha theme
 vim.cmd.colorscheme "catppuccin-mocha"
+

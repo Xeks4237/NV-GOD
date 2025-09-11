@@ -14,6 +14,10 @@ require("configs.core.keymaps")
 -- Which is gonna load other stuff like plugins and colorschemes
 require("lazy.lazy")
 
--- tmp command to set catppuccin-mocha theme
+-- Applys a dashboard configuratin and logo using alpha-nvim
+-- It's loaded here because in other ways it becomes useless
+require("configs.plugins.alpha-nvim")
+
+-- Command to set catppuccin-mocha theme after loading it with lazy.nvim
 vim.cmd.colorscheme "catppuccin-mocha"
 

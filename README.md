@@ -1,39 +1,49 @@
 NV-GOD is a Best NeoVim Distro (in future, work in progress...)
 
-NV-GOD is creted by Me, because other distros of NeoVim like LazyVim or AstroNVim uses their own repos like a some pack with different pre-configured options, plugins, autocmds and etc. It's a easy and good choise for devs and new users but for advanced users like me who wants to use their work like a base for their own configs, it's a big headache to work with.
+NV-GOD is creted by Me, because other distros of NeoVim like LazyVim or AstroNVim uses their own repos like a some pack with different pre-configured options, plugins, autocmds and etc. It's a easy and good choise for devs and new users
 
-- You can say "but what about kickstart.nvim? why you just don't use it" I know about it, it's a beautifull project but it more about to help new users to make their own NeoVim setup and understand how it works(it taked me 2 min to read everything on their entire repo >:v)
+But  first it breaks UNIX philosophy because it says:
+    One tool is gonna be able to do only one thing and be able to make it good
+    It means any pack with a lot of stuff is USELESS
+And for advanced users like me who wants to use their work like a base for their own configs, it's a big headache to work with.
+
+- You can say "but what about kickstart.nvim?"
+    I know about it, it's a beautifull project but it more about to help new users to make their own NeoVim setup from scratch and understand how it works
+    (it taked me 2 min to read their entire repo >:v)
 
 ## Why you need to choose NV-GOD
-- It's just better🗿, seriously just choose it(when it gets v1.0 version only)
+- It's just better🗿, seriously just choose it
+(when it gets v1.0 only)
 
 ## Future Requirements which gonna be needed - (which I defenetly know)
-- Latest version of **NVim**
-- Latest version of **Git**
-- **C** compiler (gcc for example)
+- Latest version of **NeoVim**
+- Latest version of **Git** to install it
+- **C** compiler(gcc for example) for some plugins
 - **npm** for some plugins
-- [Nerd Font](https://www.nerdfonts.com/) **_(optional but recommended, just choose one which you like, for example JetBrainsMono NF)_**
+- [Nerd Font](https://www.nerdfonts.com/) **_(optional but recommended, just choose one which you like)_**
 
 ## Installation
 
 - Before Starting Installation, PLEASE backup your old config of NVim if it exists
-- This command Just gonna rename directory with your old config from "nvim" to "nvim-backup":
+- This command Just gonna rename directory with your old nvim config from "nvim" to "nvim-backup":
 
   ```sh
   mv ~/.config/nvim/ ~/.config/nvim-backup/
   mv ~/.local/share/nvim/ ~/.local/share/nvim-backup/
   ```
 
-For Installation of NV-GOD, You need to choose a correct NV-GOD-Starter for your needs, with type of a default setup, minimalistic with only essentials, full featured IDE installation, or a setup to start from scratch with only configs
+For Installation of NV-GOD, You need to choose a correct NV-GOD-Starter for your needs, with type of a default setup:
+    Full featured IDE setup or
+    Scratch setup to configure your own NeoVim setup
 
 - IDE setup (work in progress)
-- Minimal setup (work in progress)
 - Scratch Setup (work in progress)
 
 Just create a your own repo on github using NV-GOD-Starter which you choosed as a Template on github, after making it, go over a installation instructions of your template what you choosed
 
 Mostly you just need to clone it from github with git
-It gonna allow you to save your own NV-GOD configuration on github, For better managment of your NV-GOD configuration using git :)
+It gonna allow you to easyly manage your setups versions using git
+    P.S I gonna make a plugin to easyly manage old versions of nvim with git in ui screen:)
 
 ## Future Features which I plan to make:
 
@@ -45,10 +55,11 @@ It gonna allow you to save your own NV-GOD configuration on github, For better m
 
 - Made it as much Easy to configure for new users and pro NVim enjoyers than LazyVim, NV-Chad, and AstroNVim Distros
 
+- And I doesn't gonna use snacks.nvim or mini.nvim like plugin packs because I just gonna use plugins on this packs directly, instead of using someones pre-made packs (gonna make my own pack with all plugins which is made specially for NV-GOD, if someone gonna need it:3)
+
 ---
 
-There's a great video created by Me with the explanation of everything about NV-GOD
-(gonna make a video later😅, after making at least NV-GOD v1.0)
+(here gonna be a future video with all other info😅, gonna make it after making at least NV-GOD v1.0)
 
 ## 📂 File Structure
 
@@ -87,5 +98,5 @@ But it gonna be a little bit different on other cases with other package manager
 
 </pre>
 
-- I am not a religious person actually
-- I use MS-Edge on Gentoo, btw
+- I am not a religious person actually because,
+- I use MS-Edge on Gentoo, btw🍷🗿

@@ -44,6 +44,7 @@ vim.keymap.set("n", "<C-S-Tab>", "<cmd>tabprevious<cr>", { desc = "Previous Tab"
 vim.keymap.set("n", "<leader>tw", "<cmd>tabclose<cr>", { desc = "Close Tab" })
 
 -- Open NetRw Directory Listing (BuiltIn Explorer of NVim)
+-- It's tmp keymap
 vim.keymap.set("n", "<C-e>", ":Ex<CR>")
 
 -- Save file with CTRL + s
@@ -57,8 +58,11 @@ vim.keymap.set("n", "<C-q>", "<cmd>qa<CR>", { desc = "Quit NVim" })
 -- gonna ignore not saved changes, Can make lost of data!
 vim.keymap.set("n", "<leader><C-q>", "<cmd>qa!<CR>", { desc = "FORCE quit NVim" })
 
--- Open lazy.nvim package manager
+-- Opens lazy.nvim package manager
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
+
+-- Opens Mason package manager
+vim.keymap.set("n", "<leader>m", "<cmd>Mason<cr>", { desc = "Mason" })
 
 -- Keymaps to move lines of code by using:
 -- ALT + j or k on the line with cursor or

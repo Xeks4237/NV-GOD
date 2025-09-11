@@ -31,5 +31,12 @@ return {
             return require("configs.plugins.mason")
         end,
     },
+    {
+        "nvimdev/dashboard-nvim",
+        name = "dashboard",
+        opts = function()
+            return require("configs.plugins.dashboard")
+        end,
+    },
 }
 

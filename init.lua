@@ -7,8 +7,9 @@
 -- Loads Options like LineNumbers fromoptions.lua file
 require("configs.options")
 
--- Loads Keymaps from keymaps.lua file
+-- Loads Keymaps from keymaps directory
 require("configs.keymaps.core")
+require("configs.keymaps.telescope")
 
 -- Loads a file what BootStraps of lazy.nvim package manager
 -- Which is gonna load other stuff like plugins and colorschemes

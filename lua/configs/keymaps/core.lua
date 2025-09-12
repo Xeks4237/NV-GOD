@@ -2,9 +2,9 @@
 -- Most of the file is inspired by keymaps of
 -- LazyVim and personal keymaps of my Friend
 
--- P.S If you are new in NVim please write <cmd>Tutor command and after completing simple tutorial, return here
+-- P.S If you are new in NVim please write :Tutor command and after completing simple tutorial, return here
 
--- In NVim some keys are writed shortly like for example<cmd>
+-- In NVim some keys are writed shortly like for example:
 -- "CTRL + a" is a <C-a>
 -- "SHIFT + a" is a <S-a>
 -- "ALT + a" is a <A-a>
@@ -21,7 +21,7 @@ vim.keymap.set("n", "x", '"_x' )
 -- Keymaps for creating splits of window
 vim.keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split window horizontally", remap = true })
 vim.keymap.set("n", "<leader>|", "<C-W>v", { desc = "Split window vertically", remap = true })
-vim.keymap.set("n", "<leader>q", "<C-W>c", { desc = "Close window splith", remap = true })
+vim.keymap.set("n", "<leader>q", "<C-W>c", { desc = "Close window split", remap = true })
 
 -- Keymaps to resize splits of window
 -- by holding CTRL and pressing arrow keys
@@ -30,7 +30,7 @@ vim.keymap.set("n", "<C-Down>", "<cmd>resize +2<CR>")
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<CR>")
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>")
 
--- Navigating beetween splits of window
+-- Navigating between splits of window
 -- by holding CTRL and pressing hjkl (like ←↓↑→)
 vim.keymap.set("n", '<C-k>', '<cmd>wincmd k<CR>')
 vim.keymap.set("n", '<C-j>', '<cmd>wincmd j<CR>')
@@ -63,26 +63,24 @@ vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Lazy" })
 -- Opens Mason package manager
 vim.keymap.set("n", "<leader>m", "<cmd>Mason<CR>", { desc = "Mason" })
 
--- Keymaps to move lines of code by using<cmd>
--- ALT + j or k on the line with cursor or
--- on the lines of code chosen on visual mode
-vim.keymap.set("n", "<A-j>", "<cmd>execute 'move .+' . v<cmd>count1<CR>==", { desc = "Move Down" })
-vim.keymap.set("n", "<A-k>", "<cmd>execute 'move .-' . (v<cmd>count1 + 1)<CR>==", { desc = "Move Up" })
-vim.keymap.set("i", "<A-j>", "<esc><cmd>m .+1<CR>==gi", { desc = "Move Down" })
-vim.keymap.set("i", "<A-k>", "<esc><cmd>m .-2<CR>==gi", { desc = "Move Up" })
-vim.keymap.set("v", "<A-j>", "<cmd><C-u>execute \"'<,'>move '>+\" . v<cmd>count1<CR>gv=gv", { desc = "Move Down" })
-vim.keymap.set("v", "<A-k>", "<cmd><C-u>execute \"'<,'>move '<-\" . (v<cmd>count1 + 1)<CR>gv=gv", { desc = "Move Up" })
+-- Keymaps to move lines of code by using ALT + j or k 
+-- In Normal mode:
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move Down" })
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move Up" })
+-- In Insert mode:
+vim.keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi", { desc = "Move Down" })
+vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move Up" })
+-- In Visual mode:
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move Down" })
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Up" })
 
 -- Buffer Managment
 -- I recomment you to read some documentation on what is that
--- Because description gonna take to much lines <cmd>/
-vim.keymap.set("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Prev Buffer" })
-vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Next Buffer" })
-vim.keymap.set("n", "[b", "<cmd>bprevious<CR>", { desc = "Prev Buffer" })
-vim.keymap.set("n", "]b", "<cmd>bnext<CR>", { desc = "Next Buffer" })
+-- Because description gonna take to much lines 
+vim.keymap.set("n", "<leader>bh", "<cmd>bprevious<CR>", { desc = "Prev Buffer" })
+vim.keymap.set("n", "<leader>bl", "<cmd>bnext<CR>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<leader>bb", "<cmd>e #<CR>", { desc = "Switch to Other Buffer" })
-vim.keymap.set("n", "<leader>`", "<cmd>e #<CR>", { desc = "Switch to Other Buffer" })
-vim.keymap.set("n", "<leader>bD", "<cmd><cmd>bd<CR>", { desc = "Delete Buffer and Window" })
+vim.keymap.set("n", "<leader>bD", "<cmd>bd<CR>", { desc = "Delete Buffer and Window" })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -91,27 +89,28 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set(
     "n",
     "<leader>fr",
-    "<Cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>",
+    "<cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>",
     { desc = "Redraw / Clear hlsearch / Diff Update" }
 )
 
--- Keymaps for easier navigation on search results on file
--- Read more about this thing on this github page:
--- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
-vim.keymap.set("n", "n", "'Nn'[v<cmd>searchforward].'zv'", { expr = true, desc = "Next Search Result" })
-vim.keymap.set("x", "n", "'Nn'[v<cmd>searchforward]", { expr = true, desc = "Next Search Result" })
-vim.keymap.set("o", "n", "'Nn'[v<cmd>searchforward]", { expr = true, desc = "Next Search Result" })
-vim.keymap.set("n", "N", "'nN'[v<cmd>searchforward].'zv'", { expr = true, desc = "Prev Search Result" })
-vim.keymap.set("x", "N", "'nN'[v<cmd>searchforward]", { expr = true, desc = "Prev Search Result" })
-vim.keymap.set("o", "N", "'nN'[v<cmd>searchforward]", { expr = true, desc = "Prev Search Result" })
+-- Keymaps for easier navigation of in search results
+-- Makes n key to move your cursor to the next search result 
+-- Makes N key to move your cursor to the previous search result 
+-- Read more: https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+vim.keymap.set("n", "n", "v:searchforward ? 'n' : 'N'", { expr = true, desc = "Next Search Result" })
+vim.keymap.set("n", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Prev Search Result" })
+vim.keymap.set("x", "n", "v:searchforward ? 'n' : 'N'", { expr = true, desc = "Next Search Result" })
+vim.keymap.set("x", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Prev Search Result" })
+vim.keymap.set("o", "n", "v:searchforward ? 'n' : 'N'", { expr = true, desc = "Next Search Result" })
+vim.keymap.set("o", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Prev Search Result" })
 
 -- Add undo break-points
--- Makes some symbhols be a points where undo takes break
+-- Makes some symbols be a points where undo takes break
 vim.keymap.set("i", ",", ",<c-g>u")
 vim.keymap.set("i", ".", ".<c-g>u")
 vim.keymap.set("i", ";", ";<c-g>u")
 
--- Ability to search in man word under a cursor
+-- Ability to search in mandoc word under a cursor
 vim.keymap.set("n", "<leader>K", "<cmd>norm! K<CR>", { desc = "Keywordprg" })
 
 -- Makes indenting in visual mode more "consistent"

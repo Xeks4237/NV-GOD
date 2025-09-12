@@ -4,6 +4,8 @@ local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 -- Set header/logo which we need
 dashboard.section.header.val = {
+    "                                                         ",
+    "                                                         ",
     "    ███╗   ██╗██╗   ██╗       ██████╗  ██████╗ ██████╗   ",
     "    ████╗  ██║██║   ██║      ██╔════╝ ██╔═══██╗██╔══██╗  ",
     "    ██╔██╗ ██║██║   ██║█████╗██║  ███╗██║   ██║██║  ██║  ",

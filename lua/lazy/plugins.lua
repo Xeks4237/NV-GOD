@@ -108,5 +108,52 @@ return {
             return require("configs.plugins.gitsigns")
         end
     },
+    -- nvim-cmp: Main completion plugin
+    {
+        "hrsh7th/nvim-cmp",
+        name = "nvim-cmp",
+        event = { "InsertEnter", "CmdlineEnter" },
+        opts = function()
+            return require("configs.plugins.nvim-cmp")
+        end,
+    },
+    -- cmp-nvim-lsp: LSP completion source
+    {
+        "hrsh7th/cmp-nvim-lsp",
+        event = { "InsertEnter" },
+    },
+    -- cmp-buffer: Buffer words completion source
+    {
+        "hrsh7th/cmp-buffer",
+        event = { "InsertEnter" },
+    },
+    -- cmp-path: File path completion source
+    {
+        "hrsh7th/cmp-path",
+        event = { "InsertEnter" },
+    },
+    -- cmp-cmdline: Command-line completion source
+    {
+        "hrsh7th/cmp-cmdline",
+        event = { "CmdlineEnter" },
+    },
+    -- LuaSnip: Snippet engine
+    {
+        "L3MON4D3/LuaSnip",
+        event = { "InsertEnter" },
+        config = function()
+            -- Load VSCode-style snippets from friendly-snippets
+            require("luasnip.loaders.from_vscode").lazy_load()
+        end,
+    },
+    -- cmp_luasnip: Snippet completion source
+    {
+        "saadparwaiz1/cmp_luasnip",
+        event = { "InsertEnter" },
+    },
+    -- friendly-snippets: Prebuilt snippets for many languages
+    {
+        "rafamadriz/friendly-snippets",
+        event = { "InsertEnter" },
+    },
 }
-

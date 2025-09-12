@@ -98,5 +98,15 @@ return {
         --     return require("configs.plugins.alpha-nvim")
         -- end
     },
+    {
+        "lewis6991/gitsigns.nvim",
+        name = "gitsigns",
+        priority = 10,
+        lazy = true,
+        event = "VeryLazy",
+        opts = function()
+            return require("configs.plugins.gitsigns")
+        end
+    },
 }
 

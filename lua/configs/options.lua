@@ -2,6 +2,7 @@ vim.o.hlsearch = true -- Set highlight on search
 vim.wo.number = true -- Make line numbers default
 vim.o.mouse = 'a' -- Enable mouse mode🗿
 vim.o.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim.
+vim.g.have_nerd_font = true -- Says NeoVim you have nerd font installed
 vim.o.breakindent = true -- Enable break indent
 vim.o.undofile = true -- Save undo history
 vim.o.ignorecase = true -- Case-insensitive searching UNLESS \C or capital in search
@@ -38,6 +39,8 @@ vim.o.conceallevel = 0 -- so that `` is visible in markdown files
 -- vim.o.fileencoding = 'utf-8' -- the encoding written to a file
 vim.o.cmdheight = 1 -- more space in the neovim command line for displaying messages
 vim.o.autoindent = true -- copy indent from current line when starting new one
+-- Makes it ask you to save file if you have unsaved changes
+vim.o.confirm = true
 vim.opt.shortmess:append 'c' -- don't give |ins-completion-menu| messages
 vim.opt.iskeyword:append '-' -- hyphenated words recognized by searches
 vim.opt.formatoptions:remove { 'c', 'r', 'o' } -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.

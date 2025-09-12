@@ -21,7 +21,7 @@ vim.keymap.set("n", "x", '"_x' )
 -- Keymaps for creating splits of window
 vim.keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split window horizontally", remap = true })
 vim.keymap.set("n", "<leader>|", "<C-W>v", { desc = "Split window vertically", remap = true })
-vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Close window splith", remap = true })
+vim.keymap.set("n", "<leader>q", "<C-W>c", { desc = "Close window splith", remap = true })
 
 -- Keymaps to resize splits of window
 -- by holding CTRL and pressing arrow keys
@@ -84,6 +84,9 @@ vim.keymap.set("n", "<leader>bb", "<cmd>e #<CR>", { desc = "Switch to Other Buff
 vim.keymap.set("n", "<leader>`", "<cmd>e #<CR>", { desc = "Switch to Other Buffer" })
 vim.keymap.set("n", "<leader>bD", "<cmd><cmd>bd<CR>", { desc = "Delete Buffer and Window" })
 
+-- Clear highlights on search when pressing <Esc> in normal mode
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
 -- Keymap to clear search, diff update and redraw easyly
 vim.keymap.set(
     "n",
@@ -93,8 +96,8 @@ vim.keymap.set(
 )
 
 -- Keymaps for easier navigation on search results on file
--- Read more about this thing on<cmd>
--- https<cmd>//github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+-- Read more about this thing on this github page:
+-- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
 vim.keymap.set("n", "n", "'Nn'[v<cmd>searchforward].'zv'", { expr = true, desc = "Next Search Result" })
 vim.keymap.set("x", "n", "'Nn'[v<cmd>searchforward]", { expr = true, desc = "Next Search Result" })
 vim.keymap.set("o", "n", "'Nn'[v<cmd>searchforward]", { expr = true, desc = "Next Search Result" })
@@ -123,6 +126,7 @@ vim.keymap.set("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = 
 vim.keymap.set("n", "<C-n>", "<cmd>enew<CR>", { desc = "New File" })
 
 -- Location list is a location list 🗿
+-- P.S in most cases it's useless but some people wants it
 vim.keymap.set("n", "<leader>xl", function()
   local success, err = pcall(vim.fn.getloclist(0, { winid = 0 }).winid ~= 0 and vim.cmd.lclose or vim.cmd.lopen)
   if not success and err then
@@ -131,6 +135,7 @@ vim.keymap.set("n", "<leader>xl", function()
 end, { desc = "Location List" })
 
 -- Quickfix list is a quickfix list 🗿
+-- P.S in most cases it's useless but some people wants it
 vim.keymap.set("n", "<leader>xq", function()
   local success, err = pcall(vim.fn.getqflist({ winid = 0 }).winid ~= 0 and vim.cmd.cclose or vim.cmd.copen)
   if not success and err then

@@ -14,24 +14,25 @@ return {
             horizontal = {
                 prompt_position = "top", -- Prompt at top (options: top, bottom)
                 preview_width = 0.55, -- Preview window width (percentage)
-                results_width = 0.8, -- Results window width
+                results_width = 1.0, -- Results window width
             },
             vertical = {
                 mirror = false, -- Don’t mirror results
+                -- gonna be mirrored by defauly if you have prompt_position = "top"
             },
-            width = 0.87, -- Window width (percentage or fixed)
+            width = 0.90, -- Window width (percentage or fixed)
             height = 0.80, -- Window height (percentage or fixed)
             preview_cutoff = 120, -- Min chars to show preview
         },
         file_sorter = require("telescope.sorters").get_fuzzy_file, -- Default fuzzy sorter
         generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter, -- Generic fuzzy sorter
         path_display = { "truncate" }, -- Truncate long paths (options: truncate, shorten, absolute)
-        winblend = 0, -- Transparency (0 = opaque, 100 = fully transparent)
+        winblend = 20, -- Transparency (0 = opaque, 100 = fully transparent)
         border = true, -- Show borders around windows
         borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }, -- Border characters
         color_devicons = true, -- Enable devicon colors (requires nvim-web-devicons)
         use_less = true, -- Use less-like scrolling
-        set_env = { ["COLORTERM"] = "truecolor" }, -- Enable truecolor support
+        set_env = { ["COLORTERM"] = "truecolor" }, -- Enable truecolor support (Needs your terminal to have support for it)
         file_previewer = require("telescope.previewers").vim_buffer_cat.new, -- File previewer
         grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new, -- Grep previewer
         qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new, -- Quickfix previewer
@@ -40,30 +41,31 @@ return {
             i = { -- Insert mode mappings
                 ["<C-n>"] = actions.move_selection_next, -- Next item
                 ["<C-p>"] = actions.move_selection_previous, -- Previous item
-                ["<C-c>"] = actions.close, -- Close Telescope
                 ["<C-j>"] = actions.cycle_history_next, -- Next prompt history
                 ["<C-k>"] = actions.cycle_history_prev, -- Previous prompt history
                 ["<CR>"] = actions.select_default, -- Select item
-                ["<C-x>"] = actions.select_horizontal, -- Open in horizontal split
-                ["<C-v>"] = actions.select_vertical, -- Open in vertical split
+                ["<C-x>"] = actions.select_horizontal, -- Open in horizontal window split
+                ["<C-v>"] = actions.select_vertical, -- Open in vertical window split
                 ["<C-t>"] = actions.select_tab, -- Open in new tab
                 ["<C-u>"] = actions.preview_scrolling_up, -- Scroll preview up
                 ["<C-d>"] = actions.preview_scrolling_down, -- Scroll preview down
+                ["<C-c>"] = actions.close, -- Close Telescope
             },
             n = { -- Normal mode mappings
                 ["<C-n>"] = actions.move_selection_next, -- Next item
                 ["<C-p>"] = actions.move_selection_previous, -- Previous item
-                ["<C-c>"] = actions.close, -- Close Telescope
-                ["<CR>"] = actions.select_default, -- Select item
-                ["<C-x>"] = actions.select_horizontal, -- Open in horizontal split
+                ["<CR>"] = actions.select_default, -- Select item(<CR> is a ENTER)
+                ["<C-h>"] = actions.select_horizontal, -- Open in horizontal split
                 ["<C-v>"] = actions.select_vertical, -- Open in vertical split
                 ["<C-t>"] = actions.select_tab, -- Open in new tab
                 ["<C-u>"] = actions.preview_scrolling_up, -- Scroll preview up
                 ["<C-d>"] = actions.preview_scrolling_down, -- Scroll preview down
                 ["q"] = actions.close, -- Close Telescope
+                -- P.S arrow keys works for navigation too
             },
         },
-        vimgrep_arguments = { -- Arguments for ripgrep in live_grep
+        vimgrep_arguments = {
+            -- Arguments for ripgrep in live_grep
             "rg",
             "--color=never",
             "--no-heading",
@@ -73,18 +75,18 @@ return {
             "--smart-case",
         },
         dynamic_preview_title = true, -- Dynamically update preview title
-        wrap_results = false, -- Don’t wrap result text
+        wrap_results = true, -- Don’t wrap result text
         scroll_strategy = "cycle", -- Cycle through results when scrolling (options: cycle, limit)
         history = { -- Command history settings
             path = "~/.local/share/nvim/telescope_history", -- History file path
-            limit = 100, -- Max history entries
+            limit = 1000, -- Max history entries
         },
     },
     pickers = {
         find_files = {
             find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }, -- Use fd for file finding
             hidden = true, -- Show hidden files
-            no_ignore = false, -- Respect .gitignore
+            no_ignore = true, -- Please Respect .gitignore
         },
         live_grep = {
             only_sort_text = true, -- Only sort text, not file paths
@@ -115,7 +117,8 @@ return {
         },
     },
     extensions = {
-        -- Example: Enable extensions like fzf or file_browser (must be installed separately)
+        -- Example: Enable extensions like fzf or file_browser 
+        -- (must be installed separately!)
         -- fzf = {
         --     fuzzy = true, -- Enable fuzzy matching
         --     override_generic_sorter = true, -- Override default sorter

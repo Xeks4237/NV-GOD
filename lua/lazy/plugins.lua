@@ -62,7 +62,7 @@ return {
         name = "lualine",
         priority = 100,
         lazy = true,
-        event = "VeryLazy",
+        event = "VimEnter",
         opts = function()
             return require("configs.plugins.lualine")
         end,

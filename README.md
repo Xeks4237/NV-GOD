@@ -74,14 +74,12 @@ But it gonna be a little bit different on other cases with other package manager
 ├─ init.lua
 └─ lua
    ├── configs
-   │   ├── core
-   │   │   ├── options.lua
-   │   │   └── keymaps
-   │   │       ├── core.lua
-   │   │       ├── plugins
-   │   │       ├── telescope.lua
-   │   │       ├── ...
-   │   │       └── treesitter.lua
+   │   ├── options.lua
+   │   ├── keymaps
+   │   │   ├── core.lua
+   │   │   ├── telescope.lua
+   │   │   ├── ...
+   │   │   └── treesitter.lua
    │   ├── colorschemes
    │   │   ├── tokyonight.lua
    │   │   ├── ...

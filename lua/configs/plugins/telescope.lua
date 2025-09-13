@@ -87,7 +87,7 @@ return {
         find_files = {
             find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }, -- Use fd for file finding
             hidden = true, -- Show hidden files
-            no_ignore = true, -- Please Respect .gitignore
+            no_ignore = false, -- Please Respect .gitignore
         },
         live_grep = {
             only_sort_text = true, -- Only sort text, not file paths

@@ -20,8 +20,10 @@ dashboard.section.buttons.val = {
     dashboard.button("n", "  New File", "<cmd>ene | startinsert<CR>"),
     dashboard.button("f", "  Find File", "<cmd>Telescope find_files<CR>"),
     dashboard.button("g", "  Find Text", "<cmd>Telescope live_grep<CR>"),
-    dashboard.button("o", "  Recent Files", "<cmd>Telescope oldfiles<CR>"),        dashboard.button("l", "󰒲  Lazy", "<cmd>Lazy<CR>"),
+    dashboard.button("o", "  Recent Files", "<cmd>Telescope oldfiles<CR>"),
+    dashboard.button("l", "󰒲  Lazy", "<cmd>Lazy<CR>"),
     dashboard.button("m", "  Mason", "<cmd>Mason<CR>"),
+    dashboard.button("?", "  Keymaps", "<cmd>lua require('which-key').show('', { mode = 'n' })<CR>"),
     dashboard.button("c", "  Config", "<cmd>Telescope find_files cwd=~/.config/nvim<CR>"),
     dashboard.button("q", "  Quit", "<cmd>qa<CR>"),
 }

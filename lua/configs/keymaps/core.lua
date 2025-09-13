@@ -38,15 +38,18 @@ vim.keymap.set("n", '<C-h>', '<cmd>wincmd h<CR>')
 vim.keymap.set("n", '<C-l>', '<cmd>wincmd l<CR>')
 
 -- Tab Managment
-vim.keymap.set("n", "<leader>tn", "<cmd>tabnew<CR>", { desc = "New Tab" })
-vim.keymap.set("n", "<C-Tab>", "<cmd>tabnext<CR>", { desc = "Next Tab" })
-vim.keymap.set("n", "<C-S-Tab>", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
-vim.keymap.set("n", "<leader>tw", "<cmd>tabclose<CR>", { desc = "Close Tab" })
+vim.keymap.set("n", "<leader>tk", "<cmd>tabnew<CR>", { desc = "New Tab" })
+vim.keymap.set("n", "<leader>tl", "<cmd>tabnext<CR>", { desc = "Next Tab" })
+vim.keymap.set("n", "<leader>th", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
+vim.keymap.set("n", "<leader>tj", "<cmd>tabclose<CR>", { desc = "Close Tab" })
+vim.keymap.set("n", "<leader>ta", "<cmd>tabonly<CR>", { desc = "Close All Other Tabs" })
+vim.keymap.set("n", "<leader>t<C-h>", "<cmd>tabmove -1<CR>", { desc = "Move Tab Left" })
+vim.keymap.set("n", "<leader>t<C-l>", "<cmd>tabmove +1<CR>", { desc = "Move Tab Right" })
 
 -- tmp key to open panel with bulitin file explorer of NeoVim
 vim.keymap.set("n", "<C-e>", "<cmd>Ex<CR>")
 
--- Save file with CTRL + s
+-- Save file using CTRL + s
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<CR><ESC>", { desc = "Save File" })
 
 -- Just quit everything

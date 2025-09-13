@@ -10,3 +10,6 @@ vim.keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Recen
 -- Keymap to search
 vim.keymap.set("n", "<leader>fm", "<cmd>Telescope<CR>", { desc = "Open Telescope" })
 
+vim.keymap.set("n", "<leader>?", function()
+    require("which-key").show("", { mode = "n" })
+end, { desc = "Keymaps" })

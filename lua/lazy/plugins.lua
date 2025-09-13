@@ -20,7 +20,6 @@ return {
     {
         "folke/which-key.nvim",
         name = "which-key",
-        priority = 10,
         lazy = true,
         event = "VeryLazy",
         opts = function()
@@ -30,7 +29,6 @@ return {
     {
         "nvim-telescope/telescope.nvim",
         name = "telescope",
-        priority = 10,
         lazy = true,
         event = "VeryLazy",
         opts = function()
@@ -40,7 +38,6 @@ return {
     {
         "nvim-tree/nvim-web-devicons",
         name = "nvim-web-devicons",
-        priority = 10,
         lazy = true,
         event = "VeryLazy",
         opts = function()
@@ -50,7 +47,6 @@ return {
     {
         "mason-org/mason.nvim",
         name = "mason",
-        priority = 10,
         lazy = true,
         event = "VeryLazy",
         opts = function()
@@ -60,8 +56,7 @@ return {
     {
         "nvim-lualine/lualine.nvim",
         name = "lualine",
-        priority = 100,
-        lazy = true,
+        lazy = false,
         event = "VimEnter",
         opts = function()
             return require("configs.plugins.lualine")
@@ -70,27 +65,18 @@ return {
     {
         "MunifTanjim/nui.nvim",
         name = "nui",
-        priority = 10,
         lazy = true,
         event = "VeryLazy",
-        -- opts = function()
-        --     return require("confifs.plugins.nui")
-        -- end,
     },
     {
         "nvim-lua/plenary.nvim",
         name = "plenary.nvim",
-        priority = 10,
         lazy = true,
         event = "VeryLazy",
-        -- opts = function()
-        --     return require("configs.plugins.plenary")
-        -- end,
     },
     {
         "goolord/alpha-nvim",
         name = "alpha-nvim",
-        priority = 100,
         lazy = false,
         event = "VimEnter",
         -- Settings for this plugins is loaded in init.lua
@@ -101,59 +87,79 @@ return {
     {
         "lewis6991/gitsigns.nvim",
         name = "gitsigns",
-        priority = 10,
         lazy = true,
         event = "VeryLazy",
         opts = function()
             return require("configs.plugins.gitsigns")
         end
     },
-    -- nvim-cmp: Main completion plugin
     {
+        -- nvim-cmp: Main completion plugin and framework
         "hrsh7th/nvim-cmp",
         name = "nvim-cmp",
+        lazy = true,
         event = { "InsertEnter", "CmdlineEnter" },
         opts = function()
             return require("configs.plugins.nvim-cmp")
         end,
     },
-    -- cmp-nvim-lsp: LSP completion source
     {
+        -- cmp-nvim-lsp: LSP completion source
         "hrsh7th/cmp-nvim-lsp",
+        name = "cmp-nvim-lsp",
+        lazy = true,
         event = { "InsertEnter" },
     },
-    -- cmp-buffer: Buffer words completion source
     {
+        -- cmp-buffer: Buffer words completion source
         "hrsh7th/cmp-buffer",
+        name = "cmp-buffer",
+        lazy = true,
         event = { "InsertEnter" },
     },
-    -- cmp-path: File path completion source
     {
+        -- cmp-path: File path completion source
         "hrsh7th/cmp-path",
+        name = "cmp-path",
+        lazy = true,
         event = { "InsertEnter" },
     },
-    -- cmp-cmdline: Command-line completion source
     {
+        -- cmp-cmdline: Command-line completion source
         "hrsh7th/cmp-cmdline",
-        event = { "CmdlineEnter" },
+        name = "cmp-cmdline",
+        lazy = true,
+        event = "CmdlineEnter",
     },
-    -- LuaSnip: Snippet engine
     {
+        -- LuaSnip: Snippet engine
         "L3MON4D3/LuaSnip",
+        name = "LuaSnip",
+        lazy = true,
         event = { "InsertEnter" },
-        config = function()
-            -- Load VSCode-style snippets from friendly-snippets
-            require("luasnip.loaders.from_vscode").lazy_load()
+        opts = function()
+            require("configs.plugins.LuaSnip")
         end,
     },
-    -- cmp_luasnip: Snippet completion source
     {
+        -- cmp_luasnip: Snippet completion source
         "saadparwaiz1/cmp_luasnip",
+        name = "cmp_luasnip",
+        lazy = true,
         event = { "InsertEnter" },
     },
-    -- friendly-snippets: Prebuilt snippets for many languages
     {
+        -- friendly-snippets: Prebuilt snippets for many languages
         "rafamadriz/friendly-snippets",
+        name = "friendly-snippets",
+        lazy = true,
         event = { "InsertEnter" },
+    },
+    {
+        -- plugin to allow stuff releted to menu of telescope plugin
+        "nvim-telescope/telescope-ui-select.nvim",
+        name = "telescope-ui-select",
+        lazy = true,
+        event = "VeryLazy",
     },
 }

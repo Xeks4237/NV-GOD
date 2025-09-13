@@ -119,7 +119,7 @@ return {
     },
     extensions = {
         -- Example: Enable extensions like fzf or file_browser 
-        -- (must be installed separately!)
+        -- (Must be installed separately!)
         -- fzf = {
         --     fuzzy = true, -- Enable fuzzy matching
         --     override_generic_sorter = true, -- Override default sorter

@@ -10,6 +10,10 @@ return {
         align = "left", -- Alignment of items: "left", "center", "right"
         padding = 1, -- Padding around layout content
     },
+    win = {
+        -- Prevent popup from overlapping cursor
+        no_overlap = false,
+    },
     icons = {
         -- Choose icons or text for mappings
         mappings = vim.g.have_nerd_font, -- Says you have nerd font for icons

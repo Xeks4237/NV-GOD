@@ -79,10 +79,10 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Up" })
 -- Because description gonna take to much lines 
 vim.keymap.set("n", "<leader>bh", "<cmd>bprevious<CR>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "<leader>bl", "<cmd>bnext<CR>", { desc = "Next Buffer" })
-vim.keymap.set("n", "<leader>bb", "<cmd>e #<CR>", { desc = "Switch to Other Buffer" })
-vim.keymap.set("n", "<leader>bD", "<cmd>bd<CR>", { desc = "Delete Buffer and Window" })
+vim.keymap.set("n", "<leader>bk", "<cmd>e #<CR>", { desc = "Switch to Other Buffer" })
+vim.keymap.set("n", "<leader>bj", "<cmd>bd<CR>", { desc = "Delete Buffer and Window" })
 
--- Clear highlights on search when pressing <Esc> in normal mode
+-- Clear highlights of search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Keymap to clear search, diff update and redraw easyly
@@ -93,10 +93,10 @@ vim.keymap.set(
     { desc = "Redraw / Clear hlsearch / Diff Update" }
 )
 
--- Keymaps for easier navigation of in search results
+-- Keymaps for easier navigation in search results
 -- Makes n key to move your cursor to the next search result 
 -- Makes N key to move your cursor to the previous search result 
--- Read more: https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+-- Read more aboit it: https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
 vim.keymap.set("n", "n", "v:searchforward ? 'n' : 'N'", { expr = true, desc = "Next Search Result" })
 vim.keymap.set("n", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Prev Search Result" })
 vim.keymap.set("x", "n", "v:searchforward ? 'n' : 'N'", { expr = true, desc = "Next Search Result" })

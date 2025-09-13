@@ -1,5 +1,5 @@
 return {
-    delay = 0,
+    delay = 50,
     icons = {
         mappings = vim.g.have_nerd_font,
         keys = vim.g.have_nerd_font and {} or {

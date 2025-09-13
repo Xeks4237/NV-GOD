@@ -19,16 +19,16 @@ vim.g.maplocalleader = " "
 vim.keymap.set("n", "x", '"_x' )
 
 -- Keymaps for creating splits of window
-vim.keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split window horizontally", remap = true })
-vim.keymap.set("n", "<leader>|", "<C-W>v", { desc = "Split window vertically", remap = true })
+vim.keymap.set("n", "<leader>h", "<C-W>s", { desc = "Split window horizontally", remap = true })
+vim.keymap.set("n", "<leader>v", "<C-W>v", { desc = "Split window vertically", remap = true })
 vim.keymap.set("n", "<leader>q", "<C-W>c", { desc = "Close window split", remap = true })
 
 -- Keymaps to resize splits of window
 -- by holding CTRL and pressing arrow keys
-vim.keymap.set("n", "<C-Up>", "<cmd>resize -2<CR>")
-vim.keymap.set("n", "<C-Down>", "<cmd>resize +2<CR>")
-vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<CR>")
-vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>")
+vim.keymap.set("n", "<C-Up>", "<cmd>resize -2<CR>", { desc = "Vertical Resize Up" })
+vim.keymap.set("n", "<C-Down>", "<cmd>resize +2<CR>", { desc = "Vertical Resize Down" })
+vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<CR>", { desc = "Horizontal Resize" })
+vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Horizontal Resize" })
 
 -- Navigating between splits of window
 -- by holding CTRL and pressing hjkl (like ←↓↑→)
@@ -58,7 +58,7 @@ vim.keymap.set("n", "<C-q>", "<cmd>qa<CR>", { desc = "Quit NVim" })
 
 -- Force quit everything
 -- gonna ignore not saved changes, Can make lost of data!
-vim.keymap.set("n", "<leader><C-q>", "<cmd>qa!<CR>", { desc = "FORCE quit NVim" })
+vim.keymap.set("n", "<leader><C-q>", "<cmd>qa!<CR>", { desc = "FORCE Quit NVim" })
 
 -- Opens lazy.nvim package manager
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Lazy" })

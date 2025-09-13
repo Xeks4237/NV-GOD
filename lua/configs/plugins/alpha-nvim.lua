@@ -4,15 +4,15 @@ local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 -- Set header/logo which we need
 dashboard.section.header.val = {
-    "                                                         ",
-    "            The Best NeoVim Distro of ALL TIME           ",
-    "    ███╗   ██╗██╗   ██╗       ██████╗  ██████╗ ██████╗   ",
-    "    ████╗  ██║██║   ██║      ██╔════╝ ██╔═══██╗██╔══██╗  ",
-    "    ██╔██╗ ██║██║   ██║█████╗██║  ███╗██║   ██║██║  ██║  ",
-    "    ██║╚██╗██║╚██╗ ██╔╝╚════╝██║   ██║██║   ██║██║  ██║  ",
-    "    ██║ ╚████║ ╚████╔╝       ╚██████╔╝╚██████╔╝██████╔╝  ",
-    "    ╚═╝  ╚═══╝  ╚═══╝         ╚═════╝  ╚═════╝ ╚═════╝   ",
-    "    by Xeks4237       *not final logo            v0.0.1  ",
+    "                                                           ",
+    "            The Best NeoVim Distro of ALL TIME             ",
+    "    ███╗   ██╗██╗   ██╗      ████████╗████████╗███████╗    ",
+    "    ████╗  ██║██║   ██║      ██╔═════╝██╔═══██║██╔═══██╗   ",
+    "    ██╔██╗ ██║██║   ██║█████╗██║  ███╗██║   ██║██║   ██║   ",
+    "    ██║╚██╗██║╚██╗ ██╔╝╚════╝██║   ██║██║   ██║██║   ██║   ",
+    "    ██║ ╚████║ ╚████╔╝       ████████║████████║███████╔╝   ",
+    "    ╚═╝  ╚═══╝  ╚═══╝        ╚═══════╝╚═══════╝╚══════╝    ",
+    "    by Xeks4237         *not final logo           v0.0.1   ",
 }
 
 -- Sets buttons which gonna be shown below the logo with their icons

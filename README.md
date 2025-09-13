@@ -53,11 +53,12 @@ It gonna allow you to easyly manage your setups versions using git
 
 - Made it as much Easy to configure for new users and pro NVim enjoyers than LazyVim, NV-Chad, and AstroNVim Distros
 
-- And I doesn't gonna use snacks.nvim or mini.nvim like plugin packs because I just gonna use plugins on this packs directly, instead of using someones pre-made packs (gonna make my own pack with all plugins which is made specially for NV-GOD, if someone gonna need it:3)
+- And I doesn't gonna use snacks.nvim or mini.nvim like plugin packs because I just gonna use plugins on this packs directly from their sources, instead of using someones pre-made packs.
+    Gonna make my own pack with all plugins which I used for NV-GOD, if someone gonna need it:3)
 
 ---
 
-(here gonna be a future video with all other info😅, gonna make it after making at least NV-GOD v1.0)
+(here gonna be a future video with all other info, gonna make it after making at least NV-GOD v1.0)
 
 ## 📂 File Structure
 

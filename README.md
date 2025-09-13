@@ -2,9 +2,10 @@ NV-GOD is a Best NeoVim Distro (in future, work in progress...)
 
 NV-GOD is creted by Me, because other distros of NeoVim like LazyVim or AstroNVim uses their own repos like a some pack with different pre-configured options, plugins, autocmds and etc. It's a easy and good choise for devs and new users
 
-But  first it breaks UNIX philosophy because it says:
-    One tool is gonna be able to do only one thing and be able to make it good
-    It means any pack with a lot of stuff is USELESS
+    But  first it breaks UNIX philosophy because it says:
+One tool is gonna be able to do only one thing and be able to make it good
+It means any pack with a lot of stuff is USELESS
+
 And for advanced users like me who wants to use their work like a base for their own configs, it's a big headache to work with.
 
 - You can say "but what about kickstart.nvim?"

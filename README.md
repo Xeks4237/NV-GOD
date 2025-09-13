@@ -75,9 +75,8 @@ But it gonna be a little bit different on other cases with other package manager
    │   ├── options.lua
    │   ├── keymaps
    │   │   ├── core.lua
-   │   │   ├── telescope.lua
-   │   │   ├── ...
-   │   │   └── treesitter.lua
+   │   │   ├── plugins.lua
+   │   │   └── colorschemes.lua
    │   ├── colorschemes
    │   │   ├── tokyonight.lua
    │   │   ├── ...

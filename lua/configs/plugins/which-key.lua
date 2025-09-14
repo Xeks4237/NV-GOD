@@ -1,18 +1,17 @@
 return {
     -- Preset for which-key appearance: "classic", "modern", "helix", or false to disable
-    preset = "helix", -- Affects styling of popup menu
-    delay = 250, -- Delay in ms before showing popup
+    preset = "modern", -- Affects styling of popup menu
+    delay = 512, -- Delay in ms before showing popup
     notify = true, -- Displays notifications for conflicts or issues with keymaps
     layout = {
-        height = { min = 1, max = 10 }, -- Height constraints for first row
-        width = { min = 1, max = 25 }, -- Width constraints for columns (-1 means not limited)
-        spacing = 2, -- Spacing between items in popup
+        height = { min = 1, max = 30 }, -- Height constraints for first row
+        width = { min = 1, max = 30 }, -- Width constraints for columns (-1 means not limited)
+        spacing = 1, -- Spacing between items in popup
         align = "left", -- Alignment of items: "left", "center", "right"
         padding = 1, -- Padding around layout content
     },
     win = {
-        -- Prevent popup from overlapping cursor
-        no_overlap = false,
+        no_overlap = false, -- Prevent popup from overlapping cursor
     },
     icons = {
         -- Choose icons or text for mappings

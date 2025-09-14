@@ -47,7 +47,7 @@ vim.keymap.set("n", "<leader>t<C-h>", "<cmd>tabmove -1<CR>", { desc = "Move Tab 
 vim.keymap.set("n", "<leader>t<C-l>", "<cmd>tabmove +1<CR>", { desc = "Move Tab Right" })
 
 -- tmp key to open panel with bulitin file explorer of NeoVim
-vim.keymap.set("n", "<C-e>", "<cmd>Ex<CR>")
+vim.keymap.set("n", "<C-e>", "<cmd>Ex<CR>", { desc = "File Explorer" })
 
 -- Save file using CTRL + s
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<CR><ESC>", { desc = "Save File" })

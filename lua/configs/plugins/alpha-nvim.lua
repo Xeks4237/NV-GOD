@@ -5,7 +5,7 @@ local dashboard = require("alpha.themes.dashboard")
 -- Set header/logo which we need
 dashboard.section.header.val = {
     "                                                           ",
-    "            The Best NeoVim Distro of ALL TIME             ",
+    "             The Best NeoVim Distro of ALL TIME            ",
     "    ███╗   ██╗██╗   ██╗      ████████╗████████╗███████╗    ",
     "    ████╗  ██║██║   ██║      ██╔═════╝██╔═══██║██╔═══██╗   ",
     "    ██╔██╗ ██║██║   ██║█████╗██║  ███╗██║   ██║██║   ██║   ",

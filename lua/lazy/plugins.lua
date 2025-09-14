@@ -1,23 +1,29 @@
--- This file contains a list of all plugins which
--- lazy.nvim plugin manager gonna read and load
--- lazy.nvim plugin manager has A LOT OF settings which You can use in this table, to know more about it see the official site with documentation of lazy.nvim:
+-- This file contains a table of all plugins which
+-- lazy.nvim plugin manager gonna read, install and lazy load
+-- lazy.nvim has many of settings which you can use in this table
+-- To know more about it see the official site with doc for lazy.nvim:
 -- https://lazy.folke.io
 
--- here I gonna mention main stuff which you gonna know in first place to start using it on NV-GOD:
-    -- name = "", sets a name of local directory where lazy.nvim installs a plugin, and it sets it's name
-    -- lazy = true, this option says if this plugin is needed to be lazy loaded or not, if it equals to false then it gonna be loaded only when it's used somewhere in config like through:
-        -- require("this-exact-plugin")
-    -- event = "",  says lazy.nvim how to load this plugin:
-        -- event = "VeryLazy" needed to load plugin only when needed
-        -- event = "VimEnter" needed to load plugin on startup
+-- name = "", sets a name of local directory where lazy.nvim installs plugin
+
+-- lazy = true, this option says if this plugin is needed to be lazy loaded or not
+
+-- event = "", says lazy.nvim when or how to load this plugin:
+    -- event = "VeryLazy" needed to load plugin only when needed
+    -- event = "VimEnter" needed to load plugin on startup
+    -- "InsertEnter" needed to load plugin when you start typing
+    -- "CmdlineEnter needed to load plugin when you start typing in cmd
 
 -- P.S it's not necessary to give a names to all plugins manually
--- But some plugins/colorschemes requires it
--- (like catppuccin theme) and You can give custom name to some of them if you want, but it's not recommended
+-- But some plugins/colorschemes requires it (like catppuccin theme)
 
--- Some plugins don't need options, for example some library plugins like plenary or nui
+-- P.S Some plugins don't need options to function, for example:
+-- library plugins like plenary or nui
+
+
 return {
     {
+        -- which-key: adds popup menu with keymaps of your NeoVim setup
         "folke/which-key.nvim",
         name = "which-key",
         lazy = true,
@@ -27,6 +33,8 @@ return {
         end,
     },
     {
+        -- telescope: Most popular plugin for NeoVim Telescope is needed to search:
+        -- files, code, buffers, configs and other stuff in cool ui
         "nvim-telescope/telescope.nvim",
         name = "telescope",
         lazy = true,
@@ -36,6 +44,7 @@ return {
         end,
     },
     {
+        -- nvim-web-devicons: Library Plugin for adding ability to use various glyps and symbols for other plugins
         "nvim-tree/nvim-web-devicons",
         name = "nvim-web-devicons",
         lazy = true,
@@ -45,6 +54,8 @@ return {
         end,
     },
     {
+        -- mason: Portative package manager for easyly installing and managing:
+        -- Language Server Plugins, formatters, linters, and Debug Adapter Plugins
         "mason-org/mason.nvim",
         name = "mason",
         lazy = true,
@@ -54,6 +65,7 @@ return {
         end,
     },
     {
+        -- lualine: makes status line of NeoVim better
         "nvim-lualine/lualine.nvim",
         name = "lualine",
         lazy = false,
@@ -69,12 +81,15 @@ return {
         event = "VeryLazy",
     },
     {
+        -- plenary: Library plugin needed for devs to not write same parts of code over and over in their plugins
         "nvim-lua/plenary.nvim",
         name = "plenary.nvim",
         lazy = true,
         event = "VeryLazy",
     },
     {
+        -- alpha-nvim: adds custom greeting screen for NeoVim
+        -- P.S before 2023 everybody was using dashboard-nvim plugin, but it is now discontinued
         "goolord/alpha-nvim",
         name = "alpha-nvim",
         lazy = false,
@@ -85,6 +100,7 @@ return {
         -- end
     },
     {
+        -- gitsigns: For showing different git related info in editor
         "lewis6991/gitsigns.nvim",
         name = "gitsigns",
         lazy = true,
@@ -94,7 +110,7 @@ return {
         end
     },
     {
-        -- nvim-cmp: Main completion plugin and framework
+        -- nvim-cmp is a Main autocompletions plugin and framework for it
         "hrsh7th/nvim-cmp",
         name = "nvim-cmp",
         lazy = true,
@@ -104,35 +120,35 @@ return {
         end,
     },
     {
-        -- cmp-nvim-lsp: LSP completion source
+        -- cmp-nvim-lsp: LSP autocompletion source for nvim-cmp
         "hrsh7th/cmp-nvim-lsp",
         name = "cmp-nvim-lsp",
         lazy = true,
         event = { "InsertEnter" },
     },
     {
-        -- cmp-buffer: Buffer words completion source
+        -- cmp-buffer: Buffer words autocompletions source
         "hrsh7th/cmp-buffer",
         name = "cmp-buffer",
         lazy = true,
         event = { "InsertEnter" },
     },
     {
-        -- cmp-path: File path completion source
+        -- cmp-path: File paths autocompletion source
         "hrsh7th/cmp-path",
         name = "cmp-path",
         lazy = true,
         event = { "InsertEnter" },
     },
     {
-        -- cmp-cmdline: Command-line completion source
+        -- cmp-cmdline: Command-line autocompletions source
         "hrsh7th/cmp-cmdline",
         name = "cmp-cmdline",
         lazy = true,
         event = "CmdlineEnter",
     },
     {
-        -- LuaSnip: Snippet engine
+        -- LuaSnip: Snippets engine
         "L3MON4D3/LuaSnip",
         name = "LuaSnip",
         lazy = true,
@@ -142,7 +158,7 @@ return {
         end,
     },
     {
-        -- cmp_luasnip: Snippet completion source
+        -- cmp_luasnip: Snippets autocompletions source
         "saadparwaiz1/cmp_luasnip",
         name = "cmp_luasnip",
         lazy = true,
@@ -156,7 +172,7 @@ return {
         event = { "InsertEnter" },
     },
     {
-        -- plugin to allow stuff releted to menu of telescope plugin
+        -- telescope-ui-select: Allows other plugins to use ui of telescope for their needs
         "nvim-telescope/telescope-ui-select.nvim",
         name = "telescope-ui-select",
         lazy = true,

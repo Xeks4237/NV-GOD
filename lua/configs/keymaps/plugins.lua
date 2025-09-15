@@ -1,4 +1,4 @@
--- This file contains all keymaps for plugins only
+-- This file contains keymaps for plugins only
 
 -- Keymaps for telescope plugin:
 -- Keymap to search files using telescope plugin

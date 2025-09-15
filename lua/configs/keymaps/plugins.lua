@@ -15,4 +15,4 @@ vim.keymap.set("n", "<leader>fs", "<cmd>Telescope filetypes<CR>", { desc = "Choo
 -- Keymap to open which-key popup with all availible keymaps
 vim.keymap.set("n", "<leader>?", function()
     require("which-key").show("", { mode = "n" })
-end, { desc = "Keymaps" })
+end, { desc = "All Keymaps Popup" })

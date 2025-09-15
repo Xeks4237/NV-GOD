@@ -1,31 +1,65 @@
--- All settings for defined here,
--- But keymap groups of plugins are registered seperatly in file with keymaps of plugins
-
 return {
-    icons = { -- Configure theme and icons
+    -- Preset for which-key appearance: "classic", "modern", "helix", or false to disable
+    preset = "modern", -- Affects styling of popup menu 
+    show_help = true, -- Show help message
+    show_keys = true, -- Show keybinding in popup
+    triggers = { "<leader>" }, -- Keys to trigger popup
+    delay = 512, -- Delay in ms before showing popup
+    debug = false, -- Enable/Disable debug logging
+    layout = { -- Configure popup window (layout)
+        height = { min = 1, max = 30 }, -- Height constraints for first row
+        width = { min = 1, max = 30 }, -- Width constraints for columns (-1 means not limited)
+        spacing = 1, -- Spacing between items in popup
+        align = "left", -- Alignment of items: "left", "center", "right"
+        padding = 1, -- Padding around layout content
+    },
+    win = { -- Configure popup window (window)
+        border = "single", -- Border: none, single, double, shadow
+        no_overlap = true, -- Prevent overlap with other windows
+        padding = { 1, 1 }, -- Padding: [top/bottom, left/right]
+        title = true, -- Show title
+        title_pos = "center", -- Title position: left, center, right
+        zindex = 1000, -- Window z-index
+        bo = { -- Buffer options
+            filetype = "which_key",
+        },
+    },
+    icons = {
+        -- Choose icons or text for mappings
+        mappings = vim.g.have_nerd_font, -- Says you have nerd font for icons
         breadcrumb = "»", -- Separator between keymap segments
         separator = "➜", -- Separator between key and description
         group = "+", -- Symbol for keymap groups
-        keys = { -- Icons for specific keys
-            Up = "↑ ",
-            Down = "↓ ",
-            Left = "← ",
-            Right = "→ ",
-            C = "Ctrl + ",
-            M = "Alt + ",
-            S = "Shift + ",
+        keys = vim.g.have_nerd_font and {} or {
+            -- Shows nerd font icons or text in this table
+            Up = "↑",
+            Down = "↓",
+            Left = "←",
+            Right = "→",
+            C = "Ctrl ",
+            M = "M-…",
+            D = "D-…",
+            S = "Shift ",
             CR = "Enter",
             Esc = "Esc",
+            ScrollWheelDown = "ScrollWheelDown",
+            ScrollWheelUp = "ScrollWheelUp",
+            NL = "NL",
+            BS = "BS",
             Space = "Space",
-            Tab = "↹",
-        },
-        rules = { -- Customize icon display
-            enabled = true, -- Enable icons
-            override = { -- Override specific key labels
-                ["<space>"] = "SPC",
-                ["<cr>"] = "RET",
-                ["<tab>"] = "TAB",
-            },
+            Tab = "Tab",
+            F1 = "F1",
+            F2 = "F2",
+            F3 = "F3",
+            F4 = "F4",
+            F5 = "F5",
+            F6 = "F6",
+            F7 = "F7",
+            F8 = "F8",
+            F9 = "F9",
+            F10 = "F10",
+            F11 = "F11",
+            F12 = "F12",
         },
     },
     plugins = { -- Configure which-key plugins
@@ -45,45 +79,5 @@ return {
             g = true, -- g-related mappings (e.g., gg, g_)
         },
     },
-    win = { -- Configure popup window
-        border = "single", -- Border: none, single, double, shadow
-        no_overlap = true, -- Prevent overlap with other windows
-        padding = { 1, 2 }, -- Padding: [top/bottom, left/right]
-        title = true, -- Show title
-        title_pos = "center", -- Title position: left, center, right
-        zindex = 1000, -- Window z-index
-        bo = { -- Buffer options
-            filetype = "which_key",
-        },
-    },
-    layout = { -- Configure popup layout
-        height = { min = 4, max = 25 }, -- Min/max height
-        width = { min = 20, max = 50 }, -- Min/max width
-        spacing = 3, -- Spacing between columns
-        align = "left", -- Align columns: left, center, right
-    },
-    show_help = true, -- Show help message
-    show_keys = true, -- Show keybinding in popup
-    triggers = { "auto" }, -- Choose triggers for popup
-    delay = 512, -- Delay (ms) before showing popup
-    debug = false, -- Enable/Disable debug logging
-
-    -- key_labels = { -- Override key labels for readability
-    --     ["<space>"] = "SPC",
-    --     ["<cr>"] = "RET",
-    --     ["<tab>"] = "TAB",
-    -- },
-    -- hidden = {
-    --     -- Allows to hide some parts of keys code in popup
-    --     -- Like this ones for example:
-    --     "<silent>",
-    --     "<cmd>",
-    --     "<Cmd>",
-    --     "<CR>",
-    --     "call",
-    --     "lua",
-    --     "^:",
-    --     "^ ",
-    -- },
 }
 

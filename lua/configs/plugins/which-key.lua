@@ -6,8 +6,8 @@ return {
     delay = 512, -- Delay in ms before showing popup
     debug = false, -- Enable/Disable debug logging
     layout = { -- Configure popup window (layout)
-        height = { min = 1, max = 10 }, -- Height constraints for first row
-        width = { min = 1, max = 20 }, -- Width constraints for columns (-1 means not limited)
+        height = { min = 1, max = 20 }, -- Height constraints for first row
+        width = { min = 1, max = 30 }, -- Width constraints for columns (-1 means unlimited)
         spacing = 1, -- Spacing between items in popup
         align = "left", -- Alignment of items: "left", "center", "right"
         padding = 1, -- Padding around layout content
@@ -36,15 +36,17 @@ return {
             Left = "←",
             Right = "→",
             C = "Ctrl ",
-            M = "M-…",
-            D = "D-…",
+            M = "Meta ",
+            D = "D ",
             S = "Shift ",
-            CR = "Enter",
+            -- CR and NL is a symbols what your OS chooses between when you click Enter
+            -- Vim/NeoVim prefers to use CR to reprecent Enter key
+            CR = "Enter", -- Carriage Return
+            NL = "Enter", -- New Line
             Esc = "Esc",
             ScrollWheelDown = "ScrollWheelDown",
             ScrollWheelUp = "ScrollWheelUp",
-            NL = "NL",
-            BS = "BS",
+            BS = "BackSpace",
             Space = "Space",
             Tab = "Tab",
             F1 = "F1",

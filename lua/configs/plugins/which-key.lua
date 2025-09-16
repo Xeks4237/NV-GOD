@@ -3,23 +3,22 @@ return {
     preset = "modern", -- Affects styling of popup menu 
     show_help = true, -- Show help message
     show_keys = true, -- Show keybinding in popup
-    triggers = { "<leader>" }, -- Keys to trigger popup
     delay = 512, -- Delay in ms before showing popup
     debug = false, -- Enable/Disable debug logging
     layout = { -- Configure popup window (layout)
-        height = { min = 1, max = 30 }, -- Height constraints for first row
-        width = { min = 1, max = 30 }, -- Width constraints for columns (-1 means not limited)
+        height = { min = 1, max = 10 }, -- Height constraints for first row
+        width = { min = 1, max = 20 }, -- Width constraints for columns (-1 means not limited)
         spacing = 1, -- Spacing between items in popup
         align = "left", -- Alignment of items: "left", "center", "right"
         padding = 1, -- Padding around layout content
     },
     win = { -- Configure popup window (window)
         border = "single", -- Border: none, single, double, shadow
-        no_overlap = true, -- Prevent overlap with other windows
+        no_overlap = false, -- Prevent overlap with other windows
         padding = { 1, 1 }, -- Padding: [top/bottom, left/right]
         title = true, -- Show title
         title_pos = "center", -- Title position: left, center, right
-        zindex = 1000, -- Window z-index
+        zindex = 1069, -- Window z-index
         bo = { -- Buffer options
             filetype = "which_key",
         },

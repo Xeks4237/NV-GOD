@@ -4,13 +4,11 @@
 
 -- P.S a / directory for require("") is a lua directory
 
--- Loads Options like LineNumbers fromoptions.lua file
+-- Loads Options like LineNumbers from options.lua file
 require("configs.options")
 
--- Loads Keymaps from keymaps directory
+-- Loads Keymaps from keymaps directory using init-keymaps.lua file
 require("configs.keymaps.core")
-require("configs.keymaps.plugins")
-require("configs.keymaps.colorschemes")
 
 -- Loads a file what BootStraps of lazy.nvim package manager
 -- Which is gonna load other stuff like plugins and colorschemes

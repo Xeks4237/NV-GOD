@@ -1,8 +1,8 @@
--- Needed to don't write require() on every line of this file
+-- Keymaps of nvim-cmp
+
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 
--- Main part with actuall keymapss of nvim-cmp
 return {
     ["<C-l>"] = cmp.mapping.select_next_item(), -- Next suggestion
     ["<C-h>"] = cmp.mapping.select_prev_item(), -- Previous suggestion

@@ -54,8 +54,8 @@ return {
         end,
     },
     {
-        -- mason: Portative package manager for easyly installing and managing:
-        -- Language Server Plugins, formatters, linters, and Debug Adapter Plugins
+        -- mason: package manager for easyly installing and managing:
+        -- Language Server Plugins, formatters, linters, and Debug Adapter Plugins inside of nvim
         "mason-org/mason.nvim",
         name = "mason",
         lazy = true,
@@ -63,6 +63,23 @@ return {
         opts = function()
             return require("configs.plugins.mason")
         end,
+    },
+    {
+        -- mason-lspconfig: Bridge to nvim-lspconfig for auto-setup
+        "williamboman/mason-lspconfig.nvim",
+        name = "mason-lspconfig",
+        lazy = true,
+        event = "VeryLazy",
+        opts = function()
+            return require("configs.plugins.mason-lspconfig")
+        end,
+    },
+    {
+        -- nvim-lspconfig: Needed for LSP configuration (dependency of mason-lspconfig)
+        "neovim/nvim-lspconfig",
+        name = "nvim-lspconfig",
+        lazy = true,
+        event = "VeryLazy",
     },
     {
         -- lualine: makes status line of NeoVim better

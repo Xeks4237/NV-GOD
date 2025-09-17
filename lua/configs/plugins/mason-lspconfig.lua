@@ -1,0 +1,37 @@
+-- Configuration for mason-lspconfig.nvim
+
+return {
+    -- LSP servers to auto-install
+    -- See https://mason-registry.dev/registry/list for available servers
+    ensure_installed = {
+        -- Add as needed (e.g., "clangd" for C/C++, "gopls" for Go and etc)
+    },
+
+    -- Automatically set up LSP servers with nvim-lspconfig
+    automatic_installation = true,
+
+    -- Handlers for LSP server configurations
+    handlers = {
+        -- Default handler for all servers
+        function(server_name)
+            require("lspconfig")[server_name].setup {
+                on_attach = function(client, bufnr)
+                    return require("configs.keymap.mason-lspconfig")
+                end,
+                -- Enable autocompletion via nvim-cmp
+                capabilities = require("cmp_nvim_lsp").default_capabilities(),
+            }
+        end,
+    },
+    -- Diagnostics customization
+    vim.diagnostic.config({
+        virtual_text = {
+            prefix = "●",
+            spacing = 4,
+        },
+        signs = true,
+        update_in_insert = true,
+        severity_sort = true,
+    }),
+}
+

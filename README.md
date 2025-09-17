@@ -76,16 +76,20 @@ But it gonna be a little bit different on other cases with other package manager
    │   ├── options.lua
    │   ├── keymaps
    │   │   ├── core.lua
-   │   │   ├── plugins.lua
-   │   │   └── colorschemes.lua
+   │   │   ├── extra.lua
+   │   │   ├── colorschemes.lua
+   │   │   ├── mason.lua
+   │   │   ├── ...
+   │   │   └── treesitter.lua
    │   ├── colorschemes
    │   │   ├── tokyonight.lua
    │   │   ├── ...
    │   │   └── catppuccin.lua
    │   └── plugins
-   │       ├── tokyonight.lua
+   │       ├── telescope.lua
+   │       ├── treesitter.lua
    │       ├── ...
-   │       └── catppuccin.lua
+   │       └── nvim-cmp.lua
    └── lazy
        ├── plugins.lua
        ├── colorschemes.lua

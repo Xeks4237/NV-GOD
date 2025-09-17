@@ -2,12 +2,10 @@
 -- When you add something here please check the order of commands what you write
 -- Like for example you can not set colorscheme before loading it with package manager
 
--- P.S a / directory for require("") is a lua directory
-
 -- Loads Options like LineNumbers from options.lua file
 require("configs.options")
 
--- Loads Keymaps from keymaps directory using init-keymaps.lua file
+-- Loads Keymaps from keymaps directory
 require("configs.keymaps.core")
 
 -- Loads a file what BootStraps of lazy.nvim package manager

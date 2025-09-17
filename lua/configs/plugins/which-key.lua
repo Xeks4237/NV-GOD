@@ -14,11 +14,11 @@ return {
     },
     win = { -- Configure popup window (window)
         border = "single", -- Border: none, single, double, shadow
-        no_overlap = false, -- Prevent overlap with other windows
+        no_overlap = true, -- Prevent overlap with other windows
         padding = { 1, 1 }, -- Padding: [top/bottom, left/right]
         title = true, -- Show title
         title_pos = "center", -- Title position: left, center, right
-        zindex = 1069, -- Window z-index
+        zindex = 1000, -- Window z-index
         bo = { -- Buffer options
             filetype = "which_key",
         },

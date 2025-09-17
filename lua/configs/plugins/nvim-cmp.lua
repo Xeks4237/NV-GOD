@@ -16,33 +16,8 @@ return {
     },
 
     -- Key mappings for completion menu navigation and actions
-    mapping = cmp.mapping.preset.insert({
-        ["<C-n>"] = cmp.mapping.select_next_item(), -- Next suggestion
-        ["<C-p>"] = cmp.mapping.select_prev_item(), -- Previous suggestion
-        ["<C-b>"] = cmp.mapping.scroll_docs(-4), -- Scroll docs up
-        ["<C-f>"] = cmp.mapping.scroll_docs(4), -- Scroll docs down
-        ["<C-Space>"] = cmp.mapping.complete(), -- Trigger completion manually
-        ["<C-e>"] = cmp.mapping.abort(), -- Cancel completion
-        ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Confirm selection, select if none
-        ["<Tab>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-                cmp.select_next_item() -- Cycle to next suggestion
-            elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump() -- Expand or jump to next snippet placeholder
-            else
-                fallback() -- Fallback to default Tab behavior
-            end
-        end, { "i", "s" }), -- Apply in insert and select modes
-        ["<S-Tab>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-                cmp.select_prev_item() -- Cycle to previous suggestion
-            elseif luasnip.jumpable(-1) then
-                luasnip.jump(-1) -- Jump to previous snippet placeholder
-            else
-                fallback() -- Fallback to default Shift-Tab behavior
-            end
-        end, { "i", "s" }),
-    }),
+    -- See nvim-cmp.lua file in plugins directory
+    mapping = cmp.mapping.preset.insert(require("configs.keymaps.nvim-cmp")),
 
     -- Completion sources with priority and filtering options
     sources = cmp.config.sources({
@@ -82,7 +57,7 @@ return {
             -- Bordered documentation window
             border = "rounded",
             max_width = 80, -- Max width of doc window
-            max_height = 30, -- Max height of doc window
+            max_height = 40, -- Max height of doc window
         }),
     },
 
@@ -132,8 +107,8 @@ return {
 
     -- Performance tweaks
     performance = {
-        debounce = 60, -- Delay (ms) before updating completions
-        throttle = 30, -- Delay (ms) between keystrokes for updates
+        debounce = 50, -- Delay (ms) before updating completions
+        throttle = 40, -- Delay (ms) between keystrokes for updates
         fetching_timeout = 500, -- Timeout (ms) for fetching completions
         confirm_resolve_timeout = 80, -- Timeout (ms) for resolving confirmations
         async_budget = 1, -- Time (ms) to spend on async operations
@@ -143,6 +118,6 @@ return {
     -- View settings for completion menu
     view = {
         entries = { name = "custom", selection_order = "top_down" }, -- Custom menu, top-to-bottom
-        -- entries = { name = "wildmenu", separator = " | " }, -- Vim-style wildmenu
+        -- entries = { name = "wildmenu", separator = " | " }, -- Vim-style wildmenu at bottom
     },
 }

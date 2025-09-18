@@ -1,4 +1,4 @@
--- Keymaps fir which-key.nvim
+-- Keymaps for which-key.nvim
 
 return {
     -- Keymap to open open popup with all keymaps availible

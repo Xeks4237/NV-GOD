@@ -12,6 +12,11 @@ require("configs.keymaps.core")
 -- Which is gonna load other stuff like plugins and colorschemes
 require("lazy.lazy")
 
+-- Loads extra Keymaps for plugins and colorschemes
+-- (which aren't loaded by plugins themself)
+require("configs.keymaps.extra")
+require("configs.keymaps.colorschemes")
+
 -- Applys a greeting screen configuration and logo using alpha-nvim
 -- It's loaded here because in other ways it becomes not "consistent"
 require("configs.plugins.alpha-nvim")

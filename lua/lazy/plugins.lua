@@ -12,7 +12,7 @@
     -- event = "VeryLazy" needed to load plugin only when needed
     -- event = "VimEnter" needed to load plugin on startup
     -- "InsertEnter" needed to load plugin when you start typing
-    -- "CmdlineEnter needed to load plugin when you start typing in cmd
+    -- "CmdlineEnter" needed to load plugin when you start typing in cmd
 
 -- P.S it's not necessary to give a names to all plugins manually
 -- But some plugins/colorschemes requires it (like catppuccin theme)
@@ -92,6 +92,7 @@ return {
         end,
     },
     {
+        -- nui: UI Component Library for Neovim
         "MunifTanjim/nui.nvim",
         name = "nui",
         lazy = true,
@@ -196,3 +197,4 @@ return {
         event = "VeryLazy",
     },
 }
+

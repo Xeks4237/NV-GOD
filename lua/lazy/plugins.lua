@@ -196,5 +196,14 @@ return {
         lazy = true,
         event = "VeryLazy",
     },
+    {
+        "VonHeikemen/fine-cmdline.nvim",
+        name = "fine-cmdline",
+        lazy = true,
+        event = "VeryLazy",
+        opts = function()
+            return require("configs.plugins.fine-cmdline")
+        end,
+    },
 }
 

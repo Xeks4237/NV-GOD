@@ -58,7 +58,7 @@ return {
         -- Language Server Plugins, formatters, linters, and Debug Adapter Plugins inside of nvim
         "mason-org/mason.nvim",
         name = "mason",
-        event = "BufReadPre",
+        event = "VeryLazy",
         lazy = true,
         opts = function()
             return require("configs.plugins.mason")

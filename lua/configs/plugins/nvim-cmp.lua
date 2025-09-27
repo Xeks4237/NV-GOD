@@ -6,7 +6,7 @@ return {
     enabled = true,
 
     -- Preselect behavior for completion items
-    preselect = cmp.PreselectMode.Item, -- Options: Item (first item), None (no preselection)
+    preselect = cmp.PreselectMode.None, -- Options: Item (first item), None (no preselection)
 
     -- Snippet engine integration (required for snippet expansion)
     snippet = {

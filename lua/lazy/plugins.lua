@@ -58,8 +58,8 @@ return {
         -- Language Server Plugins, formatters, linters, and Debug Adapter Plugins inside of nvim
         "mason-org/mason.nvim",
         name = "mason",
+        event = "BufReadPre",
         lazy = true,
-        event = "VeryLazy",
         opts = function()
             return require("configs.plugins.mason")
         end,
@@ -69,7 +69,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         name = "mason-lspconfig",
         lazy = true,
-        event = "VeryLazy",
+        event = "BufReadPre",
         opts = function()
             return require("configs.plugins.mason-lspconfig")
         end,
@@ -79,7 +79,7 @@ return {
         "neovim/nvim-lspconfig",
         name = "nvim-lspconfig",
         lazy = true,
-        event = "VeryLazy",
+        event = "BufReadPre",
     },
     {
         -- lualine: makes status line of NeoVim better
@@ -122,7 +122,7 @@ return {
         "lewis6991/gitsigns.nvim",
         name = "gitsigns",
         lazy = true,
-        event = "VeryLazy",
+        event = "BufReadPre",
         opts = function()
             return require("configs.plugins.gitsigns")
         end
@@ -200,9 +200,18 @@ return {
         "VonHeikemen/fine-cmdline.nvim",
         name = "fine-cmdline",
         lazy = true,
-        event = "VeryLazy",
+        event = "VimEnter",
         opts = function()
             return require("configs.plugins.fine-cmdline")
+        end,
+    },
+    {
+        "ThePrimeagen/harpoon", branch = "harpoon2",
+        name = "harpoon",
+        lazy = true,
+        event = "VeryLazy",
+        opts = function()
+            return require("configs.plugins.harpoon")
         end,
     },
 }

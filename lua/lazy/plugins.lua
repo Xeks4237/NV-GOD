@@ -214,14 +214,5 @@ return {
             return require("configs.plugins.nvim-notify")
         end,
     },
-    {
-        "ThePrimeagen/harpoon", branch = "harpoon2",
-        name = "harpoon",
-        lazy = true,
-        event = "VeryLazy",
-        opts = function()
-            return require("configs.plugins.harpoon")
-        end,
-    },
 }
 

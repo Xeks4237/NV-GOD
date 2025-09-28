@@ -15,6 +15,3 @@ vim.keymap.set("n", "<leader>fm", "<cmd>Telescope<CR>", { desc = "Open Telescope
 -- Keymap to Choose file type of file using telescope
 vim.keymap.set("n", "<leader>fs", "<cmd>Telescope filetypes<CR>", { desc = "Choose File Type" })
 
--- Remaps : and ? to trigger fine-cmdline plugin instead of default menu
-vim.keymap.set({ "n", "v" }, ":", "<cmd>FineCmdline<CR>")
-

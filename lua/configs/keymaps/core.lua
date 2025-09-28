@@ -16,12 +16,7 @@ vim.g.maplocalleader = " "
 
 -- Makes x key don't copy symbhol under a cursor after deleting it
 -- Someone likes it, someone not, just choose if you want it
-vim.keymap.set("n", "x", '"_x' )
-
--- Keymaps for creating splits of window
-vim.keymap.set("n", "<leader>h", "<C-W>s", { desc = "Split window horizontally", remap = true })
-vim.keymap.set("n", "<leader>v", "<C-W>v", { desc = "Split window vertically", remap = true })
-vim.keymap.set("n", "<leader>q", "<C-W>c", { desc = "Close window split", remap = true })
+vim.keymap.set("n", "x", '"_x', { desc = "Delete symbhol under the cursor" })
 
 -- Keymaps to resize splits of window
 -- by holding CTRL and pressing arrow keys

@@ -197,12 +197,21 @@ return {
         event = "VeryLazy",
     },
     {
-        "VonHeikemen/fine-cmdline.nvim",
-        name = "fine-cmdline",
+        "folke/noice.nvim",
+        name = "noice",
         lazy = true,
-        event = "VimEnter",
+        event = "VeryLazy",
         opts = function()
-            return require("configs.plugins.fine-cmdline")
+            return require("configs.plugins.noice")
+        end,
+    },
+    {
+        "rcarriga/nvim-notify",
+        name = "nvim-notify",
+        lazy = true,
+        event = "VeryLazy",
+        opts = function()
+            return require("configs.plugins.nvim-notify")
         end,
     },
     {

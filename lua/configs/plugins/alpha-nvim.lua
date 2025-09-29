@@ -1,8 +1,10 @@
--- This file is loaded using init.lua instead of plugin.lua
--- Because it's more easy and convenient to do
+-- This file is loaded using init.lua instead of plugins.lua
+-- Because it's more convenient to do
+
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
--- Set header/logo which we need
+
+-- Set header/logo
 dashboard.section.header.val = {
     "                                                           ",
     "             The Best NeoVim Distro of ALL TIME            ",
@@ -40,3 +42,4 @@ vim.cmd([[
 -- P.S I gonna make this able to load .png files instead of ASCII arts
 -- In the future using image.nvim plugin
 -- To give you ability to set a anime girl as a logo:3
+

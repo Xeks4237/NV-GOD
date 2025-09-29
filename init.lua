@@ -22,5 +22,5 @@ require("configs.keymaps.colorschemes")
 require("configs.plugins.alpha-nvim")
 
 -- Command to set catppuccin-mocha theme after loading it with lazy.nvim
-vim.cmd.colorscheme "catppuccin-mocha"
+vim.cmd.colorscheme("catppuccin-mocha")
 

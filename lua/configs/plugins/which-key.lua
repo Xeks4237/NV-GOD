@@ -80,5 +80,13 @@ return {
             g = true, -- g-related mappings (e.g., gg, g_)
         },
     },
+    -- Name for groups of keys which are starts with some key
+    -- For example <leader>fg gonna be in group of <leader>f keymaps
+    spec = {
+        { "<leader>f", group = "[Find]" },
+        { "<leader>h", group = "[Harpoon]" },
+        { "<leader>t", group = "[Tabs]" },
+        { "<leader>u", group = "[Inspect]" },
+    },
 }
 

@@ -86,7 +86,7 @@ return {
         "nvim-lualine/lualine.nvim",
         name = "lualine",
         lazy = false,
-        event = "VimEnter",
+        event = "VeryLazy",
         opts = function()
             return require("configs.plugins.lualine")
         end,
@@ -112,10 +112,7 @@ return {
         name = "alpha-nvim",
         lazy = false,
         event = "VimEnter",
-        -- Settings for this plugins is loaded in init.lua
-        -- opts = function ()
-        --     return require("configs.plugins.alpha-nvim")
-        -- end
+        -- Config of this plugins is loaded in init.lua
     },
     {
         -- gitsigns: For showing different git related info in editor
@@ -125,7 +122,7 @@ return {
         event = "BufReadPre",
         opts = function()
             return require("configs.plugins.gitsigns")
-        end
+        end,
     },
     {
         -- nvim-cmp is a Main autocompletions plugin and framework for it
@@ -212,6 +209,15 @@ return {
         event = "VeryLazy",
         opts = function()
             return require("configs.plugins.nvim-notify")
+        end,
+    },
+    {
+        "ThePrimeagen/harpoon", branch = "harpoon2",
+        name = "harpoon",
+        lazy = true,
+        event = "VeryLazy",
+        opts = function()
+            return require("configs.plugins.harpoon")
         end,
     },
 }

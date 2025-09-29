@@ -27,10 +27,14 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Horizo
 
 -- Navigating between splits of window
 -- by holding CTRL and pressing hjkl (like ←↓↑→)
-vim.keymap.set("n", '<C-k>', '<cmd>wincmd k<CR>')
-vim.keymap.set("n", '<C-j>', '<cmd>wincmd j<CR>')
 vim.keymap.set("n", '<C-h>', '<cmd>wincmd h<CR>')
+vim.keymap.set("n", '<C-j>', '<cmd>wincmd j<CR>')
+vim.keymap.set("n", '<C-k>', '<cmd>wincmd k<CR>')
 vim.keymap.set("n", '<C-l>', '<cmd>wincmd l<CR>')
+vim.keymap.set("n", '<C-H>', '<cmd>wincmd l<CR>')
+vim.keymap.set("n", '<C-J>', '<cmd>wincmd k<CR>')
+vim.keymap.set("n", '<C-K>', '<cmd>wincmd j<CR>')
+vim.keymap.set("n", '<C-L>', '<cmd>wincmd h<CR>')
 
 -- Tab Managment
 vim.keymap.set("n", "<leader>tk", "<cmd>tabnew<CR>", { desc = "New Tab" })
@@ -71,6 +75,9 @@ vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move Up" })
 -- In Visual mode:
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move Down" })
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Up" })
+
+-- Keymap to set Ctrl W keymap to <leader>w (Window Managment)
+vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Window Managment" })
 
 -- Buffer Managment
 -- I recomment you to read some documentation on what is that
@@ -124,7 +131,7 @@ vim.keymap.set("n", "<C-n>", "<cmd>enew<CR>", { desc = "New File" })
 
 -- Location list is a location list 🗿
 -- P.S in most cases it's useless but some people wants it
-vim.keymap.set("n", "<leader>xl", function()
+vim.keymap.set("n", "<leader>ul", function()
   local success, err = pcall(vim.fn.getloclist(0, { winid = 0 }).winid ~= 0 and vim.cmd.lclose or vim.cmd.lopen)
   if not success and err then
     vim.notify(err, vim.log.levels.ERROR)
@@ -133,7 +140,7 @@ end, { desc = "Location List" })
 
 -- Quickfix list is a quickfix list 🗿
 -- P.S in most cases it's useless but some people wants it
-vim.keymap.set("n", "<leader>xq", function()
+vim.keymap.set("n", "<leader>uq", function()
   local success, err = pcall(vim.fn.getqflist({ winid = 0 }).winid ~= 0 and vim.cmd.cclose or vim.cmd.copen)
   if not success and err then
     vim.notify(err, vim.log.levels.ERROR)
@@ -144,8 +151,8 @@ vim.keymap.set("n", "[q", vim.cmd.cprev, { desc = "Previous Quickfix" })
 vim.keymap.set("n", "]q", vim.cmd.cnext, { desc = "Next Quickfix" })
 
 -- Inspecting under a cursor
-vim.keymap.set("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
-vim.keymap.set("n", "<leader>uI", function() vim.treesitter.inspect_tree() vim.api.nvim_input("I") end, { desc = "Inspect Tree" })
+vim.keymap.set("n", "<leader>up", vim.show_pos, { desc = "Inspect Pos" })
+vim.keymap.set("n", "<leader>ut", function() vim.treesitter.inspect_tree() vim.api.nvim_input("I") end, { desc = "Inspect Tree" })
 
 -- Keymap to hide a Terminal
 vim.keymap.set("t", "<C-/>", "<cmd>close<CR>", { desc = "Hide Terminal" })

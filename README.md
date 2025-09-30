@@ -7,17 +7,17 @@ And for advanced users like me who wants to use their work like a base for their
 
 - You can say "but what about kickstart.nvim?"
     I know about it, it's a beautifull project but it more about to help new users to make their own NeoVim setup from scratch and understand how it works
-    (it taked me 2 min to read their entire repo >:v)
+    (it taked me 2 min to read their entire repo >:v with additions)
 
 ## Why you need to choose NV-GOD
 - It's just better🗿, seriously just choose it
 (when it gets v1.0 only)
 
-## Future Requirements which gonna be needed - (which I defenetly know)
-- Latest version of **NeoVim**
-- Latest version of **Git** to install it
+## Requirements and Dependencies - (which I defenetly know)
+- Latest version of **NeoVim** (0.11+)
+- **Git** to install it
 - **C** compiler(gcc for example) for some plugins
-- **npm** for some plugins
+- **npm** and **pip** for some plugins
 - [Nerd Font](https://www.nerdfonts.com/) **_(optional but recommended, just choose one which you like)_**
 
 ## Installation

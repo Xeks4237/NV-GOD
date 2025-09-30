@@ -25,8 +25,8 @@ return {
         border = "rounded", -- Options: "none", "single", "double", "rounded", "solid", "shadow"
 
         -- Window dimensions
-        width = 0.8,
-        height = 0.8,
+        width = 0.9,
+        height = 0.9,
 
         -- Icons for package states
         icons = {

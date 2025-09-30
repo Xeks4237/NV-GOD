@@ -1,6 +1,5 @@
 -- This file contains main keymaps of NV-GOD
--- Most of the file is inspired by keymaps of
--- LazyVim and personal keymaps of my Friend
+-- Most of the file is inspired by keymaps of LazyVim and AstroNvim
 
 -- P.S If you are new in NVim please write :Tutor command and after completing simple tutorial, return here
 
@@ -9,8 +8,8 @@
 -- "SHIFT + a" is a <S-a>
 -- "ALT + a" is a <A-a>
 
--- <leader> key is a main key which is used in most of the keymaps for start
--- In this case <leader> is a space key
+-- <leader> key is a main key which is used in most of the keymaps for nvim
+-- In this case <leader> is a Space
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -37,10 +36,10 @@ vim.keymap.set("n", '<C-K>', '<cmd>wincmd j<CR>')
 vim.keymap.set("n", '<C-L>', '<cmd>wincmd h<CR>')
 
 -- Tab Managment
-vim.keymap.set("n", "<leader>tk", "<cmd>tabnew<CR>", { desc = "New Tab" })
-vim.keymap.set("n", "<leader>tl", "<cmd>tabnext<CR>", { desc = "Next Tab" })
 vim.keymap.set("n", "<leader>th", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
 vim.keymap.set("n", "<leader>tj", "<cmd>tabclose<CR>", { desc = "Close Tab" })
+vim.keymap.set("n", "<leader>tk", "<cmd>tabnew<CR>", { desc = "New Tab" })
+vim.keymap.set("n", "<leader>tl", "<cmd>tabnext<CR>", { desc = "Next Tab" })
 vim.keymap.set("n", "<leader>ta", "<cmd>tabonly<CR>", { desc = "Close All Other Tabs" })
 vim.keymap.set("n", "<leader>t<C-h>", "<cmd>tabmove -1<CR>", { desc = "Move Tab Left" })
 vim.keymap.set("n", "<leader>t<C-l>", "<cmd>tabmove +1<CR>", { desc = "Move Tab Right" })
@@ -58,12 +57,6 @@ vim.keymap.set("n", "<C-q>", "<cmd>qa<CR>", { desc = "Quit NVim" })
 -- Force quit everything
 -- gonna ignore not saved changes, Can make lost of data!
 vim.keymap.set("n", "<leader><C-q>", "<cmd>qa!<CR>", { desc = "FORCE Quit NVim" })
-
--- Opens lazy.nvim package manager
-vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Lazy" })
-
--- Opens Mason package manager
-vim.keymap.set("n", "<leader>m", "<cmd>Mason<CR>", { desc = "Mason" })
 
 -- Keymaps to move lines of code by using ALT + j or k 
 -- In Normal mode:

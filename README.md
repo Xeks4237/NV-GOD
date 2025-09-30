@@ -72,28 +72,28 @@ But it gonna be a little bit different on other cases with other package manager
 ~/.config/nvim
 ├─ init.lua
 └─ lua
-   ├── configs
-   │   ├── options.lua
-   │   ├── keymaps
-   │   │   ├── core.lua
-   │   │   ├── extra.lua
-   │   │   ├── colorschemes.lua
-   │   │   ├── mason.lua
-   │   │   ├── ...
-   │   │   └── treesitter.lua
-   │   ├── colorschemes
-   │   │   ├── tokyonight.lua
-   │   │   ├── ...
-   │   │   └── catppuccin.lua
-   │   └── plugins
-   │       ├── telescope.lua
-   │       ├── treesitter.lua
-   │       ├── ...
-   │       └── nvim-cmp.lua
+   ├── options.lua
+   ├── keymaps
+   │   ├── core.lua
+   │   ├── extra.lua
+   │   ├── colorschemes.lua
+   │   ├── mason.lua
+   │   ├── ...
+   │   └── treesitter.lua
+   ├── colorschemes
+   │   ├── tokyonight.lua
+   │   ├── ...
+   │   └── catppuccin.lua
+   ├── plugins
+   │   ├── telescope.lua
+   │   ├── treesitter.lua
+   │   ├── ...
+   │   └── nvim-cmp.lua
    └── lazy
+       ├── bootstrap.lua
+       ├── config.lua
        ├── plugins.lua
        ├── colorschemes.lua
-       ├── lazy.lua
        └── lazy-lock.json
 
 </pre>

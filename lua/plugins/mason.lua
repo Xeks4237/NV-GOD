@@ -1,5 +1,6 @@
--- Configuration for mason.nvim
+-- This file is loaded through lua/lazy/plugins.lua
 
+-- Configuration for mason
 return {
     -- Add installed binaries to Neovim's PATH
     PATH = "prepend", -- Options: "prepend", "append", "skip"
@@ -35,7 +36,7 @@ return {
         },
 
         -- Keymaps for Mason UI
-        require("configs.keymaps.mason"),
+        require("keymaps.mason"),
     },
 
     -- Logging level

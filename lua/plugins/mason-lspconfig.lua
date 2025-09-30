@@ -1,7 +1,8 @@
--- Configuration for mason-lspconfig.nvim
+-- This file is loaded through lua/lazy/plugins.lua
 
+-- Configuration for mason-lspconfig.nvim
 return {
-    -- LSP servers to auto-install
+    -- LSP servers to auto-install with mason
     -- See https://mason-registry.dev/registry/list for available servers
     ensure_installed = {
         -- "pyright" -- For Python
@@ -18,7 +19,7 @@ return {
         function(server_name)
             require("lspconfig")[server_name].setup {
                 on_attach = function(client, bufnr)
-                    return require("configs.keymaps.mason-lspconfig") -- Sets Keymaps for lspconfig after attach of lsp
+                    return require("keymaps.mason-lspconfig") -- Sets Keymaps for lspconfig after attach of lsp
                 end,
                 -- Enable autocompletion via nvim-cmp
                 capabilities = require("cmp_nvim_lsp").default_capabilities(),

@@ -3,24 +3,23 @@
 -- Like for example you can not set colorscheme before loading it with package manager
 
 -- Loads Options like LineNumbers from options.lua file
-require("configs.options")
+require("options")
 
--- Loads Keymaps from keymaps directory
-require("configs.keymaps.core")
+-- Loads core Keymaps from keymaps directory
+require("keymaps.core")
 
--- Loads a file what BootStraps of lazy.nvim package manager
--- Which is gonna load other stuff like plugins and colorschemes
-require("lazy.lazy")
+-- Loads a file which BootStraps lazy.nvim package manager
+require("lazy.bootstrap")
 
--- Loads extra Keymaps for plugins and colorschemes
--- (which aren't loaded by plugins themself)
-require("configs.keymaps.extra")
-require("configs.keymaps.colorschemes")
+-- Loads extra Keymaps for plugins and colorschemes after BootStrapping lazy.nvim
+-- (which aren't loaded by plugins themselves)
+require("keymaps.extra")
+require("keymaps.colorschemes")
 
--- Applys a greeting screen configuration and logo using alpha-nvim
+-- Applys a greeting screen configuration using alpha-nvim
 -- It's loaded here because in other ways it becomes not "consistent"
-require("configs.plugins.alpha-nvim")
+require("plugins.alpha-nvim")
 
--- Command to set catppuccin-mocha theme after loading it with lazy.nvim
+-- Command to set catppuccin-mocha colorscheme in end
 vim.cmd.colorscheme("catppuccin-mocha")
 

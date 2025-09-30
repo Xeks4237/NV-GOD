@@ -1,3 +1,6 @@
+-- This file is loaded through lua/lazy/plugins.lua
+
+-- Configuration for noice.nvim
 return {
     -- General plugin settings
     debug = false, -- Disable debug mode for production

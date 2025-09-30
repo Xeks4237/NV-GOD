@@ -1,5 +1,6 @@
 -- This file is loaded through lua/lazy/plugins.lua
 
+-- Configuration for harpoon
 return {
     settings = {
         save_on_toggle = true, -- Save marks when toggling the quick menu

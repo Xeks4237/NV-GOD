@@ -1,6 +1,7 @@
 -- This file is loaded using init.lua instead of plugins.lua
 -- Because it's more convenient to do
 
+-- Configuration for alpha-nvim
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 

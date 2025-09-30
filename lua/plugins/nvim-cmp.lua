@@ -1,3 +1,6 @@
+-- This file is loaded through lua/lazy/plugins.lua
+
+-- Configuration for nvim-cmp plugin
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 
@@ -17,7 +20,7 @@ return {
 
     -- Key mappings for completion menu navigation and actions
     -- See nvim-cmp.lua file in plugins directory
-    mapping = cmp.mapping.preset.insert(require("configs.keymaps.nvim-cmp")),
+    mapping = cmp.mapping.preset.insert(require("keymaps.nvim-cmp")),
 
     -- Completion sources with priority and filtering options
     sources = cmp.config.sources({

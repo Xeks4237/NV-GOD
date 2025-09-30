@@ -29,18 +29,18 @@ return {
         lazy = true,
         event = "VeryLazy",
         opts = function()
-            return require("configs.plugins.which-key")
+            return require("plugins.which-key")
         end,
     },
     {
         -- telescope: Most popular plugin for NeoVim Telescope is needed to search:
-        -- files, code, buffers, configs and other stuff in cool ui
+        -- files, code, buffers, and other stuff in cool ui
         "nvim-telescope/telescope.nvim",
         name = "telescope",
         lazy = true,
         event = "VeryLazy",
         opts = function()
-            return require("configs.plugins.telescope")
+            return require("plugins.telescope")
         end,
     },
     {
@@ -50,7 +50,7 @@ return {
         lazy = true,
         event = "VeryLazy",
         opts = function()
-            return require("configs.plugins.nvim-web-devicons")
+            return require("plugins.nvim-web-devicons")
         end,
     },
     {
@@ -61,7 +61,7 @@ return {
         event = "VeryLazy",
         lazy = true,
         opts = function()
-            return require("configs.plugins.mason")
+            return require("plugins.mason")
         end,
     },
     {
@@ -71,7 +71,7 @@ return {
         lazy = true,
         event = "BufReadPre",
         opts = function()
-            return require("configs.plugins.mason-lspconfig")
+            return require("plugins.mason-lspconfig")
         end,
     },
     {
@@ -88,7 +88,7 @@ return {
         lazy = false,
         event = "VeryLazy",
         opts = function()
-            return require("configs.plugins.lualine")
+            return require("plugins.lualine")
         end,
     },
     {
@@ -121,7 +121,7 @@ return {
         lazy = true,
         event = "BufReadPre",
         opts = function()
-            return require("configs.plugins.gitsigns")
+            return require("plugins.gitsigns")
         end,
     },
     {
@@ -131,7 +131,7 @@ return {
         lazy = true,
         event = { "InsertEnter", "CmdlineEnter" },
         opts = function()
-            return require("configs.plugins.nvim-cmp")
+            return require("plugins.nvim-cmp")
         end,
     },
     {
@@ -169,7 +169,7 @@ return {
         lazy = true,
         event = { "InsertEnter" },
         opts = function()
-            require("configs.plugins.LuaSnip")
+            require("plugins.LuaSnip")
         end,
     },
     {
@@ -199,7 +199,7 @@ return {
         lazy = true,
         event = "VeryLazy",
         opts = function()
-            return require("configs.plugins.noice")
+            return require("plugins.noice")
         end,
     },
     {
@@ -208,7 +208,7 @@ return {
         lazy = true,
         event = "VeryLazy",
         opts = function()
-            return require("configs.plugins.nvim-notify")
+            return require("plugins.nvim-notify")
         end,
     },
     {
@@ -217,7 +217,7 @@ return {
         lazy = true,
         event = "VeryLazy",
         opts = function()
-            return require("configs.plugins.harpoon")
+            return require("plugins.harpoon")
         end,
     },
 }

@@ -5,7 +5,7 @@ return {
         lazy = false,
         event = "VimEnter",
         opts = function()
-            return require("configs.colorschemes.catppuccin")
+            return require("colorschemes.catppuccin")
         end,
     },
 }

@@ -1,5 +1,6 @@
--- Configuration for telescope plugin
+-- This file is loaded through lua/lazy/plugins.lua
 
+-- Configuration for telescope
 local telescope = require("telescope")
 local actions = require("telescope.actions")
 
@@ -39,7 +40,7 @@ return {
         grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new, -- Grep previewer
         qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new, -- Quickfix previewer
         buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker, -- Buffer previewer
-        mappings = require("configs.keymaps.telescope"),
+        mappings = require("keymaps.telescope"),
 
         vimgrep_arguments = {
             -- Arguments for ripgrep in live_grep

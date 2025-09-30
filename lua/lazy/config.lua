@@ -1,25 +1,4 @@
--- This is a main file which
--- BootStraps lazy.nvim package manager
--- from https://github.com/folke/lazy.nvim
-
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
-end
-vim.opt.rtp:prepend(lazypath)
-
--- Settings for lazy.nvim package manager
-require("lazy").setup({
+return {
     -- Changes location of lazy-lock.json from
     -- default ~/.config/nvim/lazy-lock.json
     -- to ~/.config/nvim/lua/lazy/core/lazy-lock.json
@@ -43,5 +22,5 @@ require("lazy").setup({
         -- (Isn't usefull in most of the cases)
 		notify = false,
 	},
-})
+}
 

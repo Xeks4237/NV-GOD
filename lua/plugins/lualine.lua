@@ -1,6 +1,8 @@
+-- This file is loaded through lua/lazy/plugins.lua
+
+-- Configuration for lualine
 -- For now this only has default configuration of lualine
 -- with some extra comments
-
 return {
     options = {
         icons_enabled = true, -- Enables/Disables icons for lualine
@@ -67,3 +69,4 @@ return {
     inactive_winbar = {},
     extensions = {}
 }
+

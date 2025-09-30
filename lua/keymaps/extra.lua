@@ -1,4 +1,10 @@
--- Extra keymaps for plugins
+-- This file is loaded through init.lua
+
+-- Opens lazy.nvim package manager
+vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Lazy" })
+
+-- Opens Mason package manager
+vim.keymap.set("n", "<leader>m", "<cmd>Mason<CR>", { desc = "Mason" })
 
 -- Keymap to search files using telescope plugin
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find File" })

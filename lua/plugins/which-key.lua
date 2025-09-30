@@ -1,3 +1,6 @@
+-- This file is loaded through lua/lazy/plugins.lua
+
+-- Configuration for which-key
 return {
     -- Preset for which-key appearance: "classic", "modern", "helix", or false to disable
     preset = "modern", -- Affects styling of popup menu 

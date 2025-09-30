@@ -49,7 +49,7 @@ return {
     },
     {
         styles = {
-            comments = { "italic" },
+            comments = { "bold" },
             conditionals = { "italic" },
             loops = {},
             functions = {},

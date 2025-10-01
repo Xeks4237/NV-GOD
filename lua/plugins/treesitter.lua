@@ -11,15 +11,16 @@ return {
         "query",
         "markdown",
         "python",
+        "bash",
     },
 
     -- Install parsers synchronously (only applies to "ensure_installed").
     -- If false, parsers will be installed asynchronously (recommended)
-    sync_install = false,
+    sync_install = true,
 
     -- Automatically install missing parsers when entering a buffer.
     -- Recommended to set to false if the "tree-sitter" CLI tool is not installed locally.
-    auto_install = true,
+    auto_install = false,
 
     -- List of parsers to ignore installing, or "all" to ignore all parsers.
     -- Example: {"javascript"}

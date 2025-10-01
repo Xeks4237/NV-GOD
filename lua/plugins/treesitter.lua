@@ -1,4 +1,5 @@
 -- This file is loaded through lua/lazy/plugins.lua
+
 -- Configuration for nvim-treesitter PLUGIN
 return {
     -- List of parser names that must always be installed

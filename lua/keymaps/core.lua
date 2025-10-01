@@ -1,5 +1,4 @@
--- This file contains main keymaps of NV-GOD
--- Most of the file is inspired by keymaps of LazyVim and AstroNvim
+-- This file contains main keymaps of NV-GOD which are NOT related to plugins
 
 -- P.S If you are new in NVim please write :Tutor command and after completing simple tutorial, return here
 
@@ -56,14 +55,14 @@ vim.keymap.set("n", "<leader><C-q>", "<cmd>qa!<CR>", { desc = "FORCE Quit NVim" 
 
 -- Keymaps to move lines of code by using ALT + j or k 
 -- In Normal mode:
-vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move Down" })
-vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move Up" })
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move Down", silent = true })
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move Up", silent = true })
 -- In Insert mode:
-vim.keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi", { desc = "Move Down" })
-vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move Up" })
+vim.keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi", { desc = "Move Down", silent = true })
+vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move Up", silent = true })
 -- In Visual mode:
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move Down" })
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Up" })
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move Down", silent = true })
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Up", silent = true })
 
 -- Keymap to set Ctrl W keymap to <leader>w (Window Managment)
 vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Window Managment" })

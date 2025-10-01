@@ -1,4 +1,5 @@
 -- This file is loaded through init.lua
+-- there goes a keymaps related to plugins which are not loaded by plugins itself
 
 -- Opens lazy.nvim package manager
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy show<CR>", { desc = "Lazy" })

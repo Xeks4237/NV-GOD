@@ -15,6 +15,7 @@ return {
         opts = {}, -- Additional options for cmdline_popup view
         format = {
             -- Define patterns and icons for different cmdline modes
+            -- for example if you print :lua it gonna show icon of lua
             cmdline = { pattern = "^:", icon = "> ", lang = "vim" }, -- : commands
             search_down = { kind = "search", pattern = "^/", icon = " ", lang = "regex" }, -- / search
             search_up = { kind = "search", pattern = "^\\?", icon = " ", lang = "regex" }, -- ? search
@@ -148,7 +149,7 @@ return {
             relative = "editor",
             position = {
                 row = 12, -- Slightly below cmdline
-                col = "50%",
+                col = "30%",
             },
             size = {
                 width = 60, -- Fixed width for palette
@@ -175,7 +176,7 @@ return {
             },
         },
         mini = {
-            timeout = 3000, -- Duration for mini messages
+            timeout = 3000, -- Duration for mini messages in ms
             position = {
                 row = -2, -- Near bottom
                 col = "100%", -- Right-aligned
@@ -245,7 +246,7 @@ return {
     },
     -- Experimental features
     experimental = {
-        lsp_scrollbar = false, -- Add scrollbar to LSP hovers (experimental)
+        lsp_scrollbar = true, -- Add scrollbar to LSP hovers (experimental)
     },
 }
 

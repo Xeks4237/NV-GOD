@@ -8,14 +8,14 @@ local dashboard = require("alpha.themes.dashboard")
 -- Set header/logo
 dashboard.section.header.val = {
     "                                                           ",
-    "             The Best NeoVim Distro of ALL TIME            ",
+    "              The Best NeoVim Distro of ALL TIME           ",
     "    ███╗   ██╗██╗   ██╗      ████████╗████████╗███████╗    ",
     "    ████╗  ██║██║   ██║      ██╔═════╝██╔═══██║██╔═══██╗   ",
     "    ██╔██╗ ██║██║   ██║█████╗██║  ███╗██║   ██║██║   ██║   ",
     "    ██║╚██╗██║╚██╗ ██╔╝╚════╝██║   ██║██║   ██║██║   ██║   ",
     "    ██║ ╚████║ ╚████╔╝       ████████║████████║███████╔╝   ",
     "    ╚═╝  ╚═══╝  ╚═══╝        ╚═══════╝╚═══════╝╚══════╝    ",
-    "    by Xeks4237         *not final logo           v0.0.1   ",
+    "    by Xeks4237                                   v0.0.1   ",
 }
 
 -- Sets buttons which gonna be shown below the logo with their icons
@@ -41,6 +41,6 @@ vim.cmd([[
 ]])
 
 -- P.S I gonna make this able to load .png files instead of ASCII arts
--- In the future using image.nvim plugin
+-- In the future using image.nvim library
 -- To give you ability to set a anime girl as a logo:3
 

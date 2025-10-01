@@ -1,3 +1,5 @@
+-- This file is loaded through lua/plugins/treesitter.lua
+
 return {
     -- Initialize selection.
     init_selection = "gnn",

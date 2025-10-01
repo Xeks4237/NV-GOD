@@ -64,9 +64,6 @@ vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move Up", silent =
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move Down", silent = true })
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Up", silent = true })
 
--- Keymap to set Ctrl W keymap to <leader>w (Window Managment)
-vim.keymap.set("n", "<leader>w", "<C-w>", { desc = "Window Managment" })
-
 -- Buffer Managment
 -- I recomment you to read some documentation on what is that
 -- Because description gonna take to much lines 

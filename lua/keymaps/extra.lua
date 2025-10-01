@@ -1,7 +1,7 @@
 -- This file is loaded through init.lua
 
 -- Opens lazy.nvim package manager
-vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Lazy" })
+vim.keymap.set("n", "<leader>l", "<cmd>Lazy show<CR>", { desc = "Lazy" })
 
 -- Opens Mason package manager
 vim.keymap.set("n", "<leader>m", "<cmd>Mason<CR>", { desc = "Mason" })

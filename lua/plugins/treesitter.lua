@@ -1,5 +1,4 @@
 -- This file is loaded through lua/lazy/plugins.lua
-
 -- Configuration for nvim-treesitter PLUGIN
 return {
     -- List of parser names that must always be installed
@@ -80,10 +79,14 @@ return {
         enable = true,
     },
 
-    -- Module: matchup (requires nvim-treesitter/nvim-treesitter-endwise or similar, but configurable)
+    -- Modules: matchup and endwise (requires RRethy/nvim-treesitter-endwise or similar)
     -- Enables matching of brackets, tags, etc.
     matchup = {
         -- Enable the module.
+        enable = true,
+    },
+    endwise = {
+        -- Enable the module
         enable = true,
     },
 }

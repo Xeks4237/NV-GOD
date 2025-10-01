@@ -197,7 +197,7 @@ return {
         "folke/noice.nvim",
         name = "noice",
         lazy = true,
-        event = "VeryLazy",
+        event = "VimEnter",
         opts = function()
             return require("plugins.noice")
         end,
@@ -206,7 +206,7 @@ return {
         "rcarriga/nvim-notify",
         name = "nvim-notify",
         lazy = true,
-        event = "VeryLazy",
+        event = "VimEnter",
         opts = function()
             return require("plugins.nvim-notify")
         end,
@@ -224,6 +224,7 @@ return {
         "nvim-treesitter/nvim-treesitter", branch = "main",
         name = "treesitter",
         lazy = true, build = ":TSUpdate",
+        event = "VeryLazy",
         opts = function()
             return require("plugins.treesitter")
         end,
@@ -241,9 +242,6 @@ return {
         name = "treesitter-endwise",
         lazy = true,
         event = "VeryLazy",
-        opts = function()
-            return require("plugins.treesitter-endwise")
-        end,
     },
 }
 

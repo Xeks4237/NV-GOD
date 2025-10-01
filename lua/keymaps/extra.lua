@@ -6,6 +6,11 @@ vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Lazy" })
 -- Opens Mason package manager
 vim.keymap.set("n", "<leader>m", "<cmd>Mason<CR>", { desc = "Mason" })
 
+-- Keymap to open open popup with all keymaps availible
+vim.keymap.set("n", "<leader>?", function()
+    require("which-key").show("", { mode = "n" })
+end, { desc = "Show All Keymaps" })
+
 -- Keymap to search files using telescope plugin
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find File" })
 

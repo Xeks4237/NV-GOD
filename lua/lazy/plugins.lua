@@ -220,5 +220,21 @@ return {
             return require("plugins.harpoon")
         end,
     },
+    {
+        "nvim-treesitter/nvim-treesitter", branch = "main",
+        name = "treesitter",
+        lazy = true, build = ":TSUpdate",
+        opts = function()
+            return require("plugins.treesitter")
+        end,
+    },
+    {
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        name = "treesitter-textobjects",
+        lazy = true,
+        opts = function()
+            return require("plugins.treesitter-textobjects")
+        end,
+    },
 }
 

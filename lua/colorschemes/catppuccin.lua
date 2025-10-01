@@ -1,6 +1,7 @@
 return {
     {
         integrations = {
+            auto_integrations = true, -- only with lazy.nvim
             aerial = true,
             alpha = true,
             cmp = true,
@@ -44,15 +45,14 @@ return {
             treesitter_context = true,
             trouble = true,
             which_key = true,
-            auto_integrations = true, -- only for lazy.nvim
         },
     },
     {
         styles = {
-            comments = { "bold" },
+            comments = { "italic" },
             conditionals = { "italic" },
             loops = {},
-            functions = {},
+            functions = { "italic" },
             keywords = {},
             strings = {},
             variables = {},

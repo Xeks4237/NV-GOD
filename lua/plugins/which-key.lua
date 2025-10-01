@@ -17,7 +17,7 @@ return {
     },
     win = { -- Configure popup window (window)
         border = "single", -- Border: none, single, double, shadow
-        no_overlap = false, -- Disable/Enable overlap with other windows
+        no_overlap = true, -- Disable/Enable overlap with other windows
         padding = { 1, 1 }, -- Padding: [top/bottom, left/right]
         title = true, -- Show title
         title_pos = "center", -- Title position: left, center, right

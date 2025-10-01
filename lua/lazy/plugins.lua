@@ -236,5 +236,14 @@ return {
             return require("plugins.treesitter-textobjects")
         end,
     },
+    {
+        "RRethy/nvim-treesitter-endwise",
+        name = "treesitter-endwise",
+        lazy = true,
+        event = "VeryLazy",
+        opts = function()
+            return require("plugins.treesitter-endwise")
+        end,
+    },
 }
 

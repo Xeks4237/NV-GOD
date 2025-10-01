@@ -30,10 +30,6 @@ vim.keymap.set("n", '<C-h>', '<cmd>wincmd h<CR>')
 vim.keymap.set("n", '<C-j>', '<cmd>wincmd j<CR>')
 vim.keymap.set("n", '<C-k>', '<cmd>wincmd k<CR>')
 vim.keymap.set("n", '<C-l>', '<cmd>wincmd l<CR>')
-vim.keymap.set("n", '<C-H>', '<cmd>wincmd l<CR>')
-vim.keymap.set("n", '<C-J>', '<cmd>wincmd k<CR>')
-vim.keymap.set("n", '<C-K>', '<cmd>wincmd j<CR>')
-vim.keymap.set("n", '<C-L>', '<cmd>wincmd h<CR>')
 
 -- Tab Managment
 vim.keymap.set("n", "<leader>th", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })

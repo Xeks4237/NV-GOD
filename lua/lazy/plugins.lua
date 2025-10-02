@@ -225,24 +225,25 @@ return {
         name = "treesitter",
         build = ":TSUpdate",
         lazy = true,
-        event = "VeryLazy",
+        event = { "InsertEnter" },
         opts = function()
             return require("plugins.treesitter")
-        end,
-    },
-    {
-        "nvim-treesitter/nvim-treesitter-textobjects",
-        name = "treesitter-textobjects",
-        lazy = true,
-        opts = function()
-            return require("plugins.treesitter-textobjects")
         end,
     },
     {
         "RRethy/nvim-treesitter-endwise",
         name = "treesitter-endwise",
         lazy = true,
-        event = "VeryLazy",
+        event = { "InsertEnter" },
+    },
+    {
+        "akinsho/bufferline.nvim",
+        name = "bufferline",
+        lazy = true,
+        event = "VimEnter",
+        opts = function()
+            return require("plugins.bufferline")
+        end
     },
 }
 

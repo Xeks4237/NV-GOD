@@ -22,4 +22,4 @@ require("plugins.alpha-nvim")
 
 -- Command to set catppuccin-mocha colorscheme in end
 vim.cmd.colorscheme("catppuccin-mocha")
-
+vim.cmd("Alpha")

@@ -25,10 +25,10 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Horizo
 
 -- Navigating between splits of window
 -- by holding CTRL and pressing hjkl (like ←↓↑→)
-vim.keymap.set("n", '<C-h>', '<cmd>wincmd h<CR>')
-vim.keymap.set("n", '<C-j>', '<cmd>wincmd j<CR>')
-vim.keymap.set("n", '<C-k>', '<cmd>wincmd k<CR>')
-vim.keymap.set("n", '<C-l>', '<cmd>wincmd l<CR>')
+vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
+vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>")
+vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>")
+vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>")
 
 -- Tab Managment
 vim.keymap.set("n", "<leader>th", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
@@ -73,7 +73,7 @@ vim.keymap.set("n", "<leader>bk", "<cmd>e #<CR>", { desc = "Switch to Other Buff
 vim.keymap.set("n", "<leader>bj", "<cmd>bd<CR>", { desc = "Delete Buffer and Window" })
 
 -- Clear highlights of search when pressing <Esc> in normal mode
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Keymap to clear search, diff update and redraw easyly
 vim.keymap.set(

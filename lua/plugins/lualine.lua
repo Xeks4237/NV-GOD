@@ -23,7 +23,7 @@ return {
         always_show_tabline = true,
         globalstatus = false,
         refresh = {
-            -- Sets priority for refresh of element (ignore it)
+            -- Sets priority for refresh of element
             statusline = 1000,
             tabline = 1000,
             winbar = 1000,

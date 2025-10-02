@@ -35,10 +35,10 @@ dashboard.section.buttons.val = {
 -- Send config to alpha
 alpha.setup(dashboard.opts)
 
--- Disable folding on alpha buffer
-vim.cmd([[
-    autocmd FileType alpha setlocal nofoldenable
-]])
+-- Disable folding on alpha buffer if you need it
+-- vim.cmd([[
+--     autocmd FileType alpha setlocal nofoldenable
+-- ]])
 
 -- P.S I gonna make this able to load .png files instead of ASCII arts
 -- In the future using image.nvim library

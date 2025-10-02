@@ -98,7 +98,7 @@ return {
         },
     },
     extensions = {
-        -- (Must be installed separately!)
+        -- (fzf Must be installed separately!)
         harpoon = true,
         --fzf = {
         --    fuzzy = true, -- Enable fuzzy matching

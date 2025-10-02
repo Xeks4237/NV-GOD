@@ -90,6 +90,7 @@ return {
         { "<leader>h", group = "[Harpoon]" },
         { "<leader>t", group = "[Tabs]" },
         { "<leader>u", group = "[Inspect]" },
+        { "<leader>b", group = "[Buffers]" },
     },
 }
 

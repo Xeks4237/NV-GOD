@@ -3,8 +3,8 @@
 -- Configuration for bufferline
 return {
     options = {
-        -- Sets the mode. Valid options are 'bufferline' and 'tabs'.
-        mode = "bufferline",
+        -- Sets the mode. Valid options are "bufferline" and "tabs"
+        mode = "tabs",
         -- Numbering style for buffer names.
         numbers = "ordinal",  -- "ordinal", "buffer_id", (function), false
         -- Adds padding around buffer numbers.
@@ -16,7 +16,7 @@ return {
         -- Truncation method for buffer names.
         truncate_names = true,  -- whether or not to truncate the text to omit prefix parts of a long name
         -- Separator style for buffers.
-        separator_style = "thin",  -- "slant" | "thick" | "thin" | { 'any', 'any' }
+        separator_style = "thin",  -- "slant" | "thick" | "thin" | { "any", "any" }
         -- Padding for buffer content.
         padding = 1,  -- number for fixed padding | boolean
         -- Whether to show diagnostic icons.
@@ -44,7 +44,7 @@ return {
         -- Middle mouse command.
         middle_mouse_command = "Bdelete! %d",  -- can be a function | nil
         -- Whether to show tabpages.
-        show_tab_indicators = true,
+        show_tab_indicators = false,
         -- Whether to persist tab order.
         persist_buffer_sort = true,  -- whether or not custom sorted buffers should persist
         -- Whether to move existing buffers when creating a new one.

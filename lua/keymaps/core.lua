@@ -23,12 +23,14 @@ vim.keymap.set("n", "<C-Down>", "<cmd>resize +2<CR>", { desc = "Vertical Resize 
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<CR>", { desc = "Horizontal Resize" })
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Horizontal Resize" })
 
--- Navigating between splits of window
--- by holding CTRL and pressing hjkl (like ←↓↑→)
-vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
-vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>")
-vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>")
-vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>")
+-- Bufferline keymaps similar to tab navigation
+vim.keymap.set("n", "<leader>bh", "<cmd>BufferLineCyclePrev<CR>", { desc = "Previous Buffer" })
+vim.keymap.set("n", "<leader>bj", "<cmd>BufferLineCloseCurrent<CR>", { desc = "Close Buffer" })
+vim.keymap.set("n", "<leader>bk", "<cmd>enew<CR>", { desc = "New Buffer" })
+vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
+vim.keymap.set("n", "<leader>ba", "<cmd>BufferLineCloseOthers<CR>", { desc = "Close All Other Buffers" })
+vim.keymap.set("n", "<leader>b<C-h>", "<cmd>BufferLineMovePrev<CR>", { desc = "Move Buffer Left" })
+vim.keymap.set("n", "<leader>b<C-l>", "<cmd>BufferLineMoveNext<CR>", { desc = "Move Buffer Right" })
 
 -- Tab Managment
 vim.keymap.set("n", "<leader>th", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
@@ -51,7 +53,7 @@ vim.keymap.set("n", "<C-q>", "<cmd>qa<CR>", { desc = "Quit NVim" })
 
 -- Force quit everything
 -- gonna ignore not saved changes, Can make lost of data!
-vim.keymap.set("n", "<leader><C-q>", "<cmd>qa!<CR>", { desc = "FORCE Quit NVim" })
+vim.keymap.set("n", "<leader><C-q>", "<cmd>qa!<CR>", { desc = "FORCE Quit" })
 
 -- Keymaps to move lines of code by using ALT + j or k 
 -- In Normal mode:
@@ -63,14 +65,6 @@ vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move Up", silent =
 -- In Visual mode:
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move Down", silent = true })
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Up", silent = true })
-
--- Buffer Managment
--- I recomment you to read some documentation on what is that
--- Because description gonna take to much lines 
-vim.keymap.set("n", "<leader>bh", "<cmd>bprevious<CR>", { desc = "Prev Buffer" })
-vim.keymap.set("n", "<leader>bl", "<cmd>bnext<CR>", { desc = "Next Buffer" })
-vim.keymap.set("n", "<leader>bk", "<cmd>e #<CR>", { desc = "Switch to Other Buffer" })
-vim.keymap.set("n", "<leader>bj", "<cmd>bd<CR>", { desc = "Delete Buffer and Window" })
 
 -- Clear highlights of search when pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")

@@ -20,7 +20,6 @@
 -- P.S Some plugins don't need options to function, for example:
 -- library plugins like plenary or nui
 
-
 return {
     {
         -- which-key: adds popup menu with keymaps of your NeoVim setup

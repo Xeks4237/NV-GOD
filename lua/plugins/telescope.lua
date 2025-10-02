@@ -93,6 +93,9 @@ return {
         diagnostics = {
             line_width = 120, -- Limit diagnostic line width
         },
+        colorscheme = {
+            enable_preview = true,
+        },
     },
     extensions = {
         -- (Must be installed separately!)

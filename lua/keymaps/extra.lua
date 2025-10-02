@@ -24,6 +24,9 @@ vim.keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Recen
 -- Keymap to open telescope window with menus for telescope
 vim.keymap.set("n", "<leader>fm", "<cmd>Telescope<CR>", { desc = "Open Telescope" })
 
+-- Keymap to open colorscheme chooser in telescope
+vim.keymap.set("n", "<leader>uc", "<cmd>Telescope colorscheme<CR>", { desc = "ColorScheme Picker" })
+
 -- Keymap to Choose file type of file using telescope
 vim.keymap.set("n", "<leader>fs", "<cmd>Telescope filetypes<CR>", { desc = "Choose File Type" })
 
@@ -46,3 +49,28 @@ vim.keymap.set("n", "<leader>h8", function() require("harpoon"):list():select(8)
 vim.keymap.set("n", "<leader>h9", function() require("harpoon"):list():select(9) end, { desc = "Harpoon to File 9" })
 vim.keymap.set("n", "<leader>h0", function() require("harpoon"):list():select(10) end, { desc = "Harpoon to File 10" })
 
+
+-- Location list is a location list...
+-- P.S in most cases it's useless but some people wants it
+vim.keymap.set("n", "<leader>dl", function()
+  local success, err = pcall(vim.fn.getloclist(0, { winid = 0 }).winid ~= 0 and vim.cmd.lclose or vim.cmd.lopen)
+  if not success and err then
+    vim.notify(err, vim.log.levels.ERROR)
+  end
+end, { desc = "Location List" })
+
+-- Quickfix list is a quickfix list...
+-- P.S in most cases it's useless but some people wants it
+vim.keymap.set("n", "<leader>dq", function()
+  local success, err = pcall(vim.fn.getqflist({ winid = 0 }).winid ~= 0 and vim.cmd.cclose or vim.cmd.copen)
+  if not success and err then
+    vim.notify(err, vim.log.levels.ERROR)
+  end
+end, { desc = "Quickfix List" })
+
+vim.keymap.set("n", "[q", vim.cmd.cprev, { desc = "Previous Quickfix" })
+vim.keymap.set("n", "]q", vim.cmd.cnext, { desc = "Next Quickfix" })
+
+-- Inspecting under a cursor
+vim.keymap.set("n", "<leader>dp", vim.show_pos, { desc = "Inspect Pos" })
+vim.keymap.set("n", "<leader>dt", function() vim.treesitter.inspect_tree() vim.api.nvim_input("I") end, { desc = "Inspect Tree" })

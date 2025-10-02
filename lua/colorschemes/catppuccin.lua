@@ -50,7 +50,7 @@ return {
     },
     styles = {
         comments = { "italic" },
-        conditionals = { "italic" },
+        conditionals = {},
         loops = { "italic", "bold" },
         functions = { "italic" },
         keywords = {},

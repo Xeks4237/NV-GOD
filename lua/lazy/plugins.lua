@@ -57,7 +57,7 @@ return {
         -- Language Server Plugins, formatters, linters, and Debug Adapter Plugins inside of nvim
         "mason-org/mason.nvim",
         name = "mason",
-        event = "VeryLazy",
+        event = "VimEnter",
         lazy = true,
         opts = function()
             return require("plugins.mason")
@@ -71,6 +71,16 @@ return {
         event = "BufReadPre",
         opts = function()
             return require("plugins.mason-lspconfig")
+        end,
+    },
+    {
+        -- mason-tool-installer: Allows to auto install and update additional tools
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        name = "mason-tool-installer",
+        lazy = true,
+        event = "VimEnter",
+        opts = function()
+            return require("plugins.mason-tool-installer")
         end,
     },
     {

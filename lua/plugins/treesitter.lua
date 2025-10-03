@@ -12,7 +12,15 @@ return {
         "query",
         "markdown",
         "python",
+        "java",
+        "kotlin",
         "bash",
+        "json",
+        "yaml",
+        "kdl",
+        "php",
+        "html",
+        "css",
     },
 
     -- Install parsers synchronously (only applies to "ensure_installed").
@@ -21,10 +29,10 @@ return {
 
     -- Automatically install missing parsers when entering a buffer.
     -- Recommended to set to false if the "tree-sitter" CLI tool is not installed locally.
-    auto_install = false,
+    auto_install = true,
 
     -- List of parsers to ignore installing, or "all" to ignore all parsers.
-    -- Example: {"javascript"}
+    -- Example: { "javascript", "html" }
     ignore_install = {},
 
     -- Custom directory to install parsers to.

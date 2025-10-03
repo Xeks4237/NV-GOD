@@ -234,7 +234,7 @@ return {
         name = "treesitter",
         build = ":TSUpdate",
         lazy = true,
-        event = { "InsertEnter" },
+        event = "VimEnter",
         opts = function()
             return require("plugins.treesitter")
         end,
@@ -243,7 +243,7 @@ return {
         "RRethy/nvim-treesitter-endwise",
         name = "treesitter-endwise",
         lazy = true,
-        event = { "InsertEnter" },
+        event = "InsertEnter",
     },
     {
         "akinsho/bufferline.nvim",

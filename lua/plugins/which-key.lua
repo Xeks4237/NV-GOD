@@ -89,9 +89,9 @@ return {
         { "<leader>f", group = "[Find]" },
         { "<leader>h", group = "[Harpoon]" },
         { "<leader>t", group = "[Tabs]" },
-        { "<leader>d", group = "[Inspect]" },
+        { "<leader>i", group = "[Inspect]" },
         { "<leader>b", group = "[Buffers]" },
-        { "<leader>u", group = "[Interface]" },
+        { "<leader>u", group = "[UI]" },
     },
 }
 

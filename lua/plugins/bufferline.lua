@@ -94,7 +94,7 @@ return {
         -- Whether to use colors for icons.
         all_close_icon_color = true,
         -- Close icon.
-        close_icon = "",
+        close_icon = "",
         -- Left end icon.
         left_trunc_marker = "",
         -- Right end icon.

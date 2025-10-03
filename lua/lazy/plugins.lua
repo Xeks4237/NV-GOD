@@ -196,6 +196,16 @@ return {
         event = { "InsertEnter" },
     },
     {
+        -- conform.nvim: powerfull formatter plugin, with a lot of featutes for lsp and etc
+        "stevearc/conform.nvim",
+        name = "conform",
+        lazy = true,
+        event = { "InsertEnter", "BufReadPre" },
+        opts = function()
+            return require("plugins.conform")
+        end
+    },
+    {
         -- telescope-ui-select: Allows other plugins to use ui of telescope for their needs
         "nvim-telescope/telescope-ui-select.nvim",
         name = "telescope-ui-select",
@@ -203,6 +213,7 @@ return {
         event = "VeryLazy",
     },
     {
+        -- noice.nvim: plugin for better cmd-line
         "folke/noice.nvim",
         name = "noice",
         lazy = true,
@@ -212,6 +223,7 @@ return {
         end,
     },
     {
+        -- nvim-notify: plugin for better notifications
         "rcarriga/nvim-notify",
         name = "nvim-notify",
         lazy = true,
@@ -221,6 +233,7 @@ return {
         end,
     },
     {
+        -- harpoon: plugin for fast navigation beetween buffers
         "ThePrimeagen/harpoon", branch = "harpoon2",
         name = "harpoon",
         lazy = true,
@@ -230,6 +243,7 @@ return {
         end,
     },
     {
+        -- nvim-treesitter: plugin for nvim's treesitter to extend it's functionality
         "nvim-treesitter/nvim-treesitter", branch = "main",
         name = "treesitter",
         build = ":TSUpdate",
@@ -240,12 +254,14 @@ return {
         end,
     },
     {
+        -- nvim-treesitter-endwise: extension for nvim-treesitter for auto closing functions, tables, and etc
         "RRethy/nvim-treesitter-endwise",
         name = "treesitter-endwise",
         lazy = true,
         event = "InsertEnter",
     },
     {
+        -- bufferline: Better tabline with buffers
         "akinsho/bufferline.nvim",
         name = "bufferline",
         lazy = true,

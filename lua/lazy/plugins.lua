@@ -233,7 +233,7 @@ return {
         "nvim-treesitter/nvim-treesitter", branch = "main",
         name = "treesitter",
         build = ":TSUpdate",
-        lazy = true,
+        lazy = false,
         event = "VimEnter",
         opts = function()
             return require("plugins.treesitter")

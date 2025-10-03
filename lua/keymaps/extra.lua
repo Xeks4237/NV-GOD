@@ -27,6 +27,9 @@ vim.keymap.set("n", "<leader>fm", "<cmd>Telescope<CR>", { desc = "Open Telescope
 -- Keymap to open colorscheme chooser in telescope
 vim.keymap.set("n", "<leader>uc", "<cmd>Telescope colorscheme<CR>", { desc = "ColorScheme Picker" })
 
+-- Keymap to Show greeting screen
+vim.keymap.set("n", "<leader>ug", "<cmd>Alpha<CR>", { desc = "Greeting Screen" })
+
 -- Keymap to Choose file type of file using telescope
 vim.keymap.set("n", "<leader>fs", "<cmd>Telescope filetypes<CR>", { desc = "Choose File Type" })
 

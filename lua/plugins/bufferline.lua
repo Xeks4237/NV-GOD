@@ -36,13 +36,15 @@ return {
         -- Whether to show buffer icons.
         show_buffer_icons = true,
         -- Whether to show close command.
-        close_command = "Bdelete! %d",  -- can be a string | function, see ":h bufdel"
+        close_command = "bdelete! %d",  -- can be a string | function, see ":h bufdel"
+        -- Enables Mouse support 
+        mouse = true,
         -- Right-click command.
         right_mouse_command = nil,
         -- Left mouse command.
         left_mouse_command = "buffer %d",
         -- Middle mouse command.
-        middle_mouse_command = "Bdelete! %d",  -- can be a function | nil
+        middle_mouse_command = "bdelete! %d",  -- can be a function | nil
         -- Whether to show tabpages.
         show_tab_indicators = false,
         -- Whether to persist tab order.

@@ -15,7 +15,7 @@ dashboard.section.header.val = {
     "    ██║╚██╗██║╚██╗ ██╔╝╚════╝██║   ██║██║   ██║██║   ██║   ",
     "    ██║ ╚████║ ╚████╔╝       ████████║████████║███████╔╝   ",
     "    ╚═╝  ╚═══╝  ╚═══╝        ╚═══════╝╚═══════╝╚══════╝    ",
-    "    by Xeks4237                                   v0.0.1   ",
+    "    by Xeks4237         not final logo*           v0.0.1   ",
 }
 
 -- Sets buttons which gonna be shown below the logo with their icons

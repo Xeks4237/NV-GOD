@@ -14,7 +14,7 @@ return {
         zsh = { "beautysh" }, -- for zsh
         c = { "clang_format " }, -- for c
         -- Use the "*" filetype to run formatters on all filetypes.
-        -- for example for spell checker formatters
+        -- for example for spell checker
         ["*"] = { "codespell" },
         -- Use the "_" filetype to run formatters on filetypes that don't
         -- have other formatters configured.

@@ -88,7 +88,7 @@ return {
         "neovim/nvim-lspconfig",
         name = "nvim-lspconfig",
         lazy = true,
-        event = "BufReadPre",
+        event = { "BufReadPre", "InsertEnter" },
     },
     {
         -- lualine: makes status line of NeoVim better

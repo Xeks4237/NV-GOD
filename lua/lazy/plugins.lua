@@ -53,7 +53,7 @@ return {
         end,
     },
     {
-        -- mason: package manager for easyly installing and managing:
+        -- mason: package manager for easily installing and managing:
         -- Language Server Plugins, formatters, linters, and Debug Adapter Plugins inside of nvim
         "mason-org/mason.nvim",
         name = "mason",
@@ -196,7 +196,7 @@ return {
         event = { "InsertEnter" },
     },
     {
-        -- conform.nvim: powerfull formatter plugin, with a lot of featutes for lsp and etc
+        -- conform.nvim: powerful formatter plugin, with a lot of extra features for lsp
         "stevearc/conform.nvim",
         name = "conform",
         lazy = true,
@@ -215,7 +215,7 @@ return {
     {
         -- noice.nvim: plugin for better cmd-line
         "folke/noice.nvim",
-        name = "noice",
+        name = "noice.nvim",
         lazy = true,
         event = "VimEnter",
         opts = function()
@@ -233,7 +233,7 @@ return {
         end,
     },
     {
-        -- harpoon: plugin for fast navigation beetween buffers
+        -- harpoon: plugin for fast navigation between buffers
         "ThePrimeagen/harpoon", branch = "harpoon2",
         name = "harpoon",
         lazy = true,
@@ -268,6 +268,16 @@ return {
         event = "VimEnter",
         opts = function()
             return require("plugins.bufferline")
+        end
+    },
+    {
+        -- nvim-autopairs: for auto closing to () {} [] and etc
+        "windwp/nvim-autopairs",
+        name = "nvim-autopairs",
+        lazy = true,
+        event = "InsertEnter",
+        opts = function()
+            return require("plugins.nvim-autopairs")
         end
     },
 }

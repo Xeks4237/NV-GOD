@@ -26,13 +26,13 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Horizo
 -- Bufferline keymaps similar to tab navigation
 vim.keymap.set("n", "<leader>bh", "<cmd>BufferLineCyclePrev<CR>", { desc = "Previous Buffer" })
 vim.keymap.set("n", "<leader>bj", "<cmd>BufferLineCloseCurrent<CR>", { desc = "Close Buffer" })
-vim.keymap.set("n", "<leader>bk", "<cmd>enew<CR>", { desc = "New Buffer" })
+vim.keymap.set("n", "<leader>bk", "<cmd>new<CR>", { desc = "New Buffer" })
 vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<leader>ba", "<cmd>BufferLineCloseOthers<CR>", { desc = "Close All Other Buffers" })
 vim.keymap.set("n", "<leader>b<C-h>", "<cmd>BufferLineMovePrev<CR>", { desc = "Move Buffer Left" })
 vim.keymap.set("n", "<leader>b<C-l>", "<cmd>BufferLineMoveNext<CR>", { desc = "Move Buffer Right" })
 
--- Tab Managment
+-- Tab Management
 vim.keymap.set("n", "<leader>th", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
 vim.keymap.set("n", "<leader>tj", "<cmd>tabclose<CR>", { desc = "Close Tab" })
 vim.keymap.set("n", "<leader>tk", "<cmd>tabnew<CR>", { desc = "New Tab" })
@@ -41,7 +41,7 @@ vim.keymap.set("n", "<leader>ta", "<cmd>tabonly<CR>", { desc = "Close All Other 
 vim.keymap.set("n", "<leader>t<C-h>", "<cmd>tabmove -1<CR>", { desc = "Move Tab Left" })
 vim.keymap.set("n", "<leader>t<C-l>", "<cmd>tabmove +1<CR>", { desc = "Move Tab Right" })
 
--- tmp key to open panel with bulitin file explorer of NeoVim
+-- tmp key to open panel with built-in file explorer of NeoVim
 vim.keymap.set("n", "<C-e>", "<cmd>Ex<CR>", { desc = "File Explorer" })
 
 -- Save file using CTRL + s
@@ -53,7 +53,7 @@ vim.keymap.set("n", "<C-q>", "<cmd>qa<CR>", { desc = "Quit NVim" })
 
 -- Force quit everything
 -- gonna ignore not saved changes, Can make lost of data!
-vim.keymap.set("n", "<leader><C-q>", "<cmd>qa!<CR>", { desc = "FORCE Quit" })
+vim.keymap.set("n", "<C-S-q>", "<cmd>qa!<CR>", { desc = "FORCE Quit" })
 
 -- Keymaps to move lines of code by using ALT + j or k 
 -- In Normal mode:
@@ -69,7 +69,7 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Up", silent = tr
 -- Clear highlights of search when pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- Keymap to clear search, diff update and redraw easyly
+-- Keymap to clear search, diff update and redraw easily
 vim.keymap.set(
     "n",
     "<leader>fr",
@@ -106,7 +106,7 @@ vim.keymap.set("n", "gco", "o<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = 
 vim.keymap.set("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = "Add Comment Above" })
 
 -- Keymap to make a new file, by using CTRL + n
-vim.keymap.set("n", "<C-n>", "<cmd>enew<CR>", { desc = "New File" })
+vim.keymap.set("n", "<C-n>", "<cmd>new<CR>", { desc = "New File" })
 
 -- Keymap to hide a Terminal
 vim.keymap.set("t", "<C-/>", "<cmd>close<CR>", { desc = "Hide Terminal" })

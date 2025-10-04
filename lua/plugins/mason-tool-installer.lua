@@ -11,6 +11,7 @@ return {
         -- { "golangci-lint", version = "v1.47.0", auto_update = false },
         "pyright", -- LSP for python
         "pylint", -- Linter for python
+        "black", -- Formatter for python
         "lua-language-server", -- LSP for lua
         "stylua", -- Formatter for lua
         "bash-language-server", -- LSP for bash
@@ -23,7 +24,12 @@ return {
         "clang-format", -- Formatter for c and c++
         "cpp-lint", -- Linter for c and c++
         "cpp-tools", -- DAP for c and c++
+        "gopls", -- LSP for go
+        "gofmt", -- Formatter for go
+        "goimports", -- Formatter for go
         "prettierd", -- main Formatter for everything other
+        "codespell", -- Linter for code misspellings
+        "tree-sitter-cli", -- treesitter cli tool for treesitter plugin
         -- add more tools by writing their names from mason ui
     },
 
@@ -42,7 +48,7 @@ return {
     -- set a delay (in ms) before the installation starts. This is only
     -- effective if run_on_start is set to true.
     -- e.g.: 5000 = 5 second delay
-    start_delay = 5000, -- 3 second delay
+    start_delay = 3000, -- 3 second delay
 
     -- Only attempt to install if 'debounce_hours' number of hours has
     -- elapsed since the last time Neovim was started. This stores a
@@ -61,7 +67,7 @@ return {
     -- doing lazy loading.
     integrations = {
         ["mason-lspconfig"] = true,
-        ["mason-nvim-dap"] = true,
+        ["mason-nvim-dap"] = false,
     },
 }
 

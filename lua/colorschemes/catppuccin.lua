@@ -52,7 +52,7 @@ return {
         comments = { "italic" },
         conditionals = {},
         loops = { "italic", "bold" },
-        functions = { "italic" },
+        functions = {},
         keywords = {},
         strings = {},
         variables = {},

@@ -280,5 +280,14 @@ return {
             return require("plugins.nvim-autopairs")
         end
     },
+    {
+        "folke/trouble.nvim",
+        name = "trouble",
+        lazy = true,
+        event = { "InsertEnter", "BufReadPre" },
+        opts = function()
+            return require("plugins.trouble")
+        end
+    },
 }
 

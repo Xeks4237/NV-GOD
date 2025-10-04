@@ -5,8 +5,9 @@ return {
     -- LSP servers to auto-install with mason
     -- See https://mason-registry.dev/registry/list for available servers
     ensure_installed = {
-        -- "pyright" -- For Python
-        -- "clangd" -- For C and C++
+        "pyright", -- For Python
+        "clangd", -- For C and C++
+        "gopls", -- For go
         -- Add as needed (e.g., "clangd" for C/C++, "gopls" for Go and etc)
     },
 

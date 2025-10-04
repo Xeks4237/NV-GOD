@@ -3,7 +3,7 @@
 -- Configuration for nvim-notify
 return {
     -- Minimum level to show (debug, trace, info, warn, error, off)
-    level = "info",
+    level = "warn",
 
     -- Use the "slide" stage for right-to-left sliding animation
     stages = "slide",
@@ -12,7 +12,7 @@ return {
     timeout = 2500,
 
     -- Maximum width of notification window
-    max_width = math.floor(vim.o.columns * 0.45), -- 40% of editor width
+    max_width = math.floor(vim.o.columns * 0.45), -- 45% of editor width
 
     -- Maximum height of notification window
     max_height = math.floor(vim.o.lines * 0.40), -- 40% of editor height

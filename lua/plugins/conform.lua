@@ -62,8 +62,6 @@ return {
             -- When false, will create a temp file (will appear in "$FILENAME" args). The temp
             -- file is assumed to be modified in-place by the format command.
             stdin = true,
-            -- A function that calculates the directory to run the command in
-            cwd = require("conform.util").root_file({ ".editorconfig", "package.json" }),
             -- When cwd is not found, don't run the formatter (default false)
             require_cwd = true,
             -- When stdin=false, use this template to generate the temporary file that gets formatted

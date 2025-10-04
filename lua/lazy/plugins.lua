@@ -27,9 +27,7 @@ return {
         name = "which-key",
         lazy = true,
         event = "VeryLazy",
-        opts = function()
-            return require("plugins.which-key")
-        end,
+        opts = require("plugins.which-key"),
     },
     {
         -- telescope: Most popular plugin for NeoVim Telescope is needed to search:
@@ -38,9 +36,7 @@ return {
         name = "telescope",
         lazy = true,
         event = "VeryLazy",
-        opts = function()
-            return require("plugins.telescope")
-        end,
+        opts = require("plugins.telescope"),
     },
     {
         -- nvim-web-devicons: Library Plugin for adding ability to use various glyps and symbols for other plugins
@@ -48,9 +44,7 @@ return {
         name = "nvim-web-devicons",
         lazy = true,
         event = "VeryLazy",
-        opts = function()
-            return require("plugins.nvim-web-devicons")
-        end,
+        opts = require("plugins.nvim-web-devicons"),
     },
     {
         -- mason: package manager for easily installing and managing:
@@ -59,9 +53,7 @@ return {
         name = "mason",
         event = "VimEnter",
         lazy = true,
-        opts = function()
-            return require("plugins.mason")
-        end,
+        opts = require("plugins.mason"),
     },
     {
         -- mason-lspconfig: Bridge to nvim-lspconfig for auto-setup
@@ -69,9 +61,7 @@ return {
         name = "mason-lspconfig",
         lazy = true,
         event = "BufReadPre",
-        opts = function()
-            return require("plugins.mason-lspconfig")
-        end,
+        opts = require("plugins.mason-lspconfig"),
     },
     {
         -- mason-tool-installer: Allows to auto install and update additional tools
@@ -79,9 +69,7 @@ return {
         name = "mason-tool-installer",
         lazy = true,
         event = "VimEnter",
-        opts = function()
-            return require("plugins.mason-tool-installer")
-        end,
+        opts = require("plugins.mason-tool-installer"),
     },
     {
         -- nvim-lspconfig: Needed for LSP configuration (dependency of mason-lspconfig)
@@ -89,6 +77,7 @@ return {
         name = "nvim-lspconfig",
         lazy = true,
         event = { "BufReadPre", "InsertEnter" },
+        opts = nil,
     },
     {
         -- lualine: makes status line of NeoVim better
@@ -96,9 +85,7 @@ return {
         name = "lualine",
         lazy = false,
         event = "VeryLazy",
-        opts = function()
-            return require("plugins.lualine")
-        end,
+        opts = require("plugins.lualine"),
     },
     {
         -- nui: UI Component Library for Neovim
@@ -129,18 +116,16 @@ return {
         name = "gitsigns",
         lazy = true,
         event = "BufReadPre",
-        opts = function()
-            return require("plugins.gitsigns")
-        end,
+        opts = require("plugins.gitsigns"),
     },
     {
-        -- nvim-cmp is a Main autocompletions plugin and framework for it
+        -- nvim-cmp: is a Main autocompletions plugin and framework for it
         "hrsh7th/nvim-cmp",
         name = "nvim-cmp",
         lazy = true,
         event = { "InsertEnter", "CmdlineEnter" },
         opts = function()
-            return require("plugins.nvim-cmp")
+            require("plugins.nvim-cmp")
         end,
     },
     {
@@ -177,9 +162,7 @@ return {
         name = "LuaSnip",
         lazy = true,
         event = { "InsertEnter" },
-        opts = function()
-            require("plugins.LuaSnip")
-        end,
+        opts = require("plugins.LuaSnip"),
     },
     {
         -- cmp_luasnip: Snippets autocompletions source
@@ -189,7 +172,7 @@ return {
         event = { "InsertEnter" },
     },
     {
-        -- friendly-snippets: Prebuilt snippets for many languages
+        -- frily-snippets: Prebuilt snippets for many languages
         "rafamadriz/friendly-snippets",
         name = "friendly-snippets",
         lazy = true,
@@ -201,9 +184,7 @@ return {
         name = "conform",
         lazy = true,
         event = { "InsertEnter", "BufReadPre" },
-        opts = function()
-            return require("plugins.conform")
-        end
+        opts = require("plugins.conform"),
     },
     {
         -- telescope-ui-select: Allows other plugins to use ui of telescope for their needs
@@ -218,9 +199,7 @@ return {
         name = "noice.nvim",
         lazy = true,
         event = "VimEnter",
-        opts = function()
-            return require("plugins.noice")
-        end,
+        opts = require("plugins.noice"),
     },
     {
         -- nvim-notify: plugin for better notifications
@@ -228,9 +207,7 @@ return {
         name = "nvim-notify",
         lazy = true,
         event = "VimEnter",
-        opts = function()
-            return require("plugins.nvim-notify")
-        end,
+        opts = require("plugins.nvim-notify"),
     },
     {
         -- harpoon: plugin for fast navigation between buffers
@@ -238,23 +215,19 @@ return {
         name = "harpoon",
         lazy = true,
         event = "VeryLazy",
-        opts = function()
-            return require("plugins.harpoon")
-        end,
+        opts = require("plugins.harpoon"),
     },
     {
-        -- nvim-treesitter: plugin for nvim's treesitter to extend it's functionality
+        -- nvim-treesitter: plugin for nvim's treesitter to ext it's functionality
         "nvim-treesitter/nvim-treesitter", branch = "main",
         name = "treesitter",
         build = ":TSUpdate",
         lazy = false,
         event = "VimEnter",
-        opts = function()
-            return require("plugins.treesitter")
-        end,
+        opts = require("plugins.treesitter"),
     },
     {
-        -- nvim-treesitter-endwise: extension for nvim-treesitter for auto closing functions, tables, and etc
+        -- nvim-treesitter-wise: extension for nvim-treesitter for auto closing functions, tables, and etc
         "RRethy/nvim-treesitter-endwise",
         name = "treesitter-endwise",
         lazy = true,
@@ -266,9 +239,7 @@ return {
         name = "bufferline",
         lazy = true,
         event = "VimEnter",
-        opts = function()
-            return require("plugins.bufferline")
-        end
+        opts = require("plugins.bufferline"),
     },
     {
         -- nvim-autopairs: for auto closing to () {} [] and etc
@@ -276,18 +247,21 @@ return {
         name = "nvim-autopairs",
         lazy = true,
         event = "InsertEnter",
-        opts = function()
-            return require("plugins.nvim-autopairs")
-        end
+        opts = require("plugins.nvim-autopairs"),
     },
     {
         "folke/trouble.nvim",
         name = "trouble",
         lazy = true,
         event = { "InsertEnter", "BufReadPre" },
-        opts = function()
-            return require("plugins.trouble")
-        end
+        opts = require("plugins.trouble"),
+    },
+    {
+        "stevearc/oil.nvim",
+        name = "oil",
+        lazy = true,
+        event = "VimEnter",
+        opts = require("plugins.oil"),
     },
 }
 

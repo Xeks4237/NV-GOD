@@ -9,7 +9,7 @@ return {
     ["<C-k>"] = cmp.mapping.scroll_docs(-4), -- Scroll docs up
     ["<C-j>"] = cmp.mapping.scroll_docs(4), -- Scroll docs down
     ["<C-Space>"] = cmp.mapping.complete(), -- Trigger completion manually
-    ["<C-e>"] = cmp.mapping.abort(), -- Cancel completion
+    ["<C-c>"] = cmp.mapping.abort(), -- Cancel completion
     ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Confirm selection, select if none
     ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then

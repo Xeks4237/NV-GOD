@@ -62,9 +62,9 @@ return {
     -- Set to "false" to remove a keymap
     -- See :help oil-actions for a list of all available actions
     keymaps = require("keymaps.oil"),
-
-    -- Set to false to disable all of the above keymaps
+    -- Set to false to disable all of the default keymaps (not custom ones)
     use_default_keymaps = true,
+
     view_options = {
         -- Show files and directories that start with "."
         show_hidden = false,

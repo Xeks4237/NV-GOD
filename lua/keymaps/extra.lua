@@ -7,7 +7,7 @@ vim.keymap.set("n", "<leader>l", "<cmd>Lazy show<CR>", { desc = "Lazy" })
 -- Opens Mason package manager
 vim.keymap.set("n", "<leader>m", "<cmd>Mason<CR>", { desc = "Mason" })
 
--- Keymap to open open popup with all keymaps availible
+-- Keymap to open open popup with all keymaps available
 vim.keymap.set("n", "<leader>?", function()
     require("which-key").show("", { mode = "n" })
 end, { desc = "Show All Keymaps" })
@@ -77,3 +77,7 @@ vim.keymap.set("n", "]q", vim.cmd.cnext, { desc = "Next Quickfix" })
 -- Inspecting under a cursor
 vim.keymap.set("n", "<leader>dp", vim.show_pos, { desc = "Inspect Pos" })
 vim.keymap.set("n", "<leader>dt", function() vim.treesitter.inspect_tree() vim.api.nvim_input("I") end, { desc = "Inspect Tree" })
+
+-- Keymap to open oil.nvim file explorer
+vim.keymap.set("n", "<C-e>", "<cmd>Oil<CR>", { desc = "File Explorer" })
+

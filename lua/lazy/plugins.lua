@@ -56,7 +56,9 @@ return {
         opts = require("plugins.mason"),
     },
     {
-        -- mason-lspconfig: Bridge mason with nvim-lspconfig for auto-setup
+        -- mason-lspconfig: Bridges mason.nvim with nvim-lspconfig
+        -- To auto-setup LSP Server settings through
+        -- nvim-lspconfig after installing them with mason.nvim
         "williamboman/mason-lspconfig.nvim",
         name = "mason-lspconfig",
         lazy = true,
@@ -72,12 +74,12 @@ return {
         opts = require("plugins.mason-tool-installer"),
     },
     {
-        -- nvim-lspconfig: Needed for LSP configuration (dependency of mason-lspconfig)
+        -- nvim-lspconfig: pre-defined configurations for LSP servers
         "neovim/nvim-lspconfig",
         name = "nvim-lspconfig",
         lazy = true,
         event = { "BufReadPre", "InsertEnter" },
-        opts = nil,
+        -- Doesn't need configuration if mason-lspconfig is available
     },
     {
         -- lualine: makes status line of NeoVim better

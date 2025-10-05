@@ -1,5 +1,4 @@
 NV-GOD - The Best NeoVim Distro of ALL Time
-Work in Progress
 
 <div align="center"><p>
     <a href="https://github.com/Xeks4237/NV-GOD/releases/latest">

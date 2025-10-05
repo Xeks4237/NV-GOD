@@ -47,12 +47,11 @@ For Advanced users like Me it's really big headache to work with
 
 - Install dependencies with your package manager:
   1. NeoVim (Needed to be built with **LuaJIT**)
-  2. Git (For Git Support and Version Management)
-  3. Any MonoSpace [Nerd Font](https://www.nerdfonts.com/) for your Terminal (Choose which one you like)
-  4. Terminal with TrueColor support (recommended)
-  5. **luarocks** **npm**, **pip**(python3), **cargo**, **curl** **perl**, **bash** for some plugins
-  6. **C** compiler for `nvim-treesitter`, e.g `gcc`. See [Here](https://github.com/nvim-treesitter/nvim-treesitter#requirements)
-  7. **fzf**, **fd**, **ripgrep** for Searching of Files and Text in Them
+  2. Any MonoSpace [Nerd Font](https://www.nerdfonts.com/) for your Terminal (Choose which one you like)
+  3. Terminal with TrueColor support (recommended)
+  4. **luarocks**, **npm**, **pip**,(python3), **cargo**, **curl**, **git**, **perl**, **bash** for some plugins
+  5. **C** compiler for `nvim-treesitter`, e.g `gcc`. See [Here](https://github.com/nvim-treesitter/nvim-treesitter#requirements)
+  6. **fzf**, **fd**, **ripgrep** for Searching of Files and Text in Them
 
 - For Linux and Android(through Termux) use this command to install NV-GOD using Git:
 

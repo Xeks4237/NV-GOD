@@ -48,8 +48,8 @@ For Advanced users like Me it's really big headache to work with
   1. NeoVim (Needed to be built with **LuaJIT**)
   2. Any MonoSpace [Nerd Font](https://www.nerdfonts.com/) for your Terminal (Choose which one you like)
   3. Terminal with TrueColor support (recommended)
-  4. **luarocks**, **npm**, **pip**,(python3), **cargo**, **curl**, **git**, **perl**, **bash** for some plugins
-  5. **C** compiler for `nvim-treesitter`, e.g `gcc`. See [Here](https://github.com/nvim-treesitter/nvim-treesitter#requirements)
+  4. **luarocks**, **npm**, **pip**,(python3), **cargo**, **curl**, **git**, **perl**, **cmake**, **bash** for some plugins
+  5. gcc >= v15 for `nvim-treesitter`, `mason` and etc, See [Here](https://github.com/nvim-treesitter/nvim-treesitter#requirements)
   6. **fzf**, **fd**, **ripgrep** for Searching of Files and Text in Them
 
 - For Linux and Android(through Termux) use this command to install NV-GOD using Git:

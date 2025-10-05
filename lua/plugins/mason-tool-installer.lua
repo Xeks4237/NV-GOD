@@ -10,6 +10,7 @@ return {
         -- for example:
         -- { "golangci-lint", version = "v1.47.0", auto_update = false },
         "pyright", -- LSP for python
+        "debugpy", -- DAP for python
         "pylint", -- Linter for python
         "black", -- Formatter for python
         "lua-language-server", -- LSP for lua
@@ -27,7 +28,7 @@ return {
         "gopls", -- LSP for go
         "gofmt", -- Formatter for go
         "goimports", -- Formatter for go
-        "prettierd", -- main Formatter for everything other
+        "prettier", -- main Formatter for everything other
         "codespell", -- Linter for code misspellings
         "tree-sitter-cli", -- treesitter cli tool for treesitter plugin
         -- add more tools by writing their names from mason ui
@@ -66,8 +67,8 @@ return {
     -- module(s) (assuming any are installed) which is sometimes wanted when
     -- doing lazy loading.
     integrations = {
-        ["mason-lspconfig"] = true,
-        ["mason-nvim-dap"] = false,
+        ["mason-lspconfig"] = true, -- Requires mason-lspconfig
+        ["mason-nvim-dap"] = false, -- Requires mason-nvim-dap
     },
 }
 

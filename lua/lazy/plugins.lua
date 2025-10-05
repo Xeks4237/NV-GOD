@@ -56,7 +56,7 @@ return {
         opts = require("plugins.mason"),
     },
     {
-        -- mason-lspconfig: Bridge to nvim-lspconfig for auto-setup
+        -- mason-lspconfig: Bridge mason with nvim-lspconfig for auto-setup
         "williamboman/mason-lspconfig.nvim",
         name = "mason-lspconfig",
         lazy = true,
@@ -124,6 +124,7 @@ return {
         name = "nvim-cmp",
         lazy = true,
         event = { "InsertEnter", "CmdlineEnter" },
+        -- Settings for some plugins don't loads requirw("") directly
         opts = function()
             require("plugins.nvim-cmp")
         end,
@@ -250,6 +251,8 @@ return {
         opts = require("plugins.nvim-autopairs"),
     },
     {
+        -- A pretty diagnostics, references, telescope results, quickfix and location list
+        -- to help you solve all the trouble your code is causing.
         "folke/trouble.nvim",
         name = "trouble",
         lazy = true,
@@ -257,6 +260,7 @@ return {
         opts = require("plugins.trouble"),
     },
     {
+        -- oil.nvim: File Explorer what allows you to edit your files like a buffer
         "stevearc/oil.nvim",
         name = "oil",
         lazy = true,

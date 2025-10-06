@@ -3,7 +3,7 @@
 -- Configuration for nvim-notify
 return {
     -- Minimum level to show (debug, trace, info, warn, error, off)
-    level = "warn",
+    level = "info",
 
     -- Use the "slide" stage for right-to-left sliding animation
     stages = "slide",

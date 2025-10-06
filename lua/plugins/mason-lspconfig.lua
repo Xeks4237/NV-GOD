@@ -20,6 +20,9 @@ return {
         function(server_name)
             require("lspconfig")[server_name].setup {
                 on_attach = function(client, bufnr)
+                    client.server_capabilities.completionProvider = {
+                        triggerCharacters = { ".", ":", "->" },
+                    }
                     return require("keymaps.mason-lspconfig") -- Sets Keymaps for lspconfig after attach of lsp
                 end,
                 -- Enable autocompletion via nvim-cmp
@@ -27,6 +30,7 @@ return {
             }
         end,
     },
+
     -- Diagnostics customization
     vim.diagnostic.config({
         virtual_text = {

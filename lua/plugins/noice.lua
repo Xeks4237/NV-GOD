@@ -136,7 +136,7 @@ return {
                 padding = { 0, 1 }, -- Inner padding
                 text = {
                     top = " Command ", -- Title
-                    top_align = "center", -- Alighment of Text
+                    top_align = "center", -- Alignment of Text
                 },
             },
             win_options = {
@@ -157,7 +157,7 @@ return {
             },
             border = {
                 style = "rounded",
-                padding = { 0, 1 },
+                padding = { 1, 1 },
             },
             win_options = {
                 winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder",

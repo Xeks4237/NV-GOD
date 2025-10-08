@@ -10,20 +10,20 @@ return {
             -- paste = { "p", "<CR>" },
             paste = "<CR>", -- Keymap to paste chosen entry
             paste_behind = "<C-h>", -- Keymap to paste chosen entry behind of cursor (like P)
-            select = "<C><space>", -- Keymap for selecting entry to paste later with p or P
-            replay = "<C-r>", -- Replay a macro
-            delete = "<C-d>", -- Delete an entry
-            edit = "<C-e>", -- Edit an entry
+            select = "<C-l>", -- Keymap for selecting entry to paste later with p or P
+            replay = "<C-o>", -- Replay a macro
+            delete = { "<C-d>", "<C-j>" }, -- Delete an entry
+            edit = { "<C-i>", "<C-k" }, -- Edit an entry
             custom = {},
         },
         -- Keymaps for NORMAL mode
         n = {
-            paste = "p", -- Keymap to paste chosen entry
-            paste_behind = "P", -- Keymap to paste chosen entry behind of cursor (like P)
-            select = "<CR>", -- Keymap for selecting entry to paste later with p or P
-            replay = { "r", "<C-r>" }, -- Replay a macro
-            delete = { "d", "<C-d>" }, -- Delete an entry
-            edit = { "e", "<C-e>" }, -- Edit an entry
+            paste = "<CR>", -- Keymap to paste chosen entry
+            paste_behind = "<C-h>", -- Keymap to paste chosen entry behind of cursor (like P)
+            select = "<C-l>", -- Keymap for selecting entry to paste later with p or P
+            replay = "<C-o>", -- Replay a macro
+            delete = { "<C-d>", "<C-j>" }, -- Delete an entry
+            edit = { "<C-i>", "<C-k>" }, -- Edit an entry
             custom = {},
         },
     },

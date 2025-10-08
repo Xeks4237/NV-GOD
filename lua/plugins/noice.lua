@@ -21,7 +21,7 @@ return {
             search_up = { kind = "search", pattern = "^\\?", icon = " ", lang = "regex" }, -- ? search
             filter = { pattern = "^:%s*!", icon = "$ ", lang = "bash" }, -- ! shell commands
             lua = { pattern = { "^:%s*lua%s+", "^:%s*lua%s*=%s*", "^:%s*=%s*" }, icon = " ", lang = "lua" }, -- Lua commands
-            help = { pattern = "^:%s*he?l?p?%s+", icon = " " }, -- Help commands
+            help = { pattern = "^:%s*he?l?p?%s+", icon = "? " }, -- Help commands
             input = { view = "cmdline", icon = "> " }, -- Input mode (e.g., for :%s)
         },
     },
@@ -128,7 +128,7 @@ return {
                 col = "50%", -- Center horizontally
             },
             size = {
-                width = "60%", -- Compact width
+                width = "40%", -- Compact width
                 height = "auto", -- Auto-height for multi-line
             },
             border = {

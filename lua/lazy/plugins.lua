@@ -18,9 +18,8 @@
     -- "BufReadPre" loads plugin before reading buffer
     -- "CmdlineEnter" loads plugin when you start typing in cmdline
 
--- opts = "", options which are loaded AFTER loading plugin
--- P.S Some plugins don't need options to function, for example:
--- plenary, nui and nvim-lspconfig is used like librarys in this config
+-- opts = "", stuff what happens AFTER loading plugin
+-- For example to require file with settings for plugin after loading it
 
 return {
     {
@@ -161,14 +160,14 @@ return {
     {
         -- luasnip: Snippets engine
         "L3MON4D3/LuaSnip",
-        name = "LuaSnip",
+        name = "luasnip",
         build = "make install_jsregexp", -- Installs needed library (optional but recommended)
         lazy = true,
         event = { "InsertEnter" },
-        opts = require("plugins.LuaSnip"),
+        opts = require("plugins.luasnip"),
     },
     {
-        -- cmp_luasnip: Snippets autocompletions source
+        -- cmp_luasnip: plugin to allow nvim-cmp to use luasnip
         "saadparwaiz1/cmp_luasnip",
         name = "cmp_luasnip",
         lazy = true,
@@ -182,7 +181,7 @@ return {
         event = { "InsertEnter" },
     },
     {
-        -- conform.nvim: powerful formatter plugin, with a lot of extra features for lsp
+        -- conform.nvim: powerful formatter plugin, with a lot of extra features for LSP
         "stevearc/conform.nvim",
         name = "conform",
         lazy = true,
@@ -255,6 +254,12 @@ return {
         name = "oil",
         lazy = false,
         opts = require("plugins.oil"),
+    },
+    {
+        "AckslD/nvim-neoclip.lua",
+        name = "neoclip",
+        lazy = false,
+        opts = require("plugins.neoclip"),
     },
 }
 

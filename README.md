@@ -27,7 +27,7 @@ NV-GOD is created by Me Xeks4247, Because other distros of NeoVim like LazyVim, 
 
 For Advanced users like Me it's really big headache to work with
 
-- You can ask: "Then why I just don't use kickstart.nvim?"
+- You can ask: "Then why don't I just use kickstart.nvim?"
   I know about it, it's a beautifull project but it more about to help new users to make their own NeoVim configs and understand how it works, In difference to kickstart My Project is meant to be FULL NeoVim Distro, BUT in the same time be simple as kickstart.nvim
 
 ## Features:

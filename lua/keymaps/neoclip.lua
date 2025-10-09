@@ -29,9 +29,9 @@ return {
     },
     -- Keymaps for neoclip in fzf-lua UI if available
     fzf = {
-        select = "default",
-        paste = "ctrl-l",
-        paste_behind = "ctrl-h",
+        select = "default", -- Keymap for selecting entry to paste later with p or P
+        paste = "ctrl-l", -- Keymap to paste chosen entry
+        paste_behind = "ctrl-h", -- Keymap to paste chosen entry behind of cursor (like P)
         custom = {},
     },
 }

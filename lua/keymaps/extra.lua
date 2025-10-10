@@ -39,8 +39,8 @@ vim.keymap.set("n", "<leader>hn", function() require("harpoon"):list():add() end
 -- Opens harpoon quick menu of harpoon in telescope
 vim.keymap.set("n", "<leader>hh", "<cmd>Telescope harpoon marks<CR>", { desc = "Harpoon Quick Menu" })
 
--- Keymaps to fast navigate to first 10 files using numbers
--- P.S 0 goes to file 10
+-- Keymaps to fast navigate to first 10 harpoon marks using numbers
+-- P.S function to make it shortly uses more ram/memory
 vim.keymap.set("n", "<leader>h1", function() require("harpoon"):list():select(1) end, { desc = "Harpoon to File 1" })
 vim.keymap.set("n", "<leader>h2", function() require("harpoon"):list():select(2) end, { desc = "Harpoon to File 2" })
 vim.keymap.set("n", "<leader>h3", function() require("harpoon"):list():select(3) end, { desc = "Harpoon to File 3" })
@@ -80,4 +80,7 @@ vim.keymap.set("n", "<leader>dt", function() vim.treesitter.inspect_tree() vim.a
 
 -- Keymap to open oil.nvim file explorer
 vim.keymap.set("n", "<C-e>", "<cmd>Oil<CR>", { desc = "File Explorer" })
+
+-- Keymap to open neoclip plugins menu in telescope (clipboard manager)
+vim.keymap.set({ "n", "v", "i" }, "<C-p>", "<cmd>Telescope neoclip<CR>", { desc = "Open ClipBoard" })
 

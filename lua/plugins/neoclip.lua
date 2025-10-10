@@ -5,7 +5,9 @@ return {
     history = 1000, -- Maximum number of clipboard entries to store
     enable_persistent_history = false, -- Persists clipboard history across Neovim sessions (requires sqlite.lua plugin)
     length_limit = 1048576, -- Maximum length (in bytes) for a single clipboard entry
-    continuous_sync = false, -- Enables real-time synchronization of clipboard across NeoVim instances
+    -- Enables real-time synchronization of clipboard across NeoVim instances
+    -- requires "sessionizer" like plugin
+    continuous_sync = true,
     db_path = vim.fn.stdpath("data") .. "/databases/neoclip.sqlite3", -- File path for storing persistent clipboard history
     filter = nil, -- Optional function to filter clipboard entries (nil means no filtering)
     preview = true, -- Shows a preview of clipboard entries when browsing
@@ -13,7 +15,7 @@ return {
     default_register = '"', -- Default register for clipboard operations
     default_register_macros = "q", -- Default register for macro storage
     enable_macro_history = true, -- Enables storing and managing macro history
-    content_spec_column = false, -- Displays content specification column in the picker
+    content_spec_column = true, -- Displays content specification column in the picker
     disable_keycodes_parsing = false, -- Disables parsing of keycodes in clipboard entries
     dedent_picker_display = false, -- Removes indentation in picker display for cleaner visuals
     initial_mode = "insert", -- Sets initial mode for picker (e.g., "insert" or "normal")

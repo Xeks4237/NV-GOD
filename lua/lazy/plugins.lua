@@ -256,10 +256,17 @@ return {
         opts = require("plugins.oil"),
     },
     {
+        -- neoclip: clipboard manager for managing yank history
         "AckslD/nvim-neoclip.lua",
         name = "neoclip",
         lazy = false,
         opts = require("plugins.neoclip"),
+    },
+    {
+        -- sqlite: SQLite/LuaJIT binding plugin with simple api
+        "kkharji/sqlite.lua",
+        name = "sqlite",
+        lazy = true,
     },
 }
 

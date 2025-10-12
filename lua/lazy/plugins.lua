@@ -268,5 +268,11 @@ return {
         name = "sqlite",
         lazy = true,
     },
+    {
+        -- nvim-nio: Library for asynchronous IO in Neovim
+        "nvim-neotest/nvim-nio",
+        name = "nvim-nio",
+        lazy = true,
+    }
 }
 

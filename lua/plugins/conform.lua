@@ -12,13 +12,18 @@ return {
         python = { "black" }, -- for python
         bash = { "beautysh" }, -- for bash
         zsh = { "beautysh" }, -- for zsh
-        c = { "clang_format " }, -- for c
+        c = { "clang_format" }, -- for c
+        javascript = { "prettierd" }, -- For javascript
+        typescript = { "prettierd" }, -- For typescript
+        css = { "prettierd" }, -- For css
+        html = { "prettierd" }, -- For html
         -- Use the "*" filetype to run formatters on all filetypes.
         -- for example for spell checker
         ["*"] = { "codespell" },
         -- Use the "_" filetype to run formatters on 
         -- filetypes that don't have other formatters configured.
-        ["_"] = { "prettier" },
+        -- for example:
+        -- ["_"] = { "ast-grep" },
     },
     -- Set this to change the default values when calling conform.format()
     -- This will also affect the default values for format_on_save/format_after_save
@@ -30,8 +35,8 @@ return {
     -- This can also be a function that returns the table.
     format_on_save = {
         -- I recommend these options. See :help conform.format for details.
+        timeout_ms = 128,
         lsp_format = "fallback",
-        timeout_ms = 250,
     },
     -- If this is set, Conform will run the formatter asynchronously after save.
     -- It will pass the table to conform.format().

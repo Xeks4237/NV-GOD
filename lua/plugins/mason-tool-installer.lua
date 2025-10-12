@@ -3,7 +3,6 @@
 -- Configuration for mason-tool-installer
 return {
     -- a list of all tools you want to ensure are installed upon
-    -- start
     ensure_installed = {
         -- you can pin a tool to a particular version if needed
         -- and also you can turn off/on auto_update per tool too
@@ -57,7 +56,7 @@ return {
     -- This is only relevant when you are using 'run_on_start'. It has no
     -- effect when running manually via ':MasonToolsInstall' etc....
     -- Default: nil
-    debounce_hours = 5, -- 5 equals to 5 hours between attempts to install/update
+    debounce_hours = 24, -- 24 equals to 24 hours between attempts to install/update
 
     -- By default all integrations are enabled. If you turn on an integration
     -- and you have the required module(s) installed this means you can use

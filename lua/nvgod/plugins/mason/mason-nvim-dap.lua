@@ -12,7 +12,7 @@ return {
         -- https://github.com/jay-babu/mason-nvim-dap.nvim
         handlers = {},
 
-        -- NOTE: Everything needed for "ensure_installed = {}" are included in mason-tool-installer
+        -- NOTE: Everything needed for "ensure_installed = {}" are included in mason-tool-installer.lua
         ensure_installed = {}, -- Not needed
     },
 }

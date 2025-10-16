@@ -68,8 +68,9 @@ return {
         -- module(s) (assuming any are installed) which is sometimes wanted when
         -- doing lazy loading.
         integrations = {
+            -- NOTE: "mason-lspconfig" is unneded since NeoVim v0.11
             ["mason-lspconfig"] = false, -- Requires mason-lspconfig
-            ["mason-nvim-dap"] = false, -- Requires mason-nvim-dap
+            ["mason-nvim-dap"] = true, -- Requires mason-nvim-dap
         },
     },
 }

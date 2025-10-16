@@ -11,10 +11,6 @@ return {
 
         -- Required dependency for nvim-dap-ui
         "nvim-neotest/nvim-nio",
-
-        -- Installs the debug adapters for you
-        "mason-org/mason.nvim",
-        "jay-babu/mason-nvim-dap.nvim",
     },
     keys = {
         -- Basic debugging keymaps, feel free to change to your liking!

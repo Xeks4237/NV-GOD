@@ -83,46 +83,40 @@ This is a Main File Structure of NV-GOD, which I plan to use to end,
 (Information about it gonna be on the Future WIKI page of NV-GOD)
 
 Package Manager on this example is a [lazy.nvim](https://github.com/folke/lazy.nvim)
-If you gonna choose different package manager, then lua/lazy/ directory gonna be chnagedto something else like packer, plug and etc
+If you gonna choose different package manager, then lua/nvgod/lazy/ directory gonna be changed to something else like packer, plug and etc
 
-$XDG_CONFIG_HOME is a ~/.config by default
-
-And if you changed somethink in lua directory then you need to copy files from main "lua directory to the "custom directory (with a same file structure as in lua directory)
-It gonna allow you to update NV-GOD to the latest version without losing your settings
+all configuration is located in $XDG_CONFIG_HOME/nvim or ~/.config/nvim by default
 
 <pre>
-$XDG_CONFIG_HOME/nvim
-├── init.lua
-│── lua
-│   ├── options.lua
-│   ├── keymaps
-│   │   ├── core.lua
-│   │   ├── extra.lua
-│   │   ├── colorschemes.lua
-│   │   ├── mason.lua
-│   │   ├── ...
-│   │   └── treesitter.lua
-│   ├── colorschemes
-│   │   ├── tokyonight.lua
-│   │   ├── ...
-│   │   └── catppuccin.lua
-│   ├── plugins
-│   │   ├── telescope.lua
-│   │   ├── treesitter.lua
-│   │   ├── ...
-│   │   └── nvim-cmp.lua
-│   └── lazy
-│       ├── bootstrap.lua
-│       ├── config.lua
-│       ├── plugins.lua
-│       ├── colorschemes.lua
-│       └── lazy-lock.json
-└── custom
-    ├── options.lua
-    ├── lazy/
-    ├── plugins/
-    ├── colorschemes/
-    └── keymaps/
+ ~/.config/nvim
+ 📄 init.lua
+ 📁 lua
+ │ 📁 custom  <-- Directory for overriding default settigs
+ └ 📁 nvgod   <-- Main directory of NV-GOD
+   │ 📁 lazy
+   │ 📁 colorschemes
+   │ 📁 plugins
+   │ │ 📁 cmp
+   │ │ │ 📄 nvim-cmp.lua
+   │ │ │ ...
+   │ │ └ 📄 cmp-nvim-lsp.lua
+   │ │ 📁 dap
+   │ │ │ 📄 nvim-dap-go.lua
+   │ │ └ 📄 nvim-dap.lua
+   │ │ 📁 mason
+   │ │ │ 📄 mason-tool-installer.lua
+   │ │ │ ...
+   │ │ └ 📄 mason.lua
+   │ │ 📄 gitsigns.lua
+   │ │ 📄 neo-tree.lua
+   │ │ 📄 telescope.lua
+   │ │ 📄 treesitter.lua
+   │ │ ...
+   │ └ 📄 which-key.lua
+   │ 📄 core-keymaps.lua
+   │ 📄 extra-keymaps.lua
+   │ 📄 health.lua
+   └ 📄 options.lua
 </pre>
 
 ## License

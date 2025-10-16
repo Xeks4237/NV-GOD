@@ -84,9 +84,6 @@ vim.keymap.set("i", ",", ",<c-g>u")
 vim.keymap.set("i", ".", ".<c-g>u")
 vim.keymap.set("i", ";", ";<c-g>u")
 
--- Ability to search in mandoc word under a cursor
-vim.keymap.set("n", "<leader>K", "<cmd>norm! K<CR>", { desc = "Keywordprg" })
-
 -- Makes indenting in visual mode more "consistent"
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")

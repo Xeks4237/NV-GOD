@@ -2,9 +2,8 @@
 return {
     "folke/which-key.nvim",
     name = "which-key",
-    lazy = true,
-    event = "VimEnter",
-    opst = {
+    lazy = false,
+    opts = {
         -- Preset for which-key appearance: "classic", "modern", "helix", or false to disable
         preset = "modern", -- Affects styling of popup menu 
         show_help = true, -- Show help message
@@ -95,6 +94,7 @@ return {
             { "<leader>b", group = "[Buffers]" },
             { "<leader>u", group = "[UI]" },
             { "<leader>g", group = "[Git]" },
+            { "<leader>gt", group = "[T]oggle Options" },
         },
     },
 }

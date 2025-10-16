@@ -1,25 +1,21 @@
--- This is a Main file which NeoVim gonna use on startup
--- When you add something here please check the order of commands what you write
--- Like for example you can not set colorscheme before loading it with package manager
+-- NOTE: This two options sets <leader> key of NeoVim to Space
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
--- Loads Options like LineNumbers from options.lua file
-require("options")
+-- NOTE: Set to true if you have a Nerd Font installed and selected in the terminal
+vim.g.have_nerd_font = true
 
--- Loads core Keymaps from keymaps directory
-require("keymaps.core")
+-- Setting options
+require("nvgod.options") -- Sources lua/options.lua file
 
--- Loads a file which BootStraps lazy.nvim package manager
-require("lazy.bootstrap")
+-- Basic Keymaps
+require("nvgod.core-keymaps") -- Sources lua/keymaps/core.lua file
 
--- Loads extra Keymaps for plugins and colorschemes after BootStrapping lazy.nvim
--- (which aren't loaded by plugins themselves)
-require("keymaps.extra")
-require("keymaps.colorschemes")
+-- Install "lazy.nvim" plugin manager
+require("nvgod.lazy.lazy-bootstrap")
 
--- Applys a greeting screen configuration using alpha-nvim
--- It's loaded here because in other ways it becomes not "consistent"
-require("plugins.alpha-nvim")
+-- Extra Keymaps related to plugins
+require("nvgod.extra-keymaps")
 
--- Command to set catppuccin-mocha colorscheme in end
-vim.cmd.colorscheme("catppuccin-mocha")
-
+-- Tmp keymap to set colorscheme to catppuccin-mocha:
+vim.cmd.colorscheme "catppuccin-mocha"

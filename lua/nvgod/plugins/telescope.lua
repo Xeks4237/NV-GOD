@@ -94,12 +94,12 @@ return {
         extensions = {
             -- (fzf Must be installed separately!)
             harpoon = true,
-            fzf = {
-               fuzzy = true, -- Enable fuzzy matching
-               override_generic_sorter = true, -- Override default sorter
-               override_file_sorter = true, -- Override file sorter
-               case_mode = "smart_case", -- Case sensitivity (smart_case, ignore_case, respect_case)
-            },
+            -- fzf = {
+            --    fuzzy = true, -- Enable fuzzy matching
+            --    override_generic_sorter = true, -- Override default sorter
+            --    override_file_sorter = true, -- Override file sorter
+            --    case_mode = "smart_case", -- Case sensitivity (smart_case, ignore_case, respect_case)
+            -- },
         },
     },
 }

@@ -26,7 +26,7 @@ return {
                     else
                         gitsigns.nav_hunk "next"
                     end
-                end, { desc = "[G]it Next Change" })
+                end, { desc = "[g]it Next Change" })
 
                 map("n", "<leader>g[", function()
                     if vim.wo.diff then
@@ -34,31 +34,31 @@ return {
                     else
                         gitsigns.nav_hunk "prev"
                     end
-                end, { desc = "[G]it Previous Change" })
+                end, { desc = "[g]it Previous Change" })
 
                 -- Actions
                 -- visual mode
                 map("v", "<leader>gs", function()
                     gitsigns.stage_hunk { vim.fn.line ".", vim.fn.line "v" }
-                end, { desc = "[G]it [s]tage hunk" })
+                end, { desc = "[g]it [s]tage hunk" })
                 map("v", "<leader>gr", function()
                     gitsigns.reset_hunk { vim.fn.line ".", vim.fn.line "v" }
-                end, { desc = "[G]it [r]eset hunk" })
+                end, { desc = "[g]it [r]eset hunk" })
                 -- normal mode
-                map("n", "<leader>gs", gitsigns.stage_hunk, { desc = "[G]it [s]tage hunk" })
-                map("n", "<leader>gr", gitsigns.reset_hunk, { desc = "[G]it [r]eset hunk" })
-                map("n", "<leader>gS", gitsigns.stage_buffer, { desc = "[G]it [S]tage buffer" })
-                map("n", "<leader>gu", gitsigns.stage_hunk, { desc = "[G]it [u]ndo stage hunk" })
-                map("n", "<leader>gR", gitsigns.reset_buffer, { desc = "[G]it [R]eset buffer" })
-                map("n", "<leader>gp", gitsigns.preview_hunk, { desc = "[G]it [p]review hunk" })
-                map("n", "<leader>gb", gitsigns.blame_line, { desc = "[G]it [b]lame line" })
-                map("n", "<leader>gd", gitsigns.diffthis, { desc = "[G]it [d]iff against index" })
+                map("n", "<leader>gs", gitsigns.stage_hunk, { desc = "[g]it [s]tage hunk" })
+                map("n", "<leader>gr", gitsigns.reset_hunk, { desc = "[g]it [r]eset hunk" })
+                map("n", "<leader>gS", gitsigns.stage_buffer, { desc = "[g]it [S]tage buffer" })
+                map("n", "<leader>gu", gitsigns.stage_hunk, { desc = "[g]it [u]ndo stage hunk" })
+                map("n", "<leader>gR", gitsigns.reset_buffer, { desc = "[g]it [R]eset buffer" })
+                map("n", "<leader>gp", gitsigns.preview_hunk, { desc = "[g]it [p]review hunk" })
+                map("n", "<leader>gb", gitsigns.blame_line, { desc = "[g]it [b]lame line" })
+                map("n", "<leader>gd", gitsigns.diffthis, { desc = "[g]it [d]iff against index" })
                 map("n", "<leader>gD", function()
                     gitsigns.diffthis "@"
-                end, { desc = "[G]it [D]iff against last commit" })
+                end, { desc = "[g]it [D]iff against last commit" })
                 -- Toggle Options
-                map("n", "<leader>gtb", gitsigns.toggle_current_line_blame, { desc = "[T]oggle [B]lame Line" })
-                map("n", "<leader>gtd", gitsigns.preview_hunk_inline, { desc = "[T]oggle [D]eleted Lines" })
+                map("n", "<leader>gtb", gitsigns.toggle_current_line_blame, { desc = "[t]oggle [b]lame Line" })
+                map("n", "<leader>gtd", gitsigns.preview_hunk_inline, { desc = "[t]oggle [d]eleted Lines" })
             end,
         },
     },

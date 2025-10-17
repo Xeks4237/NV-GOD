@@ -53,7 +53,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- Keymap to clear search, diff update and redraw easily
 vim.keymap.set(
     "n",
-    "<leader>ur",
+    "<leader>fr",
     "<cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>",
     { desc = "Redraw / Clear hlsearch / Diff Update" }
 )

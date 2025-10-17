@@ -49,3 +49,19 @@ vim.keymap.set("n", "<leader>fn", function()
     builtin.find_files { cwd = vim.fn.stdpath "config" }
 end , { desc = "[F]ind [N]eoVim Files" })
 
+-- [ UI Keymaps ]
+-- Search and preview colorschemes in telescope
+vim.keymap.set("n", "<leader>uc", "<cmd>Telescope colorscheme<CR>", { desc = "[U]I Pick [C]olorscheme" })
+
+-- [ UI Toggle Keymaps ]
+-- Toogle Line Numbers
+vim.keymap.set("n", "<leader>utn", "<cmd>set number! relativenumber!<CR>", { desc = "[T]oggle Line [N]umbers" })
+-- Toggle relative line numbers
+vim.keymap.set("n", "<leader>utr", "<cmd>set relativenumber!<CR>", { desc = "[T]oggle [R]elative Numbers" })
+-- Toggle line wrap
+vim.keymap.set("n", "<leader>utw", "<cmd>set wrap! <CR>", { desc = "[T]oggle Line [W]rap" })
+vim.keymap.set("n", "<leader>utt", function()
+    vim.o.showtabline = vim.o.showtabline == 2 and 0 or 2
+end, { desc = "[T]oggle [T]ab Line" })
+
+

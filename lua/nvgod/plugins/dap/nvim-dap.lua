@@ -43,18 +43,18 @@ return {
             desc = "Debug: Step Out",
         },
         {
-            "<leader>b",
+            "<leader>db",
             function()
                 require("dap").toggle_breakpoint()
             end,
-            desc = "Debug: Toggle Breakpoint",
+            desc = "[D]ebug Toggle [b]reakpoint",
         },
         {
-            "<leader>B",
+            "<leader>dB",
             function()
                 require("dap").set_breakpoint(vim.fn.input "Breakpoint condition: ")
             end,
-            desc = "Debug: Set Breakpoint",
+            desc = "[D]ebug Set [B]reakpoint",
         },
         -- Toggle to see last session result. Without this, you can't see session output in case of unhandled exception.
         {
@@ -62,7 +62,7 @@ return {
             function()
                 require("dapui").toggle()
             end,
-            desc = "Debug: See last session result.",
+            desc = "Debug: Open UI",
         },
     },
     config = function()
@@ -78,15 +78,15 @@ return {
             icons = { expanded = "▾", collapsed = "▸", current_frame = "*" },
             controls = {
                 icons = {
-                    pause = "⏸",
-                    play = "▶",
-                    step_into = "⏎",
-                    step_over = "⏭",
-                    step_out = "⏮",
-                    step_back = "b",
-                    run_last = "▶▶",
-                    terminate = "⏹",
-                    disconnect = "⏏",
+                    disconnect = "",
+                    pause = "",
+                    play = "",
+                    run_last = "",
+                    step_back = "",
+                    step_into = "",
+                    step_out = "",
+                    step_over = "",
+                    terminate = ""
                 },
             },
         }

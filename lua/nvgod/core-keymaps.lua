@@ -16,15 +16,6 @@ vim.keymap.set("n", "<C-Down>", "<cmd>resize +2<CR>", { desc = "Vertical Resize 
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<CR>", { desc = "Horizontal Resize" })
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Horizontal Resize" })
 
--- Bufferline keymaps similar to tab navigation
-vim.keymap.set("n", "<leader>bh", "<cmd>BufferLineCyclePrev<CR>", { desc = "Previous Buffer" })
-vim.keymap.set("n", "<leader>bj", "<cmd>BufferLineCloseCurrent<CR>", { desc = "Close Buffer" })
-vim.keymap.set("n", "<leader>bk", "<cmd>new<CR>", { desc = "New Buffer" })
-vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
-vim.keymap.set("n", "<leader>ba", "<cmd>BufferLineCloseOthers<CR>", { desc = "Close All Other Buffers" })
-vim.keymap.set("n", "<leader>b<C-h>", "<cmd>BufferLineMovePrev<CR>", { desc = "Move Buffer Left" })
-vim.keymap.set("n", "<leader>b<C-l>", "<cmd>BufferLineMoveNext<CR>", { desc = "Move Buffer Right" })
-
 -- Tab Management
 vim.keymap.set("n", "<leader>th", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
 vim.keymap.set("n", "<leader>tj", "<cmd>tabclose<CR>", { desc = "Close Tab" })

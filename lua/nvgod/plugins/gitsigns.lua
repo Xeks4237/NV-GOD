@@ -1,18 +1,4 @@
--- Alternatively, use `config = function() ... end` for full control over the configuration.
--- If you prefer to call `setup` explicitly, use:
---    {
---        "lewis6991/gitsigns.nvim",
---        config = function()
---            require("gitsigns").setup({
---                -- Your gitsigns configuration here
---            })
---        end,
---    }
---
--- Here is a more advanced example where we pass configuration
--- options to `gitsigns.nvim`.
---
--- See `:help gitsigns` to understand what the configuration keys do
+-- NOTE: See ":help gitsigns" to understand what the configuration keys do
 return {
     { -- Adds git related signs to the gutter, as well as utilities for managing changes
         "lewis6991/gitsigns.nvim",
@@ -34,21 +20,21 @@ return {
                 end
 
                 -- Navigation
-                map("n", "]c", function()
+                map("n", "<leader>g]", function()
                     if vim.wo.diff then
                         vim.cmd.normal { "]c", bang = true }
                     else
                         gitsigns.nav_hunk "next"
                     end
-                end, { desc = "Jump to next git [c]hange" })
+                end, { desc = "[G]it Next Change" })
 
-                map("n", "[c", function()
+                map("n", "<leader>g[", function()
                     if vim.wo.diff then
                         vim.cmd.normal { "[c", bang = true }
                     else
                         gitsigns.nav_hunk "prev"
                     end
-                end, { desc = "Jump to previous git [c]hange" })
+                end, { desc = "[G]it Previous Change" })
 
                 -- Actions
                 -- visual mode
@@ -70,9 +56,9 @@ return {
                 map("n", "<leader>gD", function()
                     gitsigns.diffthis "@"
                 end, { desc = "[G]it [D]iff against last commit" })
-                -- Toggles
-                map("n", "<leader>gtb", gitsigns.toggle_current_line_blame, { desc = "[T]oggle git show [b]lame line" })
-                map("n", "<leader>gtD", gitsigns.preview_hunk_inline, { desc = "[T]oggle git show [D]eleted" })
+                -- Toggle Options
+                map("n", "<leader>gtb", gitsigns.toggle_current_line_blame, { desc = "[T]oggle [B]lame Line" })
+                map("n", "<leader>gtd", gitsigns.preview_hunk_inline, { desc = "[T]oggle [D]eleted Lines" })
             end,
         },
     },

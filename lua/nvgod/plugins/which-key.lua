@@ -91,7 +91,7 @@ return {
             { "<leader>f", group = "[Find]" },
             { "<leader>h", group = "[Harpoon]" },
             { "<leader>t", group = "[Tabs]" },
-            { "<leader>b", group = "[Buffers]" },
+            { "<leader>d", group = "[D]iagnostics" },
             { "<leader>u", group = "[U]ser [I]nterface" },
             { "<leader>ut", group = "[T]oggle options" },
             { "<leader>g", group = "[Git]" },

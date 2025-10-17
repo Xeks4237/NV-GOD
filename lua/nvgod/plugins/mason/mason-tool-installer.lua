@@ -6,9 +6,8 @@ return {
     opts = {
         -- a list of all tools you want to ensure are installed upon
         ensure_installed = {
-            -- NOTE: you can pin a tool to a particular version if needed
-            -- and also you can turn off/on auto_update per tool too
-            -- for example:
+            -- NOTE: you can pin a tool to a particular version or
+            -- turn off/on auto_update per tool, for example:
             -- { "golangci-lint", version = "v1.47.0", auto_update = false },
             "pyright", -- LSP for python
             "debugpy", -- DAP for python
@@ -24,8 +23,8 @@ return {
             "htmlhint", -- Linter for html
             "clangd", -- LSP for c and c++
             "clang-format", -- Formatter for c and c++
-            "cpp-lint", -- Linter for c and c++
-            "cpp-tools", -- DAP for c and c++
+            "cpplint", -- Linter for c and c++
+            "cpptools", -- DAP for c and c++
             "gopls", -- LSP for go
             "gofmt", -- Formatter for go
             "goimports", -- Formatter for go
@@ -58,7 +57,7 @@ return {
         -- This is only relevant when you are using "run_on_start". It has no
         -- effect when running manually via ":MasonToolsInstall" etc....
         -- Default: nil
-        debounce_hours = 12, -- 24 equals to 24 hours between attempts to install/update
+        debounce_hours = 12, -- 12 equals to 12 hours between attempts to install/update
 
         -- By default all integrations are enabled. If you turn on an integration
         -- and you have the required module(s) installed this means you can use

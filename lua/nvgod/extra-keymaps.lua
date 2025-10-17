@@ -43,7 +43,7 @@ vim.keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "[f]in
 -- Search existing buffers
 vim.keymap.set("n", "<leader>f<leader>", "<cmd>Telescope buffers<CR>", { desc = "[f]ind Existing Buffers" })
 -- Search a file-type to set to current buffer/file
-vim.keymap.set("n", "<leader>ft", "<cmd>Telescope oldfiles<CR>", { desc = "[f]ind File [t]ype" })
+vim.keymap.set("n", "<leader>ft", "<cmd>Telescope filetypes<CR>", { desc = "[f]ind File [t]ype" })
 -- Search in your NeoVim configuration files directory
 vim.keymap.set("n", "<leader>fn", function()
     builtin.find_files { cwd = vim.fn.stdpath "config" }

@@ -39,7 +39,7 @@ return {
             vimgrep_arguments = {
                 -- Arguments for ripgrep in live_grep
                 "rg",
-                "--color=never",
+                "--color=always",
                 "--no-heading",
                 "--with-filename",
                 "--line-number",

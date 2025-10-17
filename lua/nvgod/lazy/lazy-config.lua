@@ -35,6 +35,7 @@ return {
         -- NOTE: Seperating plugins and colorschemes needed only for "consistency"
 		{ import = "nvgod.plugins" },
 		{ import = "nvgod.plugins.mason" },
+        { import = "nvgod.plugins.treesitter" },
 		{ import = "nvgod.plugins.dap" },
 		-- { import = "nvgod.plugins.cmp" },
 		{ import = "nvgod.colorschemes" },

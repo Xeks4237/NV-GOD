@@ -45,7 +45,7 @@ For Advanced users like Me it's really big headache to work with
 - First PLEASE Backup your old config of NeoVim if it exists
 
 - Install dependencies with your package manager:
-  1. NeoVim (Needed to be built with **LuaJIT**)
+  1. NeoVim >= v0.11.1
   2. Any MonoSpace [Nerd Font](https://www.nerdfonts.com/) for your Terminal (Choose which one you like)
   3. Terminal with TrueColor support (recommended)
   4. **luarocks**, **npm**, **pip**,(python3), **cargo**, **curl**, **git**, **perl**, **cmake**, **bash** for some plugins

@@ -141,7 +141,8 @@ return {
             { "<leader>g[", icon = { icon = "", color = "cyan" } },
             { "<leader>g]", icon = { icon = "", color = "cyan" } },
             -- [ Other ]
-            { "<leader>fr", icon = { icon = "󰑓", color = "yellow" } },
+            { "<leader>fr", icon = { icon = "󰑓", color = "yellow" } }, -- Clear search, redraw and etc
+            { "<leader>gl", icon = { icon = "󰒲", color = "blue" } },
         },
     },
 }

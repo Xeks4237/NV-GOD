@@ -1,8 +1,5 @@
--- This file is loaded through lua/lazy/plugins.lua
-
--- Configuration for nvim-autopairs
 return {
-    -- nvim-autopairs: for auto closing () {} [] and etc
+    -- nvim-autopairs: plugin for auto closing () {} [] and etc
     "windwp/nvim-autopairs",
     name = "nvim-autopairs",
     lazy = true,
@@ -12,7 +9,7 @@ return {
         disable_filetype = {
             -- For Example:
             -- "TelescopePrompt",
-            -- "spectre_panel",
+            "spectre_panel",
         },
 
         -- Disable when recording or executing a macro

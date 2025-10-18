@@ -1,12 +1,13 @@
 return {
+    -- nvim-scrollbar: adds cool looking scrollbar with extra ui features to nvim
     "petertriho/nvim-scrollbar",
     name = "nvim-scrollbar",
     lazy = true,
     event = { "InsertEnter", "BufReadPre", "BufNewFile" },
     opts = {
-        show = true,
-        show_in_active_only = false,
-        set_highlights = true,
+        show = true, -- make scrollbar to be shown
+        show_in_active_only = false, -- makes scrollbar to be shown in only active nvim window split
+        set_highlights = true, -- Enables error, search and etc results on scrollbar
         folds = 1000, -- handle folds, set to number to disable folds if no. of lines in buffer exceeds this
         max_lines = false, -- disables if no. of lines in buffer exceeds this
         hide_if_all_visible = false, -- Hides everything if all lines are visible

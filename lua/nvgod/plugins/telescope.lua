@@ -1,12 +1,14 @@
 return {
+    -- telescope: fuzzy find files, text, buffers, and much more
     "nvim-telescope/telescope.nvim",
     name = "telescope",
     lazy = false,
     dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-telescope/telescope-ui-select.nvim",
+        "nvim-lua/plenary.nvim", -- library plugin
+        "nvim-telescope/telescope-ui-select.nvim", -- plugin to allow nvim core commands to fill telescope menu
     },
     opts = {
+        --Default options
         defaults = {
             prompt_prefix = "> ", -- Symbol before the prompt
             selection_caret = "➤ ", -- Symbol before selected item
@@ -54,6 +56,7 @@ return {
                 limit = 1000, -- Max history entries
             },
         },
+        -- Pickers for searching files, text, and etc
         pickers = {
             find_files = {
                 find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }, -- Use fd for file finding
@@ -91,9 +94,11 @@ return {
                 enable_preview = true,
             },
         },
+        -- Extensions to use with telescope
         extensions = {
-            -- (fzf Must be installed separately!)
+            -- harpoon extension to search harpoon marks in telescope
             harpoon = true,
+            -- telescope-fzf-native plugin for searching with better performance(Must be installed separately!)
             -- fzf = {
             --    fuzzy = true, -- Enable fuzzy matching
             --    override_generic_sorter = true, -- Override default sorter

@@ -1,6 +1,4 @@
--- This file is loaded through lua/lazy/bootstrap.lua
-
--- Configuration for lazy.nvim
+-- Configuration for lazy.nvim plugin manager
 return {
     -- Behavior-Related Options
     checker = {
@@ -39,6 +37,7 @@ return {
 		{ import = "nvgod.plugins.dap" },
 		-- { import = "nvgod.plugins.cmp" },
 		{ import = "nvgod.colorschemes" },
+		{ import = "custom.init" },
         -- P.S olso it can have a table with paths to seperate files
 	},
     -- UI Appearance Options

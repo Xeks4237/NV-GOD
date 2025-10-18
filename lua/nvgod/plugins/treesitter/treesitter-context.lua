@@ -1,4 +1,5 @@
 return {
+    -- nvim-treesitter-context: Shows you in what section of code are you now in top of a screen
     "nvim-treesitter/nvim-treesitter-context",
     name = "treesitter-context",
     lazy = true,

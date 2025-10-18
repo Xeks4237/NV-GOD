@@ -1,7 +1,5 @@
--- This file is loaded through lua/lazy/plugins.lua
-
--- Configuration for mason
 return {
+    -- mason: Plugin for managing, installing, and updating additional tools for NeoVim like LSP, DAP, Formatters, and Linsters
     "mason-org/mason.nvim",
     name = "mason",
     lazy = false,

@@ -1,9 +1,5 @@
---[[
---
--- This file is not required for your own configuration,
--- but helps people determine if their system is setup correctly.
---
---]]
+-- NOTE: This file is not required for your own configuration,
+-- But it helps people determine if their system is setup correctly
 
 local check_version = function()
   local verstr = tostring(vim.version())
@@ -35,7 +31,7 @@ end
 
 return {
   check = function()
-    vim.health.start "kickstart.nvim"
+    vim.health.start "NV-GOD"
 
     vim.health.info [[NOTE: Not every warning is a "must-fix" in ":checkhealth"
 

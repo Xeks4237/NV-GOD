@@ -1,5 +1,3 @@
--- This file is loaded through lua/lazy/plugins.lua
-
 -- Configuration for catppuccin colorscheme
 return {
     "catppuccin/nvim",

@@ -1,5 +1,5 @@
 return {
-    -- Linting
+    -- nvim-lint: Plugin which allows to setup Linters to needed filetypes
     "mfussenegger/nvim-lint",
     name = "nvim-lint",
     lazy = true,

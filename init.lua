@@ -2,9 +2,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- NOTE: Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = true
-
 -- Setting options
 require("nvgod.options") -- Sources lua/options.lua file
 
@@ -17,5 +14,9 @@ require("nvgod.lazy.lazy-bootstrap")
 -- Extra Keymaps related to plugins
 require("nvgod.extra-keymaps")
 
+-- OverWrite Default Settings using insides of a "custom" directory
+-- require("custom.init")
+
 -- Tmp keymap to set colorscheme to catppuccin-mocha:
-vim.cmd.colorscheme "catppuccin-mocha"
+vim.cmd.colorscheme("catppuccin-mocha")
+

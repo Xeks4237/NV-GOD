@@ -1,4 +1,5 @@
 return {
+    -- fidget: plugin for slick notifications menu in corner of NeoVim
     "j-hui/fidget.nvim",
     name = "fidget",
     lazy = false,

@@ -1,4 +1,5 @@
 return {
+    -- nvim-web-devicons: allows to use nerd-font icons in nvim amd it's plugins
     "nvim-tree/nvim-web-devicons",
     name = "nvim-web-devicons",
     lazy = true,

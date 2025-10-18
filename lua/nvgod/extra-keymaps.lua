@@ -1,4 +1,5 @@
 -- NOTE: This file is mainly needed to set additional keymaps related to plugins
+-- All of a this keymaps are loaded through init.lua and not by plugins themselves
 
 -- [ Harpoon Keymaps ]
 -- Adds current file to harpoon marks list
@@ -20,8 +21,9 @@ vim.keymap.set("n", "<leader>h8", function() require("harpoon"):list():select(8)
 vim.keymap.set("n", "<leader>h9", function() require("harpoon"):list():select(9) end, { desc = "[h]arpoon to File [9]" })
 vim.keymap.set("n", "<leader>h0", function() require("harpoon"):list():select(10) end, { desc = "[h]arpoon to File 1[0]" })
 
--- Keymap to open NeoTree
-vim.keymap.set("n", "<C-e>", "<cmd>Neotree<CR>", { desc = "Open NeoTree" })
+-- Keymap to open NeoTree using: CTRL e
+-- by default you can open NeoTree using backslash \
+-- vim.keymap.set("n", "<C-e>", "<cmd>Neotree<CR>", { desc = "Open NeoTree" })
 
 -- [ Telescope Keymaps ]
 -- Search in :help pages
@@ -63,5 +65,4 @@ vim.keymap.set("n", "<leader>utw", "<cmd>set wrap! <CR>", { desc = "[t]oggle Lin
 vim.keymap.set("n", "<leader>utt", function()
     vim.o.showtabline = vim.o.showtabline == 2 and 0 or 2
 end, { desc = "[t]oggle [t]ab Line" })
-
 

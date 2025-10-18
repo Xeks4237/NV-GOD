@@ -1,4 +1,4 @@
--- NOTE: You can change these options how you like :)
+-- NOTE: Change these options how you like :)
 
 vim.o.hlsearch = true -- Set highlight on search
 vim.wo.number = true -- Make line numbers default

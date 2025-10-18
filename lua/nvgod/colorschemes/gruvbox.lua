@@ -1,7 +1,5 @@
--- This is loaded through lua/lazy/colorschemes.lua
-
 -- Configuration for gruvbox colorscheme
--- Ensure true color support in your terminal!
+-- NOTE: Ensure true color support is availible in your terminal!
 return {
     "ellisonleao/gruvbox.nvim",
     name = "gruvbox",

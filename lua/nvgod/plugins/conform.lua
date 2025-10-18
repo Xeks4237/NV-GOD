@@ -1,7 +1,5 @@
--- This file is loaded through lua/lazy/plugins.lua
-
--- Configuration for conform.nvim
 return {
+    -- conform: Formatter plugin for managing and controlling formatters
     "stevearc/conform.nvim",
     name = "conform",
     lazy = true,

@@ -1,5 +1,5 @@
--- Configuration for which-key
 return {
+    -- which-key: Plugin for showing slick popup menu which shows availible keymaps
     "folke/which-key.nvim",
     name = "which-key",
     lazy = false,

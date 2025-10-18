@@ -1,9 +1,10 @@
 return {
+    -- nvim-dap-go: Predefined configurations for go debugging in nvim-dap
     "leoluz/nvim-dap-go",
     name = "nvim-dap-go",
     lazy = true,
     opts = {
-        -- delve configurations
+        -- delve DAP configurations
         delve = {
             -- time to wait for delve to initialize the debug session.
             -- default to 20 seconds

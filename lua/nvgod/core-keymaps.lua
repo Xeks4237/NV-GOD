@@ -1,6 +1,7 @@
 -- NOTE: This file contains main keymaps of NV-GOD which are NOT related to plugins
+-- Keymaps for plugins are writed in "extra-keymaps.lua" file
 
--- <leader> key is a main key which is used in most of the keymaps for nvim
+-- <leader> key is a main starting key for NeoVim keybindings
 -- In this case <leader> is a Space
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -16,27 +17,34 @@ vim.keymap.set("n", "<C-Down>", "<cmd>resize +2<CR>", { desc = "Vertical Resize 
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<CR>", { desc = "Horizontal Resize" })
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Horizontal Resize" })
 
--- Tab Management
+-- [ Tab Management ]
+-- Move focus to the previous tab
 vim.keymap.set("n", "<leader>th", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
+-- Close current tab
 vim.keymap.set("n", "<leader>tj", "<cmd>tabclose<CR>", { desc = "Close Tab" })
+-- Open New tab
 vim.keymap.set("n", "<leader>tk", "<cmd>tabnew<CR>", { desc = "New Tab" })
+-- Move focus to the next tab
 vim.keymap.set("n", "<leader>tl", "<cmd>tabnext<CR>", { desc = "Next Tab" })
+-- Close all other tabs (not current one)
 vim.keymap.set("n", "<leader>ta", "<cmd>tabonly<CR>", { desc = "Close All Other Tabs" })
+-- Move tab to the left
 vim.keymap.set("n", "<leader>t<C-h>", "<cmd>tabmove -1<CR>", { desc = "Move Tab Left" })
+-- Move tab to the right
 vim.keymap.set("n", "<leader>t<C-l>", "<cmd>tabmove +1<CR>", { desc = "Move Tab Right" })
 
--- Save file using CTRL + s
+-- Save file/buffer using CTRL + s (same as using :w command)
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<CR><ESC>", { desc = "Save File" })
 
 -- Just quit everything
 -- gonna give error if you have not saved changes
 vim.keymap.set("n", "<C-q>", "<cmd>qa<CR>", { desc = "Quit NVim" })
 
--- Force quit everything
+-- Force Quit everything
 -- gonna ignore not saved changes, Can make lost of data!
 vim.keymap.set("n", "<C-S-q>", "<cmd>qa!<CR>", { desc = "FORCE Quit" })
 
--- Keymaps to move lines of code by using ALT + j or k 
+-- Keymaps to move selected lines of code by using ALT + j OR k 
 -- In Normal mode:
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move Down", silent = true })
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move Up", silent = true })
@@ -50,7 +58,7 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Up", silent = tr
 -- Clear highlights of search when pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- Keymap to clear search, diff update and redraw easily
+-- Keymap to clear Search Highlight, CommamdLine, and also Redraws UI
 vim.keymap.set(
     "n",
     "<leader>fr",
@@ -61,7 +69,7 @@ vim.keymap.set(
 -- Keymaps for easier navigation in search results
 -- Makes n key to move your cursor to the next search result 
 -- Makes N key to move your cursor to the previous search result 
--- Read more aboit it: https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+-- Read more about it: https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
 vim.keymap.set("n", "n", "v:searchforward ? 'n' : 'N'", { expr = true, desc = "Next Search Result" })
 vim.keymap.set("n", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Prev Search Result" })
 vim.keymap.set("x", "n", "v:searchforward ? 'n' : 'N'", { expr = true, desc = "Next Search Result" })
@@ -70,21 +78,20 @@ vim.keymap.set("o", "n", "v:searchforward ? 'n' : 'N'", { expr = true, desc = "N
 vim.keymap.set("o", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Prev Search Result" })
 
 -- Add undo break-points
--- Makes some symbols be a points where undo takes break
+-- Makes some symbols be a points where undo(u key) takes break
 vim.keymap.set("i", ",", ",<c-g>u")
 vim.keymap.set("i", ".", ".<c-g>u")
 vim.keymap.set("i", ";", ";<c-g>u")
 
--- Makes indenting in visual mode more "consistent"
+-- Makes indenting in visual mode easier
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
--- Keymaps for better commenting lines like this one
+-- Keymaps for better commenting lines
+-- For example: "gco" combination gonna add new below the cursor and make it commented
 vim.keymap.set("n", "gco", "o<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = "Add Comment Below" })
+-- Same think but for above the cursor
 vim.keymap.set("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = "Add Comment Above" })
-
--- Keymap to make a new file, by using CTRL + n
-vim.keymap.set("n", "<C-n>", "<cmd>new<CR>", { desc = "New File" })
 
 -- Keymap to hide a Terminal
 vim.keymap.set("t", "<C-/>", "<cmd>close<CR>", { desc = "Hide Terminal" })

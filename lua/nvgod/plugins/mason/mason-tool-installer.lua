@@ -1,10 +1,10 @@
--- Configuration for mason-tool-installer
 return {
+    -- madon-tool-installer: Allows to easyly install tools using mason automaticly
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     name = "mason-tool-installer",
     lazy = false,
     opts = {
-        -- a list of all tools you want to ensure are installed upon
+        -- a list of all tools you want to ensure are installed with mason
         ensure_installed = {
             -- NOTE: you can pin a tool to a particular version or
             -- turn off/on auto_update per tool, for example:
@@ -67,8 +67,7 @@ return {
         -- module(s) (assuming any are installed) which is sometimes wanted when
         -- doing lazy loading.
         integrations = {
-            -- NOTE: "mason-lspconfig" is unneded since NeoVim v0.11
-            ["mason-lspconfig"] = false, -- Requires mason-lspconfig
+            ["mason-lspconfig"] = true, -- Requires mason-lspconfig
             ["mason-nvim-dap"] = true, -- Requires mason-nvim-dap
         },
     },

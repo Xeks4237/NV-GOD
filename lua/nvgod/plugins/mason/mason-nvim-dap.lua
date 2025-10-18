@@ -1,4 +1,5 @@
 return {
+    -- mason-nvim-dap: Auto setups all DAP installed with mason
     "jay-babu/mason-nvim-dap.nvim",
     name = "mason-nvim-dap",
     lazy = true,

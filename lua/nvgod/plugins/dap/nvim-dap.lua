@@ -53,8 +53,8 @@ return {
         },
     },
     config = function()
-        local dap = require("dap")
-        local dapui = require("dapui")
+        local dap = require "dap"
+        local dapui = require "dapui"
 
         -- Change breakpoint icons amd colors
         vim.api.nvim_set_hl(0, "DapBreak", { fg = "#ff4040" })
@@ -77,4 +77,3 @@ return {
         require("dap-go").setup()
     end,
 }
-

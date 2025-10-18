@@ -10,13 +10,15 @@ return {
             suppress_on_insert = false, -- Suppress new messages while in insert mode
             ignore_done_already = false, -- Ignore new tasks that are already complete
             ignore_empty_message = false, -- Ignore new tasks that don't contain a message
-            clear_on_detach = -- Clear notification group when LSP server detaches
-                function(client_id)
-                    local client = vim.lsp.get_client_by_id(client_id)
-                    return client and client.name or nil
-                end,
-            notification_group = -- How to get a progress message's notification group key
-                function(msg) return msg.lsp_client.name end,
+            -- Clear notification group when LSP server detaches
+            clear_on_detach = function(client_id)
+                local client = vim.lsp.get_client_by_id(client_id)
+                return client and client.name or nil
+            end,
+            -- How to get a progress message's notification group key
+            notification_group = function(msg)
+                return msg.lsp_client.name
+            end,
             ignore = {}, -- List of LSP servers to ignore
 
             -- Options related to how LSP progress messages are displayed as notifications
@@ -26,10 +28,10 @@ return {
                 done_icon = "✔", -- Icon shown when all LSP progress tasks are complete
                 done_style = "Constant", -- Highlight group for completed LSP tasks
                 progress_ttl = math.huge, -- How long a message should persist when in progress
-                progress_icon = -- Icon shown when LSP progress tasks are in progress
-                    { "dots" },
-                progress_style = -- Highlight group for in-progress LSP tasks
-                    "WarningMsg",
+                -- Icon shown when LSP progress tasks are in progress
+                progress_icon = { "dots" },
+                -- Highlight group for in-progress LSP tasks
+                progress_style = "WarningMsg",
                 group_style = "Title", -- Highlight group for group name (LSP server name)
                 icon_style = "Question", -- Highlight group for group icons
                 priority = 30, -- Ordering priority for LSP notification group
@@ -37,9 +39,13 @@ return {
                 -- How to format a progress message
                 -- format_message = require("fidget.progress.display").default_format_message,
                 -- How to format a progress annotation
-                format_annote = function(msg) return msg.title end,
+                format_annote = function(msg)
+                    return msg.title
+                end,
                 -- How to format a progress notification group's name
-                format_group_name = function(group) return tostring(group) end,
+                format_group_name = function(group)
+                    return tostring(group)
+                end,
                 -- Override options from the default notification config
                 overrides = {
                     rust_analyzer = { name = "rust-analyzer" },
@@ -61,12 +67,12 @@ return {
             override_vim_notify = false, -- Automatically override vim.notify() with Fidget
             -- How to configure notification groups when instantiated
             -- configs = { default = require("fidget.notification").default_config },
-            redirect =                                        -- Conditionally redirect notifications to another backend
-                function(msg, level, opts)
-                    if opts and opts.on_open then
-                        return require("fidget.integration.nvim-notify").delegate(msg, level, opts)
-                    end
-                end,
+            -- Conditionally redirect notifications to another backend
+            redirect = function(msg, level, opts)
+                if opts and opts.on_open then
+                    return require("fidget.integration.nvim-notify").delegate(msg, level, opts)
+                end
+            end,
 
             -- Options related to how notifications are rendered as text
             view = {
@@ -75,13 +81,13 @@ return {
                 reflow = false, -- Reflow (wrap) messages wider than notification window
                 icon_separator = " ", -- Separator between group name and icon
                 group_separator = "---", -- Separator between notification groups
-                group_separator_hl = -- Highlight group used for group separator
-                    "Comment",
+                -- Highlight group used for group separator
+                group_separator_hl = "Comment",
                 line_margin = 1, -- Spaces to pad both sides of each non-empty line
-                render_message = -- How to render notification messages
-                    function(msg, cnt)
-                        return cnt == 1 and msg or string.format("(%dx) %s", cnt, msg)
-                    end,
+                -- How to render notification messages
+                render_message = function(msg, cnt)
+                    return cnt == 1 and msg or string.format("(%dx) %s", cnt, msg)
+                end,
             },
 
             -- Options related to the notification window and buffer
@@ -97,7 +103,7 @@ return {
                 align = "bottom", -- How to align the notification window
                 relative = "editor", -- What the notification window position is relative to
                 tabstop = 8, -- Width of each tab character in the notification window
-                avoid = {} -- Filetypes the notification window should avoid
+                avoid = {}, -- Filetypes the notification window should avoid
                 -- e.g., { "aerial", "NvimTree", "neotest-summary" }
             },
         },
@@ -107,9 +113,8 @@ return {
             level = vim.log.levels.WARN, -- Minimum logging level
             max_size = 10000, -- Maximum log file size, in KB
             float_precision = 0.01, -- Limit the number of decimals displayed for floats
-            path = -- Where Fidget writes its logs to
-                string.format("%s/fidget.nvim.log", vim.fn.stdpath("cache")),
+            -- Where Fidget writes its logs to
+            path = string.format("%s/fidget.nvim.log", vim.fn.stdpath "cache"),
         },
     },
 }
-

@@ -8,4 +8,3 @@ return {
     lazy = true,
     event = { "InsertEnter", "BufReadPre", "BufNewFile" },
 }
-

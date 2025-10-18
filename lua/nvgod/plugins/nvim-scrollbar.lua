@@ -94,16 +94,16 @@ return {
                 highlight = "GitSignsAdd",
             },
             GitChange = {
-                text = "┆",
+                text = "~",
                 priority = 7,
                 gui = nil,
-                color = "yallow",
+                color = "yellow",
                 cterm = nil,
                 color_nr = nil, -- cterm
                 highlight = "GitSignsChange",
             },
             GitDelete = {
-                text = "▁",
+                text = "-",
                 priority = 7,
                 gui = nil,
                 color = "red",
@@ -113,7 +113,7 @@ return {
             },
         },
         excluded_buftypes = {
-            "terminal",
+            "Alpha", -- Greeting Screen of alpha plugin
         },
         excluded_filetypes = {
             "blink-cmp-menu",
@@ -154,4 +154,3 @@ return {
         },
     },
 }
-

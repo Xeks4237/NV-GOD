@@ -44,7 +44,7 @@ vim.keymap.set("n", "<C-q>", "<cmd>qa<CR>", { desc = "Quit NVim" })
 -- gonna ignore not saved changes, Can make lost of data!
 vim.keymap.set("n", "<C-S-q>", "<cmd>qa!<CR>", { desc = "FORCE Quit" })
 
--- Keymaps to move selected lines of code by using ALT + j OR k 
+-- Keymaps to move selected lines of code by using ALT + j OR k
 -- In Normal mode:
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move Down", silent = true })
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move Up", silent = true })
@@ -59,16 +59,11 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Up", silent = tr
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Keymap to clear Search Highlight, CommamdLine, and also Redraws UI
-vim.keymap.set(
-    "n",
-    "<leader>fr",
-    "<cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>",
-    { desc = "Redraw / Clear hlsearch / Diff Update" }
-)
+vim.keymap.set("n", "<leader>fr", "<cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>", { desc = "Redraw / Clear hlsearch / Diff Update" })
 
 -- Keymaps for easier navigation in search results
--- Makes n key to move your cursor to the next search result 
--- Makes N key to move your cursor to the previous search result 
+-- Makes n key to move your cursor to the next search result
+-- Makes N key to move your cursor to the previous search result
 -- Read more about it: https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
 vim.keymap.set("n", "n", "v:searchforward ? 'n' : 'N'", { expr = true, desc = "Next Search Result" })
 vim.keymap.set("n", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Prev Search Result" })
@@ -96,4 +91,3 @@ vim.keymap.set("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = 
 -- Keymap to hide a Terminal
 vim.keymap.set("t", "<C-/>", "<cmd>close<CR>", { desc = "Hide Terminal" })
 vim.keymap.set("t", "<c-_>", "<cmd>close<CR>", { desc = "which_key_ignore" })
-

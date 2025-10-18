@@ -1,6 +1,7 @@
 return {
     -- harpoon: allows to fast switch between buffers/files using only keyboard
-    "ThePrimeagen/harpoon", branch = "harpoon2",
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
     name = "harpoon",
     lazy = true,
     opts = {

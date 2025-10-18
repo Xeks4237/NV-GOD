@@ -58,4 +58,3 @@ return {
         ts_config = {},
     },
 }
-

@@ -3,23 +3,45 @@
 
 -- [ Harpoon Keymaps ]
 -- Adds current file to harpoon marks list
-vim.keymap.set("n", "<leader>hn", function() require("harpoon"):list():add() end, { desc = "[h]arpoon [n]ew File" })
+vim.keymap.set("n", "<leader>hn", function()
+    require("harpoon"):list():add()
+end, { desc = "[h]arpoon [n]ew File" })
 
 -- Opens harpoon marks list in telescope
 vim.keymap.set("n", "<leader>hh", "<cmd>Telescope harpoon marks<CR>", { desc = "[h]arpoon Quick Menu" })
 
 -- Keymaps to fast navigate to first 10 harpoon marks using numbers
 -- NOTE: function to do it shortly makes it hard to set letters instead of numbers
-vim.keymap.set("n", "<leader>h1", function() require("harpoon"):list():select(1) end, { desc = "[h]arpoon to File [1]" })
-vim.keymap.set("n", "<leader>h2", function() require("harpoon"):list():select(2) end, { desc = "[h]arpoon to File [2]" })
-vim.keymap.set("n", "<leader>h3", function() require("harpoon"):list():select(3) end, { desc = "[h]arpoon to File [3]" })
-vim.keymap.set("n", "<leader>h4", function() require("harpoon"):list():select(4) end, { desc = "[h]arpoon to File [4]" })
-vim.keymap.set("n", "<leader>h5", function() require("harpoon"):list():select(5) end, { desc = "[h]arpoon to File [5]" })
-vim.keymap.set("n", "<leader>h6", function() require("harpoon"):list():select(6) end, { desc = "[h]arpoon to File [6]" })
-vim.keymap.set("n", "<leader>h7", function() require("harpoon"):list():select(7) end, { desc = "[h]arpoon to File [7]" })
-vim.keymap.set("n", "<leader>h8", function() require("harpoon"):list():select(8) end, { desc = "[h]arpoon to File [8]" })
-vim.keymap.set("n", "<leader>h9", function() require("harpoon"):list():select(9) end, { desc = "[h]arpoon to File [9]" })
-vim.keymap.set("n", "<leader>h0", function() require("harpoon"):list():select(10) end, { desc = "[h]arpoon to File 1[0]" })
+vim.keymap.set("n", "<leader>h1", function()
+    require("harpoon"):list():select(1)
+end, { desc = "[h]arpoon to File [1]" })
+vim.keymap.set("n", "<leader>h2", function()
+    require("harpoon"):list():select(2)
+end, { desc = "[h]arpoon to File [2]" })
+vim.keymap.set("n", "<leader>h3", function()
+    require("harpoon"):list():select(3)
+end, { desc = "[h]arpoon to File [3]" })
+vim.keymap.set("n", "<leader>h4", function()
+    require("harpoon"):list():select(4)
+end, { desc = "[h]arpoon to File [4]" })
+vim.keymap.set("n", "<leader>h5", function()
+    require("harpoon"):list():select(5)
+end, { desc = "[h]arpoon to File [5]" })
+vim.keymap.set("n", "<leader>h6", function()
+    require("harpoon"):list():select(6)
+end, { desc = "[h]arpoon to File [6]" })
+vim.keymap.set("n", "<leader>h7", function()
+    require("harpoon"):list():select(7)
+end, { desc = "[h]arpoon to File [7]" })
+vim.keymap.set("n", "<leader>h8", function()
+    require("harpoon"):list():select(8)
+end, { desc = "[h]arpoon to File [8]" })
+vim.keymap.set("n", "<leader>h9", function()
+    require("harpoon"):list():select(9)
+end, { desc = "[h]arpoon to File [9]" })
+vim.keymap.set("n", "<leader>h0", function()
+    require("harpoon"):list():select(10)
+end, { desc = "[h]arpoon to File 1[0]" })
 
 -- Keymap to open NeoTree using: CTRL e
 -- by default you can open NeoTree using backslash \
@@ -49,7 +71,7 @@ vim.keymap.set("n", "<leader>ft", "<cmd>Telescope filetypes<CR>", { desc = "[f]i
 -- Search in your NeoVim configuration files directory
 vim.keymap.set("n", "<leader>fn", function()
     builtin.find_files { cwd = vim.fn.stdpath "config" }
-end , { desc = "[f]ind [n]eovim Files" })
+end, { desc = "[f]ind [n]eovim Files" })
 
 -- [ UI Keymaps ]
 -- Search and preview colorschemes in telescope
@@ -65,4 +87,3 @@ vim.keymap.set("n", "<leader>utw", "<cmd>set wrap! <CR>", { desc = "[t]oggle Lin
 vim.keymap.set("n", "<leader>utt", function()
     vim.o.showtabline = vim.o.showtabline == 2 and 0 or 2
 end, { desc = "[t]oggle [t]ab Line" })
-

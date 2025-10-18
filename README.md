@@ -21,7 +21,7 @@ NV-GOD - The Best NeoVim Distro of ALL Time
     </a>
 </div>
 
-## Description:
+## Description
 
 NV-GOD is created by Me Xeks4247, Because other distros of NeoVim like LazyVim, AstroNVim and etc uses their own repos for all pre-configured options, plugins, autocmds and etc. It's easy for devs of Distros but it makes most of the configuration hidden from eyes of users, And It takes to MUCH time to find out how it works in their repos
 
@@ -30,7 +30,7 @@ For Advanced users like Me it's really big headache to work with
 - You can ask: "Then why don't I just use kickstart.nvim?"
   I know about it, it's a beautifull project but it more about to help new users to make their own NeoVim configs and understand how it works, In difference to kickstart My Project is meant to be FULL NeoVim Distro, BUT in the same time be simple as kickstart.nvim
 
-## Features:
+## Features
 
 - 😎Available in any platform Linux, Windows, and Android(through Termux)
 - 💪Fully Configured LSP Servers for different languages
@@ -40,7 +40,7 @@ For Advanced users like Me it's really big headache to work with
 - 🤩Highly Customizable UI with a lot of coloschemes for any needs
 - 🧭Own Plugin Managers UI Plugin to make Installation of Plugins, LSP, etc easier in VSCode style UI (work in progress...)
 
-## Installation:
+## Installation
 
 - First PLEASE Backup your old config of NeoVim if it exists
 
@@ -62,7 +62,7 @@ git clone https://Xeks4247/NV-GOD.git $XDG_CONFIG_HOME/nvim/ && rm -rf $XDG_CONF
 
 ---
 
-## Future Features which I plan to make:
+## Future Features which I plan to make
 
 1. a Plugin to easily manage old versions of NV-GOD and your own Configs through git in UI screen :3 (Optional if you want)
 

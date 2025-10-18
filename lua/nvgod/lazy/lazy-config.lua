@@ -13,7 +13,7 @@ return {
         -- Automatically detect config file changes and reload
         enabled = true,
         -- Notify about detected changes
-        notify = true,
+        notify = false,
     },
     -- Logging verbosity
     logging = {
@@ -27,29 +27,29 @@ return {
     -- default ~/.config/nvim/lazy-lock.json
     -- to ~/.config/nvim/lua/lazy/core/lazy-lock.json
     lockfile = "~/.config/nvim/lua/nvgod/lazy/lazy-lock.json",
-	spec = {
+    spec = {
         -- Sets a files/directorys in lua directory where
         -- lazy.nvim package manager loads files for plugins
         -- NOTE: Seperating plugins and colorschemes needed only for "consistency"
-		{ import = "nvgod.plugins" },
-		{ import = "nvgod.plugins.mason" },
+        { import = "nvgod.plugins" },
+        { import = "nvgod.plugins.mason" },
         { import = "nvgod.plugins.treesitter" },
-		{ import = "nvgod.plugins.dap" },
-		-- { import = "nvgod.plugins.cmp" },
-		{ import = "nvgod.colorschemes" },
-		{ import = "custom.init" },
+        { import = "nvgod.plugins.dap" },
+        -- { import = "nvgod.plugins.cmp" },
+        { import = "nvgod.colorschemes" },
+        { import = "custom.init" },
         -- P.S olso it can have a table with paths to seperate files
-	},
+    },
     -- UI Appearance Options
     ui = {
         -- Window size (width and height as percentage or pixels)
         size = {
-            width = 0.9,   -- 90% of screen width
+            width = 0.9, -- 90% of screen width
             height = 0.9, -- 90% of screen height
         },
         -- Border style for the floating window
         border = "rounded", -- Options: "none", "single", "double", "rounded", "solid", "shadow"
-                            -- or a table like {"╭", "─", "╮", "│", "╯", "─", "╰", "│"}
+        -- or a table like {"╭", "─", "╮", "│", "╯", "─", "╰", "│"}
         -- Custom title for the window (requires border ~= "none")
         title = " Lazy.nvim ",
         -- Title alignment
@@ -65,32 +65,32 @@ return {
     -- Custom Icons (for UI elements, useful for non-Nerd Font setups)
     icons = {
         -- General UI elements
-        cmd = "⌘",        -- Command icon
-        config = "🛠",    -- Config icon
-        event = "📅",     -- Event icon
-        ft = "📂",        -- Filetype icon
-        init = "⚙",       -- Init icon
-        import = "📥",    -- Import icon
-        keys = "🗝",      -- Keymap icon
-        lazy = "💤",      -- Lazy.nvim icon
-        loaded = "●",     -- Loaded plugin
+        cmd = "⌘", -- Command icon
+        config = "🛠", -- Config icon
+        event = "📅", -- Event icon
+        ft = "📂", -- Filetype icon
+        init = "⚙", -- Init icon
+        import = "📥", -- Import icon
+        keys = "🗝", -- Keymap icon
+        lazy = "💤", -- Lazy.nvim icon
+        loaded = "●", -- Loaded plugin
         not_loaded = "○", -- Not loaded plugin
-        plugin = "🔌",    -- Plugin icon
-        runtime = "💻",   -- Runtime icon
-        require = "📜",   -- Require icon
-        source = "📄",    -- Source icon
-        start = "🚀",     -- Start icon
-        task = "📌",      -- Task icon
-        list = {          -- List item indicators
+        plugin = "🔌", -- Plugin icon
+        runtime = "💻", -- Runtime icon
+        require = "📜", -- Require icon
+        source = "📄", -- Source icon
+        start = "🚀", -- Start icon
+        task = "📌", -- Task icon
+        list = { -- List item indicators
             "●",
             "➜",
             "★",
             "‒",
         },
         -- Status icons
-        ok = "✓",         -- Success status
-        warn = "!",       -- Warning status
-        error = "✗",      -- Error status
+        ok = "✓", -- Success status
+        warn = "!", -- Warning status
+        error = "✗", -- Error status
         -- Loading spinner animation
         dots = "⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏",
     },
@@ -121,4 +121,3 @@ return {
         },
     },
 }
-

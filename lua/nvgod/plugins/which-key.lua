@@ -5,7 +5,7 @@ return {
     lazy = false,
     opts = {
         -- Preset for which-key appearance: "classic", "modern", "helix", or false to disable
-        preset = "modern", -- Affects styling of popup menu 
+        preset = "modern", -- Affects styling of popup menu
         show_help = true, -- Show help message
         show_keys = true, -- Show keybinding in popup
         delay = 512, -- Delay in ms before showing popup
@@ -89,53 +89,59 @@ return {
         -- For example <leader>fg gonna be in group of <leader>f keymaps
         spec = {
             -- [ Telescope Related ]
-            { "<leader>f", group = "[Find]", icon = { icon = "", color = "blue" }},
-            { "<leader>fk", icon = { icon = "󰌌", color = "blue" }},
-            { "<leader>fg", icon = { icon = "󰱼", color = "orange" }},
-            { "<leader>fd", icon = { icon = "󱎸", color = "red" }},
-            { "<leader>fh", icon = { icon = "󰋗", color = "blue" }},
-            { "<leader>ft", icon = { icon = "󱇧", color = "green" }},
-            { "<leader>ff", icon = { icon = "󰈞", color = "blue" }},
-            { "<leader>fn", icon = { icon = "", color = "green" }},
+            { "<leader>f", group = "[Find]", icon = { icon = "", color = "blue" } },
+            { "<leader>fk", icon = { icon = "󰌌", color = "blue" } },
+            { "<leader>fg", icon = { icon = "󰱼", color = "orange" } },
+            { "<leader>fd", icon = { icon = "󱎸", color = "red" } },
+            { "<leader>fh", icon = { icon = "󰋗", color = "blue" } },
+            { "<leader>ft", icon = { icon = "󱇧", color = "green" } },
+            { "<leader>ff", icon = { icon = "󰈞", color = "blue" } },
+            { "<leader>fn", icon = { icon = "", color = "green" } },
             -- [ Harpoon Related ]
-            { "<leader>h", group = "[Harpoon]", icon = { icon = "", color = "yellow" }},
-            { "<leader>hh", icon = { icon = "󰙵", color = "purple" }},
-            { "<leader>hn", icon = { icon = "", color = "yellow" }},
+            { "<leader>h", group = "[Harpoon]", icon = { icon = "", color = "yellow" } },
+            { "<leader>hh", icon = { icon = "󰙵", color = "purple" } },
+            { "<leader>hn", icon = { icon = "", color = "yellow" } },
             -- [ Tabs Related ]
-            { "<leader>t", group = "[Tabs]", icon = { icon = "󰓩", color = "purple" }},
-            { "<leader>th", icon = { icon = "", color = "cyan" }},
-            { "<leader>tj", icon = { icon = "󰭌", color = "red" }},
-            { "<leader>tk", icon = { icon = "󰝜", color = "green" }},
-            { "<leader>tl", icon = { icon = "", color = "cyan" }},
-            { "<leader>t<C-h>", icon = { icon = "", color = "orange" }},
-            { "<leader>t<C-l>", icon = { icon = "", color = "orange" }},
+            { "<leader>t", group = "[Tabs]", icon = { icon = "󰓩", color = "purple" } },
+            { "<leader>th", icon = { icon = "", color = "cyan" } },
+            { "<leader>tj", icon = { icon = "󰭌", color = "red" } },
+            { "<leader>tk", icon = { icon = "󰝜", color = "green" } },
+            { "<leader>tl", icon = { icon = "", color = "cyan" } },
+            { "<leader>t<C-h>", icon = { icon = "", color = "orange" } },
+            { "<leader>t<C-l>", icon = { icon = "", color = "orange" } },
             -- [ Diagnostics Related ]
-            { "<leader>d", group = "[Diagnostics]", icon = { icon ="󰃤", color = "red" }},
-            { "<leader>db", icon = { icon = "", color = "green" }},
-            { "<leader>dB", icon = { icon = "󰛿", color = "yellow" }},
+            { "<leader>d", group = "[Diagnostics]", icon = { icon = "󰃤", color = "red" } },
+            { "<leader>db", icon = { icon = "", color = "green" } },
+            { "<leader>dB", icon = { icon = "󰛿", color = "yellow" } },
+            -- [ Trouble plugin related ]
+            { "<leader>dQ", icon = { icon = "󱖫", color = "red" } },
+            { "<leader>dL", icon = { icon = "", color = "green" } },
+            { "<leader>dl", icon = { icon = "󰛔", color = "green" } },
+            { "<leader>ds", icon = { icon = "󰃤", color = "yellow" } },
+            { "<leader>dx", icon = { icon = "󰃤", color = "red" } },
+            { "<leader>dX", icon = { icon = "󰈔", color = "red" } },
             -- [ UI Related ]
             { "<leader>u", group = "[User Interface]", icon = "󰈈" },
-            { "<leader>ut", group = "[Toggle Options]", icon = { icon = "", color = "yellow" }},
-            { "<leader>uc", icon = { icon = "", color = "white" }},
+            { "<leader>ut", group = "[Toggle Options]", icon = { icon = "", color = "yellow" } },
+            { "<leader>uc", icon = { icon = "", color = "white" } },
             -- [ Git Related ]
-            { "<leader>g", group = "[Git]", icon = { icon = "", color = "red" }},
-            { "<leader>gt", group = "[Toggle Options]", icon = { icon = "", color = "yellow" }},
-            { "<leader>gtb", icon = { icon = " ", color = "yellow" }},
-            { "<leader>gtd", icon = { icon = " ", color = "yellow" }},
-            { "<leader>gb", icon = { icon = "󰊢", color = "cyan" }},
-            { "<leader>gd", icon = { icon = "󰌒", color = "yellow" }},
-            { "<leader>gD", icon = { icon = "", color = "yellow" }},
-            { "<leader>gp", icon = { icon = "󰛔", color = "green" }},
-            { "<leader>gr", icon = { icon = "", color = "red" }},
-            { "<leader>gR", icon = { icon = "󰣜", color = "red" }},
-            { "<leader>gs", icon = { icon = "󰄳", color = "green" }},
-            { "<leader>gS", icon = { icon = "󰩍", color = "green" }},
-            { "<leader>gu", icon = { icon = "󰕌", color = "red" }},
-            { "<leader>g[", icon = { icon = "", color = "cyan" }},
-            { "<leader>g]", icon = { icon = "", color = "cyan" }},
+            { "<leader>g", group = "[Git]", icon = { icon = "", color = "red" } },
+            { "<leader>gt", group = "[Toggle Options]", icon = { icon = "", color = "yellow" } },
+            { "<leader>gtb", icon = { icon = " ", color = "yellow" } },
+            { "<leader>gtd", icon = { icon = " ", color = "yellow" } },
+            { "<leader>gb", icon = { icon = "󰊢", color = "cyan" } },
+            { "<leader>gd", icon = { icon = "󰌒", color = "yellow" } },
+            { "<leader>gD", icon = { icon = "", color = "yellow" } },
+            { "<leader>gp", icon = { icon = "󰛔", color = "green" } },
+            { "<leader>gr", icon = { icon = "", color = "red" } },
+            { "<leader>gR", icon = { icon = "󰣜", color = "red" } },
+            { "<leader>gs", icon = { icon = "󰄳", color = "green" } },
+            { "<leader>gS", icon = { icon = "󰩍", color = "green" } },
+            { "<leader>gu", icon = { icon = "󰕌", color = "red" } },
+            { "<leader>g[", icon = { icon = "", color = "cyan" } },
+            { "<leader>g]", icon = { icon = "", color = "cyan" } },
             -- [ Other ]
-            { "<leader>fr", icon = { icon = "󰑓", color = "yellow" }},
+            { "<leader>fr", icon = { icon = "󰑓", color = "yellow" } },
         },
     },
 }
-

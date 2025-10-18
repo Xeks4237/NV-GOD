@@ -5,7 +5,7 @@ return {
     lazy = false,
     config = function()
         -- Configuration for alpha-nvim
-        local dashboard = require("alpha.themes.dashboard")
+        local dashboard = require "alpha.themes.dashboard"
 
         -- Set header/logo
         dashboard.section.header.val = {
@@ -42,4 +42,3 @@ return {
         -- To give you ability to set a anime girl as a logo:3
     end,
 }
-

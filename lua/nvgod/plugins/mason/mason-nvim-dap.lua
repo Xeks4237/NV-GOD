@@ -17,4 +17,3 @@ return {
         ensure_installed = {}, -- Not needed
     },
 }
-

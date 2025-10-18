@@ -6,4 +6,3 @@ return {
     event = "InsertEnter",
     -- Don't needs configuration and "opts" table
 }
-

@@ -3,7 +3,7 @@ return {
     "stevearc/conform.nvim",
     name = "conform",
     lazy = true,
-    event =  "BufWritePre", -- Loads before writing to the file
+    event = "BufWritePre", -- Loads before writing to the file
     opts = {
         -- Map of filetype to formatters
         -- for example stylua formatter for lua
@@ -20,10 +20,11 @@ return {
             typescript = { "prettierd" }, -- For typescript
             css = { "prettierd" }, -- For css
             html = { "prettierd" }, -- For html
+            markdown = { "markdownlint" }, -- For markdown
             -- Use the "*" filetype to run formatters on all filetypes.
             -- for example for spell checker
             ["*"] = { "codespell" },
-            -- Use the "_" filetype to run formatters on 
+            -- Use the "_" filetype to run formatters on
             -- filetypes that don't have other formatters configured.
             -- for example:
             -- ["_"] = { "ast-grep" },
@@ -57,4 +58,3 @@ return {
         formatters = {},
     },
 }
-

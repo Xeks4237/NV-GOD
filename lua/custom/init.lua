@@ -20,4 +20,3 @@ return {
     -- require("custom.plugins.cmp"),
     -- require("custom.plugins.dap"),
 }
-

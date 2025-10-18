@@ -29,7 +29,7 @@ return {
             -- an issue on delve versions < 1.24.0 for Windows where this needs to be
             -- set to false, otherwise the dlv server creation will fail.
             -- avaliable ui interactive function to prompt for build flags: get_build_flags
-            detached = vim.fn.has("win32") == 0,
+            detached = vim.fn.has "win32" == 0,
             -- the current working directory to run dlv from, if other than
             -- the current working directory.
             cwd = nil,
@@ -46,4 +46,3 @@ return {
         dap_configurations = {},
     },
 }
-

@@ -5,7 +5,7 @@ return {
     lazy = true,
     event = { "BufReadPre", "BufNewFile" },
     config = function()
-        local lint = require("lint")
+        local lint = require "lint"
         -- Allows other plugins to add linters to "lint.linters_by_ft"
         lint.linters_by_ft = lint.linters_by_ft or {}
         -- Linters for some filetypes
@@ -41,4 +41,3 @@ return {
         })
     end,
 }
-

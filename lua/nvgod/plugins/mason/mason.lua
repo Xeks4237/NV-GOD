@@ -36,7 +36,6 @@ return {
                 package_pending = "➜",
                 package_uninstalled = "✗",
             },
-
         },
 
         -- Keymaps for Mason
@@ -59,4 +58,3 @@ return {
         max_concurrent_installers = 5,
     },
 }
-

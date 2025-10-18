@@ -46,9 +46,8 @@ return {
             enable = true, -- Enable indent
             -- Disable indent feature for some languages which have problems with that
             disable = {
-                "ruby"
-            }
+                "ruby",
+            },
         },
     },
 }
-

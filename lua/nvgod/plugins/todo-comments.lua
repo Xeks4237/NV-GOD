@@ -10,4 +10,3 @@ return {
     event = "VimEnter",
     opts = { signs = false },
 }
-

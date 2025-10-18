@@ -13,7 +13,7 @@ return {
         throttle_ms = 128,
         handle = {
             text = " ",
-            blend = 10, -- Integer between 0 and 100. 0 for fully opaque and 100 to full transparent. Defaults to 30.
+            blend = 0, -- Integer between 0 and 100. 0 for fully opaque and 100 to full transparent. Defaults to 30.
             color = nil,
             color_nr = nil, -- cterm
             highlight = "CursorColumn",

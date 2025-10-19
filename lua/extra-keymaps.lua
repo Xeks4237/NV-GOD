@@ -69,9 +69,7 @@ vim.keymap.set("n", "<leader>f<leader>", "<cmd>Telescope buffers<CR>", { desc = 
 -- Search a file-type to set to current buffer/file
 vim.keymap.set("n", "<leader>ft", "<cmd>Telescope filetypes<CR>", { desc = "[f]ind File [t]ype" })
 -- Search in your NeoVim configuration files directory
-vim.keymap.set("n", "<leader>fn", function()
-    builtin.find_files { cwd = vim.fn.stdpath "config" }
-end, { desc = "[f]ind [n]eovim Files" })
+vim.keymap.set("n", "<leader>fn", "<cmd>Telescope find_files cwd=~/.config/nvim<CR>", { desc = "[f]ind [n]eovim Files" })
 
 -- [ UI Keymaps ]
 -- Search and preview colorschemes in telescope

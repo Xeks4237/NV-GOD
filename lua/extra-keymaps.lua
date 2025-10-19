@@ -43,10 +43,6 @@ vim.keymap.set("n", "<leader>h0", function()
     require("harpoon"):list():select(10)
 end, { desc = "[h]arpoon to File 1[0]" })
 
--- Keymap to open NeoTree using: CTRL e
--- by default you can open NeoTree using backslash \
--- vim.keymap.set("n", "<C-e>", "<cmd>Neotree<CR>", { desc = "Open NeoTree" })
-
 -- [ Telescope Keymaps ]
 -- Search in :help pages
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "[f]ind [h]elp" })
@@ -85,3 +81,7 @@ vim.keymap.set("n", "<leader>utw", "<cmd>set wrap! <CR>", { desc = "[t]oggle Lin
 vim.keymap.set("n", "<leader>utt", function()
     vim.o.showtabline = vim.o.showtabline == 2 and 0 or 2
 end, { desc = "[t]oggle [t]ab Line" })
+
+-- [ Other Keymaps ]
+-- Keymap to open neoclip clipboard manager in telescope
+vim.keymap.set({ "n", "i", "v" }, "<C-p>", "<cmd>Telescope neoclip<CR>", { desc = "Open NeoClip" })

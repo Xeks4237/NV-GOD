@@ -19,4 +19,4 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Load configuration for lazy.nvim from lua/nvgod/lazy/lazy-config.lua
-require("lazy").setup(require "nvgod.lazy.lazy-config")
+require("lazy").setup(require "lazy.lazy-config")

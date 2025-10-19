@@ -26,18 +26,16 @@ return {
     -- Changes location of lazy-lock.json from
     -- default ~/.config/nvim/lazy-lock.json
     -- to ~/.config/nvim/lua/lazy/core/lazy-lock.json
-    lockfile = "~/.config/nvim/lua/nvgod/lazy/lazy-lock.json",
+    lockfile = "~/.config/nvim/lua/lazy/lazy-lock.json",
     spec = {
         -- Sets a files/directorys in lua directory where
         -- lazy.nvim package manager loads files for plugins
         -- NOTE: Seperating plugins and colorschemes needed only for "consistency"
-        { import = "nvgod.plugins" },
-        { import = "nvgod.plugins.mason" },
-        { import = "nvgod.plugins.treesitter" },
-        { import = "nvgod.plugins.dap" },
-        { import = "nvgod.plugins.cmp" },
-        { import = "nvgod.colorschemes" },
-        { import = "custom.init" },
+        { import = "plugins" },
+        { import = "plugins.mason" },
+        { import = "plugins.treesitter" },
+        { import = "plugins.dap" },
+        { import = "colorschemes" },
         -- P.S olso it can have a table with paths to seperate files
     },
     -- UI Appearance Options

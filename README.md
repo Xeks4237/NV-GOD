@@ -34,11 +34,11 @@ For Advanced users like Me it's really big headache to work with
 
 - 😎Available in any platform Linux, Windows, and Android(through Termux)
 - 💪Fully Configured LSP Servers for different languages
+- 🐞Full Debugging support with nvim-dap
 - ✒️AutoSuggestions for Code with LSP, DAP, and TreSitter support
 - ⌨️Non-Colliding Keymaps Without Bloat
 - 📝A lot of Comments to help you configure NV-GOD for your needs
 - 🤩Highly Customizable UI with a lot of coloschemes for any needs
-- 🧭Own Plugin Managers UI Plugin to make Installation of Plugins, LSP, etc easier in VSCode style UI (work in progress...)
 
 ## Installation
 

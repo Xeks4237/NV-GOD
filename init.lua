@@ -3,19 +3,16 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Setting options
-require "nvgod.options" -- Sources lua/options.lua file
+require "options" -- Sources lua/options.lua file
 
 -- Basic Keymaps
-require "nvgod.core-keymaps" -- Sources lua/keymaps/core.lua file
+require "core-keymaps" -- Sources lua/core-keymaps.lua file
 
 -- Install "lazy.nvim" plugin manager
-require "nvgod.lazy.lazy-bootstrap"
+require "lazy.lazy-bootstrap" -- Sources lua/lazy/lazy-bootstrap.lua file
 
 -- Extra Keymaps related to plugins
-require "nvgod.extra-keymaps"
-
--- OverWrite Default Settings using insides of a "custom" directory
--- require("custom.init")
+require "extra-keymaps" -- Sources lua/extra-keymaps.lua file
 
 -- Tmp keymap to set colorscheme to catppuccin-mocha:
 vim.cmd.colorscheme "catppuccin-mocha"

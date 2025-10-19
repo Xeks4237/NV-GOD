@@ -20,7 +20,7 @@ return {
             typescript = { "prettierd" }, -- For typescript
             css = { "prettierd" }, -- For css
             html = { "prettierd" }, -- For html
-            markdown = { "markdownlint" }, -- For markdown
+            markdown = { "prettierd", "markdownlint" }, -- For markdown
             -- Use the "*" filetype to run formatters on all filetypes.
             -- for example for spell checker
             ["*"] = { "codespell" },

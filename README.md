@@ -91,34 +91,37 @@ all configuration is located in $XDG_CONFIG_HOME/nvim or ~/.config/nvim by defau
  ~/.config/nvim
  📄 init.lua
  📁 lua
- │ 📁 custom  <-- Directory for overriding default settigs
- └ 📁 nvgod   <-- Main directory of NV-GOD
-   │ 📁 lazy
-   │ 📁 colorschemes
-   │ 📁 plugins
-   │ │ 📁 cmp
-   │ │ │ 📄 nvim-cmp.lua
-   │ │ │ ...
-   │ │ └ 📄 cmp-nvim-lsp.lua
-   │ │ 📁 dap
-   │ │ │ 📄 nvim-dap-go.lua
-   │ │ └ 📄 nvim-dap.lua
-   │ │ 📁 mason
-   │ │ │ 📄 mason-tool-installer.lua
-   │ │ │ ...
-   │ │ └ 📄 mason.lua
-   │ │ 📄 gitsigns.lua
-   │ │ 📄 neo-tree.lua
-   │ │ 📄 telescope.lua
-   │ │ 📄 treesitter.lua
-   │ │ ...
-   │ └ 📄 which-key.lua
-   │ 📄 core-keymaps.lua
-   │ 📄 extra-keymaps.lua
-   │ 📄 health.lua
-   └ 📄 options.lua
+ │ 📁 lazy
+ │ 📁 colorschemes
+ │ │ 📄 catppuccin.lua
+ │ │ ...
+ │ └ 📄 tokyonight.lua
+ │ 📁 plugins
+ │ │ 📁 cmp
+ │ │ │ 📄 nvim-cmp.lua
+ │ │ │ ...
+ │ │ └ 📄 cmp-nvim-lsp.lua
+ │ │ 📁 dap
+ │ │ │ 📄 nvim-dap-go.lua
+ │ │ └ 📄 nvim-dap.lua
+ │ │ 📁 mason
+ │ │ │ 📄 mason-tool-installer.lua
+ │ │ │ ...
+ │ │ └ 📄 mason.lua
+ │ │ 📁 treesitter
+ │ │ │ 📄 treesitter.lua
+ │ │ │ ...
+ │ │ └ 📄 treesitter-endwise.lua
+ │ │ 📄 neo-tree.lua
+ │ │ 📄 nvim-scrollbar.lua
+ │ │ ...
+ │ └ 📄 which-key.lua
+ │ 📄 core-keymaps.lua
+ │ 📄 extra-keymaps.lua
+ │ 📄 health.lua
+ └ 📄 options.lua
 </pre>
 
 ## License
 
-NV-GOD project uses MIT-License, This mean you can do whotever what you want with code😜
+NV-GOD Uses MIT-License, This mean you can do whotever what you want with code😜

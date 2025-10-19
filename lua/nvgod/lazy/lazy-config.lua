@@ -35,7 +35,7 @@ return {
         { import = "nvgod.plugins.mason" },
         { import = "nvgod.plugins.treesitter" },
         { import = "nvgod.plugins.dap" },
-        -- { import = "nvgod.plugins.cmp" },
+        { import = "nvgod.plugins.cmp" },
         { import = "nvgod.colorschemes" },
         { import = "custom.init" },
         -- P.S olso it can have a table with paths to seperate files

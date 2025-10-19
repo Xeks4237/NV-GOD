@@ -112,9 +112,7 @@ return {
                 highlight = "GitSignsDelete",
             },
         },
-        excluded_buftypes = {
-            "Alpha", -- Greeting Screen of alpha plugin
-        },
+        excluded_buftypes = {},
         excluded_filetypes = {
             "blink-cmp-menu",
             "dropbar_menu",

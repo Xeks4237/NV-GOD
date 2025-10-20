@@ -75,5 +75,6 @@ return {
         -- NOTE: If you added additional nvim-dap plugin for other language
         -- Then add require("plugun-name").setup() for this plugin here:
         require("dap-go").setup()
+        require("dap-python").setup()
     end,
 }

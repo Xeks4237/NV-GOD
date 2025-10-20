@@ -1,5 +1,5 @@
 return {
-    -- mason-lspconfig: Auto enables installed with mason LSP servers
+    -- mason-lspconfig: Auto enables installed with mason, LSP servers
     -- also bridges gaps between mason and nvim-lspconfig
     "mason-org/mason-lspconfig.nvim",
     name = "mason-lspconfig",

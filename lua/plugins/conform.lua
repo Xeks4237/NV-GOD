@@ -11,7 +11,7 @@ return {
         -- You can use a function here to determine the formatters dynamically
         formatters_by_ft = {
             lua = { "stylua" }, -- for lua
-            go = { "goimports", "gofmt" }, -- for go
+            go = { "goimports" }, -- for go
             python = { "black" }, -- for python
             bash = { "beautysh" }, -- for bash
             zsh = { "beautysh" }, -- for zsh

@@ -1,5 +1,5 @@
 return {
-    -- madon-tool-installer: Allows to easyly install tools using mason automaticly
+    -- mason-tool-installer: Allows to easyly install tools using mason automaticly
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     name = "mason-tool-installer",
     lazy = false,
@@ -9,29 +9,35 @@ return {
             -- NOTE: you can pin a tool to a particular version or
             -- turn off/on auto_update per tool, for example:
             -- { "golangci-lint", version = "v1.47.0", auto_update = false },
+            -- [ Python Related ]
             "pyright", -- LSP for python
             "debugpy", -- DAP for python
             "pylint", -- Linter for python
             "black", -- Formatter for python
+            -- [ Lua Related ]
             "lua-language-server", -- LSP for lua
             "stylua", -- Formatter for lua
+            -- [ Bash Related ]
             "bash-language-server", -- LSP for bash
             "beautysh", -- Formatter for bash
             "bash-debug-adapter", -- Debug adapter for bash
+            -- [ HTML Related ]
             "html-lsp", -- LSP for html
             "htmlbeautifier", -- Formatter for html
             "htmlhint", -- Linter for html
+            -- [ C and C++ Related ]
             "clangd", -- LSP for c and c++
             "clang-format", -- Formatter for c and c++
             "cpplint", -- Linter for c and c++
             "cpptools", -- DAP for c and c++
+            -- [ Go Related ]
             "gopls", -- LSP for go
-            "gofmt", -- Formatter for go
             "goimports", -- Formatter for go
-            "prettier", -- Main Formatter for everything other
-            "codespell", -- Linter for code misspellings
+            -- [ For Everything ]
+            "prettier", -- Formatter for many languages
+            "codebook", -- LSP for spell checking...
             "tree-sitter-cli", -- treesitter cli tool for treesitter plugin
-            -- add more tools by writing their names from mason ui
+            -- Add more tools by writing their names from mason ui (can be opened with :Mason)
         },
 
         -- if set to true this will check each tool for updates. If updates

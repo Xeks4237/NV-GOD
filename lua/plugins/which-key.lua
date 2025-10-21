@@ -122,8 +122,10 @@ return {
             { "<leader>dX", icon = { icon = "󰈔", color = "red" } },
             -- [ UI Related ]
             { "<leader>u", group = "[User Interface]", icon = "󰈈" },
-            { "<leader>ut", group = "[Toggle Options]", icon = { icon = "", color = "yellow" } },
             { "<leader>uc", icon = { icon = "", color = "white" } },
+            --[ UI Toggle Options ]
+            { "<leader>ut", group = "[Toggle Options]", icon = { icon = "", color = "yellow" } },
+            { "<leader>utc", icon = { icon = "", color = "yellow" } },
             -- [ Git Related ]
             { "<leader>g", group = "[Git]", icon = { icon = "", color = "red" } },
             { "<leader>gt", group = "[Toggle Options]", icon = { icon = "", color = "yellow" } },

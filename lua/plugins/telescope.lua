@@ -4,8 +4,21 @@ return {
     name = "telescope",
     lazy = false,
     dependencies = {
-        "nvim-lua/plenary.nvim", -- library plugin
-        "nvim-telescope/telescope-ui-select.nvim", -- plugin to allow nvim core commands to fill telescope menu
+        {
+            -- Library plugin
+            "nvim-lua/plenary.nvim",
+            name = "plenary",
+        },
+        {
+            -- Plugin to allow nvim core commands to fill telescope menu
+            "nvim-telescope/telescope-ui-select.nvim",
+            name = "telescope-ui-select",
+        },
+        {
+            -- Plugin to use NeoVim's cmdline in telescope
+            "jonarrien/telescope-cmdline.nvim",
+            name = "telescope-cmdline",
+        },
     },
     opts = {
         --Default options
@@ -55,6 +68,19 @@ return {
                 path = "~/.local/share/nvim/telescope_history", -- History file path
                 limit = 1000, -- Max history entries
             },
+            -- Mappings for Telescope
+            mappings = {
+                -- Mappings for normal mode
+                n = {
+                    ["j"] = require("telescope.actions").move_selection_next, -- j to select next entry
+                    ["k"] = require("telescope.actions").move_selection_previous, -- k to select previous entry
+                },
+                -- Mappings for insert mode
+                i = {
+                    ["<C-j>"] = require("telescope.actions").move_selection_next, -- "Ctrl j" to select next entry
+                    ["<C-k>"] = require("telescope.actions").move_selection_previous, -- "Ctrl k" to select previous entry
+                },
+            },
         },
         -- Pickers for searching files, text, and etc
         pickers = {
@@ -98,13 +124,42 @@ return {
         extensions = {
             -- harpoon extension to search harpoon marks in telescope
             harpoon = true,
-            -- telescope-fzf-native plugin for searching with better performance(Must be installed separately!)
-            -- fzf = {
-            --    fuzzy = true, -- Enable fuzzy matching
-            --    override_generic_sorter = true, -- Override default sorter
-            --    override_file_sorter = true, -- Override file sorter
-            --    case_mode = "smart_case", -- Case sensitivity (smart_case, ignore_case, respect_case)
-            -- },
+
+            -- cmdline extension to use cmdline in telescope
+            cmdline = {
+                highlights = {
+                    icon = "Include", -- Makes to be Included in menu
+                },
+                -- Icons for some command types
+                icons = {
+                    history = " ",
+                    command = " ",
+                    number = "󰴍 ",
+                    system = "",
+                    unknown = "",
+                },
+                -- Settings for telescope "picker"
+                picker = {
+                    -- Settings for layout of a telescope
+                    layout_config = {
+                        prompt_position = "top", -- Prompt at top (options: top, bottom)
+                        -- Sets size for telescope menu
+                        width = 70,
+                        height = 25,
+                    },
+                },
+                -- Mappings for cmdline
+                mappings = {
+                    edit = "<C-e>", -- "Ctrl e" to edit choosen command
+                },
+            },
+            -- fzf extension
+            fzf = {
+                fuzzy = true, -- Enable fuzzy matching
+                override_generic_sorter = true, -- Override default sorter
+                override_file_sorter = true, -- Override file sorter
+                case_mode = "smart_case", -- Case sensitivity (smart_case, ignore_case, respect_case)
+            },
         },
     },
 }

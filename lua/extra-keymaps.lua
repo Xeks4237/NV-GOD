@@ -66,6 +66,8 @@ vim.keymap.set("n", "<leader>f<leader>", "<cmd>Telescope buffers<CR>", { desc = 
 vim.keymap.set("n", "<leader>ft", "<cmd>Telescope filetypes<CR>", { desc = "[f]ind File [t]ype" })
 -- Search in your NeoVim configuration files directory
 vim.keymap.set("n", "<leader>fn", "<cmd>Telescope find_files cwd=~/.config/nvim<CR>", { desc = "[f]ind [n]eovim Files" })
+-- Sets : to open telescope-cmdline plugin instead of default cmdline
+vim.keymap.set({ "n", "v" }, ":", "<cmd>Telescope cmdline<CR>", { desc = "Open CmdLine" })
 
 -- [ UI Keymaps ]
 -- Search and preview colorschemes in telescope

@@ -14,11 +14,6 @@ return {
             "nvim-telescope/telescope-ui-select.nvim",
             name = "telescope-ui-select",
         },
-        {
-            -- Plugin to use NeoVim's cmdline in telescope
-            "jonarrien/telescope-cmdline.nvim",
-            name = "telescope-cmdline",
-        },
     },
     opts = {
         --Default options
@@ -125,34 +120,6 @@ return {
             -- harpoon extension to search harpoon marks in telescope
             harpoon = true,
 
-            -- cmdline extension to use cmdline in telescope
-            cmdline = {
-                highlights = {
-                    icon = "Include", -- Makes to be Included in menu
-                },
-                -- Icons for some command types
-                icons = {
-                    history = " ",
-                    command = " ",
-                    number = "󰴍 ",
-                    system = "",
-                    unknown = "",
-                },
-                -- Settings for telescope "picker"
-                picker = {
-                    -- Settings for layout of a telescope
-                    layout_config = {
-                        prompt_position = "top", -- Prompt at top (options: top, bottom)
-                        -- Sets size for telescope menu
-                        width = 70,
-                        height = 25,
-                    },
-                },
-                -- Mappings for cmdline
-                mappings = {
-                    edit = "<C-e>", -- "Ctrl e" to edit choosen command
-                },
-            },
             -- fzf extension
             fzf = {
                 fuzzy = true, -- Enable fuzzy matching

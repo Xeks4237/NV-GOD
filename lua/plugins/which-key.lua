@@ -114,9 +114,8 @@ return {
             { "<leader>db", icon = { icon = "", color = "green" } },
             { "<leader>dB", icon = { icon = "󰛿", color = "yellow" } },
             -- [ Trouble plugin related ]
-            { "<leader>dQ", icon = { icon = "󱖫", color = "red" } },
-            { "<leader>dL", icon = { icon = "", color = "green" } },
-            { "<leader>dl", icon = { icon = "󰛔", color = "green" } },
+            { "<leader>dq", icon = { icon = "󱖫", color = "red" } },
+            { "<leader>dl", icon = { icon = "", color = "green" } },
             { "<leader>ds", icon = { icon = "󰃤", color = "yellow" } },
             { "<leader>dx", icon = { icon = "󰃤", color = "red" } },
             { "<leader>dX", icon = { icon = "󰈔", color = "red" } },
@@ -142,9 +141,11 @@ return {
             { "<leader>gu", icon = { icon = "󰕌", color = "red" } },
             { "<leader>g[", icon = { icon = "", color = "cyan" } },
             { "<leader>g]", icon = { icon = "", color = "cyan" } },
+            { "<leader>gl", icon = { icon = "󰒲", color = "blue" } }, -- Open LazyGit
+            { "<leader>gh", icon = { icon = "", color = "cyan" } },
+            { "<leader>gv", icon = { icon = "󱖫", color = "green" } },
             -- [ Other ]
             { "<leader>fr", icon = { icon = "󰑓", color = "yellow" } }, -- Clear search, redraw and etc
-            { "<leader>gl", icon = { icon = "󰒲", color = "blue" } }, -- Open LazyGit
             { "<C-p>", icon = { icon = "󰅍", color = "cyan" } }, -- Open NeoClip
         },
     },

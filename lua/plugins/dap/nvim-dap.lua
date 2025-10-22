@@ -42,14 +42,14 @@ return {
             function()
                 require("dap").toggle_breakpoint()
             end,
-            desc = "[d]ebug: Toggle [b]reakpoint",
+            desc = "toggle [b]reakpoint",
         },
         {
             "<leader>dB",
             function()
                 require("dap").set_breakpoint(vim.fn.input "Breakpoint condition: ")
             end,
-            desc = "[d]ebug: Set [B]reakpoint",
+            desc = "set [B]reakpoint",
         },
     },
     config = function()
@@ -68,6 +68,7 @@ return {
             vim.fn.sign_define(tp, { text = icon, texthl = hl, numhl = hl })
         end
 
+        -- Make some events work better
         dap.listeners.after.event_initialized["dapui_config"] = dapui.open
         dap.listeners.before.event_terminated["dapui_config"] = dapui.close
         dap.listeners.before.event_exited["dapui_config"] = dapui.close

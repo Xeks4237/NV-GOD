@@ -5,7 +5,7 @@ return {
     lazy = false,
     opts = {
         history = 1000, -- Maximum number of clipboard entries to store
-        enable_persistent_history = false, -- Persists clipboard history across Neovim sessions (requires sqlite.lua plugin)
+        enable_persistent_history = true, -- Persists clipboard history across Neovim sessions (requires sqlite.lua plugin)
         length_limit = 1048576, -- Maximum length (in bytes) for a single clipboard entry
         -- Enables real-time synchronization of clipboard across NeoVim instances
         -- requires "sessionizer" like plugin

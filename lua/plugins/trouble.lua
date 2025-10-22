@@ -82,7 +82,7 @@ return {
                     action = function(view)
                         view:filter({ buf = 0 }, { toggle = true })
                     end,
-                    desc = "Toggle Current Buffer Filter",
+                    desc = "toggle turrent buffer filter",
                 },
                 s = { -- example of a custom action that toggles the severity
                     action = function(view)
@@ -94,7 +94,7 @@ return {
                             del = severity == 0,
                         })
                     end,
-                    desc = "Toggle Severity Filter",
+                    desc = "toggle severity filter",
                 },
             },
             modes = {
@@ -196,32 +196,27 @@ return {
         {
             "<leader>dx",
             "<cmd>Trouble diagnostics toggle<CR>",
-            desc = "Diagnostics (Trouble)",
+            desc = "diagnostics (Trouble)",
         },
         {
             "<leader>dX",
             "<cmd>Trouble diagnostics toggle filter.buf=0<CR>",
-            desc = "Buffer Diagnostics (Trouble)",
+            desc = "buffer diagnostics (Trouble)",
         },
         {
             "<leader>ds",
             "<cmd>Trouble symbols toggle focus=false<CR>",
-            desc = "Symbols (Trouble)",
+            desc = "symbols (Trouble)",
         },
         {
             "<leader>dl",
-            "<cmd>Trouble LSP toggle focus=false win.position=right<CR>",
-            desc = "LSP Definitions / references / ... (Trouble)",
-        },
-        {
-            "<leader>dL",
             "<cmd>Trouble loclist toggle<CR>",
-            desc = "Location List (Trouble)",
+            desc = "[l]ocation list (Trouble)",
         },
         {
-            "<leader>dQ",
+            "<leader>dq",
             "<cmd>Trouble qflist toggle<CR>",
-            desc = "Quickfix List (Trouble)",
+            desc = "[q]uickfix list (Trouble)",
         },
     },
 }

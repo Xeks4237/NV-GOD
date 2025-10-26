@@ -21,7 +21,7 @@ NV-GOD - The Best NeoVim Distro of ALL Time
     </a>
 </div>
 
-## Description
+# Description
 
 NV-GOD is created by Me Xeks4247, Because other distros of NeoVim like LazyVim, AstroNVim and etc uses their own repos for all pre-configured options, plugins, autocmds and etc. It's easy for devs of Distros but it makes most of the configuration hidden from eyes of users, And It takes to MUCH time to find out how it works in their repos
 
@@ -30,39 +30,239 @@ For Advanced users like Me it's really big headache to work with
 - You can ask: "Then why don't I just use kickstart.nvim?"
   I know about it, it's a beautifull project but it more about to help new users to make their own NeoVim configs and understand how it works, In difference to kickstart My Project is meant to be FULL NeoVim Distro, BUT in the same time be simple as kickstart.nvim
 
-## Features
+# Features
 
 - 😎Available in any platform Linux, Windows, and Android(through Termux)
 - 💪Fully Configured LSP Servers for different languages
 - 🐞Full Debugging support with nvim-dap
-- ✒️AutoSuggestions for Code with LSP, DAP, and TreSitter support
+- ✒️AutoSuggestions for Code with LSP, DAP, and TreeSitter support
 - ⌨️Non-Colliding Keymaps Without Bloat
 - 📝A lot of Comments to help you configure NV-GOD for your needs
 - 🤩Highly Customizable UI with a lot of coloschemes for any needs
 
-## Installation
+# Installation
 
-- First PLEASE Backup your old config of NeoVim if it exists
+### Before Starting
 
-- Install dependencies with your package manager:
-  1. NeoVim >= v0.11.1
-  2. Any MonoSpace [Nerd Font](https://www.nerdfonts.com/) for your Terminal (Choose which one you like)
-  3. Terminal with TrueColor support (recommended)
-  4. **luarocks**, **npm**, **pip**,(python3), **cargo**, **curl**, **git**, **perl**, **cmake**, **bash** for some plugins
-  5. gcc >= v15 for `nvim-treesitter`, `mason` and etc, See [Here](https://github.com/nvim-treesitter/nvim-treesitter#requirements)
-  6. **fzf**, **fd**, **ripgrep** for Searching of Files and Text in Them
+1. Use some terminal with TrueColor support (recommended)
+2. Install and choose any [NerdFont](https://www.nerdfonts.com) what you like in you terminal (recommended)
 
-- For Linux and Android(through Termux) use this command to install NV-GOD using Git:
+### System Specific Installation
 
-```sh
-git clone https://Xeks4247/NV-GOD.git $XDG_CONFIG_HOME/nvim/ && rm -rf $XDG_CONFIG_HOME/nvim/.git/
-```
+<details>
+  <summary>Arch Linux</summary>
 
-- For Windows, (work in progress)
+- First install Dependencies through pacman:
+
+  ```sh
+  sudo pacman -Syu neovim nodejs python3 curl wget git perl cmake bash gcc fzf fd ripgrep luarocks
+  ```
+
+- And use this command to clone NV-GOD using **git**:
+
+  ```sh
+  git clone https://Xeks4247/NV-GOD.git ~/.config/nvim/ && rm -rf ~/.config/nvim/.git/
+  ```
+
+- Then open NeoVim and Enjoy🎉:
+
+  ```sh
+  nvim
+  ```
+
+</details>
+
+<details>
+  <summary>Fedora</summary>
+
+- First install Dependencies through dnf:
+
+  ```sh
+  sudo dnf install -y neovim nodejs python3 curl wget git perl cmake bash gcc fzf fd-find ripgrep luarocks
+  ```
+
+- And use this command to clone NV-GOD using **git**:
+
+  ```sh
+  git clone https://Xeks4247/NV-GOD.git ~/.config/nvim/ && rm -rf ~/.config/nvim/.git/
+  ```
+
+- Then open NeoVim and Enjoy🎉:
+
+  ```sh
+  nvim
+  ```
+
+</details>
+
+<details>
+  <summary>Void Linux (xbps)</summary>
+
+- First install Dependencies through xbps:
+
+  ```sh
+  sudo xbps-install -y neovim nodejs python3 curl wget git perl cmake bash gcc fzf fd ripgrep luarocks
+  ```
+
+- And use this command to clone NV-GOD using **git**:
+
+  ```sh
+  git clone https://Xeks4247/NV-GOD.git ~/.config/nvim/ && rm -rf ~/.config/nvim/.git/
+  ```
+
+- Then open NeoVim and Enjoy🎉:
+
+  ```sh
+  nvim
+  ```
+
+</details>
+
+<details>
+  <summary>OpenSUSE Tumbleweed / Leap (zypper)</summary>
+
+- First install Dependencies through zypper:
+
+  ```sh
+  sudo zypper install -y neovim nodejs python3 curl wget git perl cmake bash gcc fzf fd ripgrep luarocks
+  ```
+
+- And use this command to clone NV-GOD using **git**:
+
+  ```sh
+  git clone https://Xeks4247/NV-GOD.git ~/.config/nvim/ && rm -rf ~/.config/nvim/.git/
+  ```
+
+- Then open NeoVim and Enjoy🎉:
+
+  ```sh
+  nvim
+  ```
+
+</details>
+
+<details>
+  <summary>Debian and Ubuntu</summary>
+
+- First install Dependencies through apt:
+
+  ```sh
+  sudo apt install -y neovim nodejs python3 curl wget git perl cmake bash gcc fzf fd-find ripgrep luarocks
+  ```
+
+- And use this command to clone NV-GOD using **git**:
+
+  ```sh
+  git clone https://Xeks4247/NV-GOD.git ~/.config/nvim/ && rm -rf ~/.config/nvim/.git/
+  ```
+
+- Then open NeoVim and Enjoy🎉:
+
+  ```sh
+  nvim
+  ```
+
+</details>
+
+<details>
+  <summary>Docker Container and Alpine Linux</summary>
+
+- First install Dependencies through apk:
+
+  ```sh
+  sudo apk add neovim nodejs python3 curl wget git perl cmake bash gcc fzf fd ripgrep luarocks
+  ```
+
+- And use this command to clone NV-GOD using **git**:
+
+  ```sh
+  git clone https://Xeks4247/NV-GOD.git ~/.config/nvim/ && rm -rf ~/.config/nvim/.git/
+  ```
+
+- Then open NeoVim and Enjoy🎉:
+
+  ```sh
+  nvim
+  ```
+
+</details>
+
+<details>
+  <summary>Other Linux Distros</summary>
+
+- First install these Dependencies With your package manager:
+  1. **neovim** version 0.11 or above
+  2. And the latest versions of these tools: **luarocks**, **nodejs**, **python3**, **curl**, **wget**, **git**, **perl**, **cmake**, **bash**, gcc, **fzf**, **fd**, **ripgrep**
+
+- And use this command to clone NV-GOD using **git**:
+
+  ```sh
+  git clone https://Xeks4247/NV-GOD.git ~/.config/nvim/ && rm -rf ~/.config/nvim/.git/
+  ```
+
+- And open NeoVim and Enjoy🎉:
+
+  ```sh
+  nvim
+  ```
+
+</details>
+
+<details>
+  <summary>Windows</summary>
+
+- First install Dependencies through winget:
+
+  ```sh
+  winget install neovim nodejs python3 curl wget git perl cmake gcc fzf fd ripgrep luarocks
+  ```
+
+- And use this command to clone NV-GOD using **git**:
+
+  ```sh
+  git clone https://Xeks4247/NV-GOD.git %AppData%\Local\nvim\ && rmdir %AppData%\Local\nvim\.git\ /s /q
+  ```
+
+- Then open NeoVim and Enjoy🎉:
+
+  ```sh
+  nvim
+  ```
+
+</details>
+
+<details>
+  <summary>Android (Through Termux)</summary>
+
+- First Update Termux
+
+  ```sh
+  pkg update -y && pkg upgrade -y
+  ```
+
+- And install Dependencies through pkg:
+
+  ```sh
+  pkg install neovim nodejs python3 curl wget git perl cmake gcc fzf fd ripgrep luarocks -y
+  ```
+
+- And use this command to clone NV-GOD using **git**:
+
+  ```sh
+  git clone https://Xeks4247/NV-GOD.git ~/.config/nvim/ && rm -rf ~/.config/nvim/.git/
+  ```
+
+- Then open NeoVim and Enjoy🎉:
+
+  ```sh
+  nvim
+  ```
+
+</details>
 
 ---
 
-## Future Features which I plan to make
+# Future Features which I plan to make
 
 1. a Plugin to easily manage old versions of NV-GOD and your own Configs through git in UI screen :3 (Optional if you want)
 

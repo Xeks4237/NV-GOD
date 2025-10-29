@@ -23,10 +23,11 @@ return {
     -- Throttle UI updates (affects performance, in milliseconds)
     -- bigger number = less lagging
     throttle = 25,
-    -- Changes location of lazy-lock.json from
-    -- default ~/.config/nvim/lazy-lock.json
-    -- to ~/.config/nvim/lua/lazy/core/lazy-lock.json
-    lockfile = "~/.config/nvim/lua/lazy/lazy-lock.json",
+    -- Changes location of lazy-lock.json
+    -- In Linux/MacOs/Android(through Termux) it's ~/.config/nvim/lazy-lock.json
+    -- In Windows %AppData%\nvim\lua\lazy\core\lazy-lock.json
+    lockfile = vim.fs.joinpath(vim.fn.stdpath "config", "lua", "lazy", "lazy-lock.json"),
+    -- Table for importing files and directorys for plugins
     spec = {
         -- Sets a files/directorys in lua directory where
         -- lazy.nvim package manager loads files for plugins

@@ -279,11 +279,9 @@ For Advanced users like Me it's really big headache to work with
 
 ## 📂 File Structure
 
-This is a Main File Structure of NV-GOD, which I plan to use to end,
-(Information about it gonna be on the Future WIKI page of NV-GOD)
+This is a Main File Structure of NV-GOD
 
-Package Manager on this example is a [lazy.nvim](https://github.com/folke/lazy.nvim)
-If you gonna choose different package manager, then lua/nvgod/lazy/ directory gonna be changed to something else like packer, plug and etc
+Package Manager on this example is [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 all configuration is located in $XDG_CONFIG_HOME/nvim or ~/.config/nvim by default
 

@@ -1,1 +1,7 @@
+# Lock file of lazy.nvim is not needed to be tracked
+# because it gonna be created after startt of lazy.nvim
 lazy-lock.json
+
+# .conform files are used by conform plugin in moments when it processes formatting on file(s) 
+# NOTE: Added it here to ensure I don't accidentally stack it when fast working 
+.conform.*

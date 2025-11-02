@@ -76,6 +76,10 @@ vim.keymap.set("n", "<leader>gh", "<cmd>DiffviewFileHistory<CR>", { desc = "[g]i
 -- [ UI Keymaps ]
 -- Search and preview colorschemes in telescope
 vim.keymap.set("n", "<leader>uc", "<cmd>Telescope colorscheme<CR>", { desc = "[u]I Pick [c]olorscheme" })
+-- Open lazy.nvim package manager
+vim.keymap.set("n", "<leader>ul", "<cmd>Lazy<CR>", { desc = "Open lazy.nvim" })
+-- Open mason
+vim.keymap.set("n", "<leader>um", "<cmd>Mason<CR>", { desc = "Open Mason" })
 
 -- [ UI Toggle Keymaps ]
 -- Toogle Line Numbers

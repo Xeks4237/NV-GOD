@@ -9,14 +9,14 @@ return {
             -- NOTE: you can pin a tool to a particular version or
             -- turn off/on auto_update per tool, for example:
             -- { "golangci-lint", version = "v1.47.0", auto_update = false },
+            -- [ Lua Related ]
+            "lua-language-server", -- LSP for lua
+            "stylua", -- Formatter for lua
             -- [ Python Related ]
             "pyright", -- LSP for python
             "debugpy", -- DAP for python
             "pylint", -- Linter for python
             "black", -- Formatter for python
-            -- [ Lua Related ]
-            "lua-language-server", -- LSP for lua
-            "stylua", -- Formatter for lua
             -- [ Bash Related ]
             "bash-language-server", -- LSP for bash
             "beautysh", -- Formatter for bash

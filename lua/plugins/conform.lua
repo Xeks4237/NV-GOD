@@ -21,6 +21,7 @@ return {
             css = { "prettierd" }, -- For css
             html = { "prettierd" }, -- For html
             markdown = { "prettierd", "markdownlint" }, -- For markdown
+            nix = { "nixfmt" }, -- For nix
             -- Use the "*" filetype to run formatters on all filetypes.
             -- for example for spell checker
             ["*"] = { "codespell" },

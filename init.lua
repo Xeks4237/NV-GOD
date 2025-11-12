@@ -14,8 +14,9 @@ require "lazy.lazy-bootstrap" -- Sources lua/lazy/lazy-bootstrap.lua file
 -- Extra Keymaps related to plugins
 require "extra-keymaps" -- Sources lua/extra-keymaps.lua file
 
--- Tmp keymap to set colorscheme to catppuccin-mocha:
-vim.cmd.colorscheme "catppuccin-mocha"
+-- Snippet for last-color.nvim plugin to make NeoVim remember last chosen colorscheme
+local theme = require("last-color").recall() or "catppuccin-mocha"
+vim.cmd.colorscheme(theme)
 
 -- Load file which contains autocmds for NV-GOD
 require "autocmds"

@@ -16,3 +16,6 @@ require "extra-keymaps" -- Sources lua/extra-keymaps.lua file
 
 -- Tmp keymap to set colorscheme to catppuccin-mocha:
 vim.cmd.colorscheme "catppuccin-mocha"
+
+-- Load file which contains autocmds for NV-GOD
+require "autocmds"

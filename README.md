@@ -4,17 +4,11 @@ NV-GOD - The Best NeoVim Distro of ALL Time
     <a href="https://github.com/Xeks4237/NV-GOD/releases/latest">
       <img alt="Latest Release:" src="https://img.shields.io/github/v/release/Xeks4247/NV-GOD?style=for-the-badge&logo=starship&color=A6E3A1&logoColor=181825&labelColor=&include_prerelease&sort=semver" />
     </a>
-    <a href="https://github.com/Xeks4237/NV-GOD/pulse">
-      <img alt="Last Commit:" src="https://img.shields.io/github/last-commit/Xeks4237/NV-GOD?style=for-the-badge&logo=git&color=FAB387&logoColor=F38BA8&labelColor=181825"/>
-    </a>
     <a href="https://github.com/Xeks4237/NV-GOD/LICENSE">
       <img alt="License:" src="https://img.shields.io/github/license/Xeks4237/NV-GOD?style=for-the-badge&color=CBA6F7&labelColor=181825" />
     </a>
     <a href="https://github.com/Xeks4237/NV-GOD/stargazers">
       <img alt="Stars:" src="https://img.shields.io/github/stars/Xeks4237/NV-GOD?style=for-the-badge&color=F9E2AF&labelColor=181825" />
-    </a>
-    <a href="https://github.com/Xeks4237/NV-GOD/issues">
-      <img alt="Issues:" src="https://img.shields.io/github/issues/Xeks4237/NV-GOD?style=for-the-badge&color=F38BA8&labelColor=181825" />
     </a>
     <a href="https://github.com/Xeks4237/NV-GOD">
       <img alt="Repo Size:" src="https://img.shields.io/github/repo-size/Xeks4237/NV-GOD?color=B4BEFE&label=Size&style=for-the-badge&labelColor=181825" />

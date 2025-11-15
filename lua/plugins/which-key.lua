@@ -113,12 +113,6 @@ return {
             { "<leader>d", group = "[Diagnostics]", icon = { icon = "󰃤", color = "red" } },
             { "<leader>db", icon = { icon = "", color = "green" } },
             { "<leader>dB", icon = { icon = "󰛿", color = "yellow" } },
-            -- [ Trouble plugin related ]
-            { "<leader>dq", icon = { icon = "󱖫", color = "red" } },
-            { "<leader>dl", icon = { icon = "", color = "green" } },
-            { "<leader>ds", icon = { icon = "󰃤", color = "yellow" } },
-            { "<leader>dx", icon = { icon = "󰃤", color = "red" } },
-            { "<leader>dX", icon = { icon = "󰈔", color = "red" } },
             -- [ UI Related ]
             { "<leader>u", group = "[User Interface]", icon = "󰈈" },
             { "<leader>uc", icon = { icon = "", color = "white" } },
@@ -145,6 +139,7 @@ return {
             { "<leader>gh", icon = { icon = "", color = "cyan" } },
             { "<leader>gv", icon = { icon = "󱖫", color = "green" } },
             -- [ Other ]
+            { "<leader>dq", icon = { icon = "", color = "cyan" } },
             { "<leader>fr", icon = { icon = "󰑓", color = "yellow" } }, -- Clear search, redraw and etc
             { "<C-p>", icon = { icon = "󰅍", color = "cyan" } }, -- Open NeoClip
         },

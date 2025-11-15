@@ -91,3 +91,6 @@ vim.keymap.set("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = 
 -- Keymap to hide a Terminal
 vim.keymap.set("t", "<C-/>", "<cmd>close<CR>", { desc = "Hide Terminal" })
 vim.keymap.set("t", "<c-_>", "<cmd>close<CR>", { desc = "which_key_ignore" })
+
+-- Keymap to open quickfix list
+vim.keymap.set("n", "<leader>dq", "<cmd>copen><CR>", { desc = "Open QuickFix List" })

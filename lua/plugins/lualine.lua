@@ -1,9 +1,11 @@
 return {
+    -- lualine: plugin for better and highly custimazible status line in the bottom for NeoVim
     "nvim-lualine/lualine.nvim",
     name = "lualine",
     lazy = false,
     dependencies = {
         {
+            -- lsp-progress: plugin to add LSP server progress messages to the lualine
             "linrongbin16/lsp-progress.nvim",
             config = function()
                 require("lsp-progress").setup()

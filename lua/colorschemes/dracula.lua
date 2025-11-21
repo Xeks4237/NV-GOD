@@ -1,3 +1,4 @@
+-- Configuration for dracula colorscheme
 return {
     "Mofiqul/dracula.nvim",
     name = "dracula",

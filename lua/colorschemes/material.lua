@@ -1,3 +1,4 @@
+-- Configuration for material colorscheme
 return {
     "marko-cerovac/material.nvim",
     name = "material",

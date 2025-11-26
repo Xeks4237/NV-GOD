@@ -10,7 +10,7 @@ end, { desc = "[h]arpoon [n]ew File" })
 -- Opens harpoon marks list in telescope
 vim.keymap.set("n", "<leader>hh", "<cmd>Telescope harpoon marks<CR>", { desc = "[h]arpoon Quick Menu" })
 
--- Keymaps to fast navigate to first 10 harpoon marks using numbers
+-- Keymaps for fast navigation between first 10 harpoon marks using numbers
 -- NOTE: function to do it shortly makes it hard to set letters instead of numbers
 vim.keymap.set("n", "<leader>h1", function()
     require("harpoon"):list():select(1)
@@ -45,27 +45,27 @@ end, { desc = "[h]arpoon to File 1[0]" })
 
 -- [ Telescope Keymaps ]
 -- Search in :help pages
-vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "[f]ind [h]elp" })
+vim.keymap.set("n", "<C-f>h", "<cmd>Telescope help_tags<CR>", { desc = "[f]ind [h]elp" })
 -- Search for available keymaps
-vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<CR>", { desc = "[f]ind [k]eymaps" })
+vim.keymap.set("n", "<C-f>k", "<cmd>Telescope keymaps<CR>", { desc = "[f]ind [k]eymaps" })
 -- Search files in current working directory
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "[f]ind [f]iles" })
+vim.keymap.set("n", "<C-f>f", "<cmd>Telescope find_files<CR>", { desc = "[f]ind [f]iles" })
 -- Search Telescope menus as marks, buffers, and etc
-vim.keymap.set("n", "<leader>fs", "<cmd>Telescope builtin<CR>", { desc = "[f]ind [s]elect Telescope" })
+vim.keymap.set("n", "<C-f><leader>", "<cmd>Telescope builtin<CR>", { desc = "[f]ind [leader] Telescope" })
 -- Grep search word under a cursor
-vim.keymap.set("n", "<leader>fw", "<cmd>Telescope grep_string<CR>", { desc = "[f]ind Current [w]ord" })
+vim.keymap.set("n", "<C-f>w", "<cmd>Telescope grep_string<CR>", { desc = "[f]ind Current [w]ord" })
 -- Grep search text in files
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", { desc = "[f]ind by [g]rep" })
+vim.keymap.set("n", "<C-f>g", "<cmd>Telescope live_grep<CR>", { desc = "[f]ind by [g]rep" })
 -- Search for available Diagnostics
-vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics<CR>", { desc = "[f]ind [d]iagnostics" })
+vim.keymap.set("n", "<C-f>d", "<cmd>Telescope diagnostics<CR>", { desc = "[f]ind [d]iagnostics" })
 -- Search recently opened files
-vim.keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "[f]ind Recent Files" })
+vim.keymap.set("n", "<C-f>o", "<cmd>Telescope oldfiles<CR>", { desc = "[f]ind Recent Files" })
 -- Search existing buffers
-vim.keymap.set("n", "<leader>f<leader>", "<cmd>Telescope buffers<CR>", { desc = "[f]ind Existing Buffers" })
+vim.keymap.set("n", "<C-f>b", "<cmd>Telescope buffers<CR>", { desc = "[f]ind Existing Buffers" })
 -- Search a file-type to set to current buffer/file
-vim.keymap.set("n", "<leader>ft", "<cmd>Telescope filetypes<CR>", { desc = "[f]ind File [t]ype" })
+vim.keymap.set("n", "<C-f>t", "<cmd>Telescope filetypes<CR>", { desc = "[f]ind File [t]ype" })
 -- Search in your NeoVim configuration files directory
-vim.keymap.set("n", "<leader>fn", "<cmd>Telescope find_files cwd=~/.config/nvim<CR>", { desc = "[f]ind [n]eovim Files" })
+vim.keymap.set("n", "<C-f>n", "<cmd>Telescope find_files cwd=~/.config/nvim<CR>", { desc = "[f]ind [n]eovim Files" })
 
 -- [ DiffView plugin related ]
 -- Open diff view

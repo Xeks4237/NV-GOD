@@ -19,19 +19,19 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Horizo
 
 -- [ Tab Management ]
 -- Move focus to the previous tab
-vim.keymap.set("n", "<leader>th", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
+vim.keymap.set("n", "<C-t>h", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
 -- Close current tab
-vim.keymap.set("n", "<leader>tj", "<cmd>tabclose<CR>", { desc = "Close Tab" })
+vim.keymap.set("n", "<C-t>j", "<cmd>tabclose<CR>", { desc = "Close Tab" })
 -- Open New tab
-vim.keymap.set("n", "<leader>tk", "<cmd>tabnew<CR>", { desc = "New Tab" })
+vim.keymap.set("n", "<C-t>k", "<cmd>tabnew<CR>", { desc = "New Tab" })
 -- Move focus to the next tab
-vim.keymap.set("n", "<leader>tl", "<cmd>tabnext<CR>", { desc = "Next Tab" })
+vim.keymap.set("n", "<C-t>l", "<cmd>tabnext<CR>", { desc = "Next Tab" })
 -- Close all other tabs (not current one)
-vim.keymap.set("n", "<leader>ta", "<cmd>tabonly<CR>", { desc = "Close All Other Tabs" })
+vim.keymap.set("n", "<C-t>x", "<cmd>tabonly<CR>", { desc = "Close All Other Tabs" })
 -- Move tab to the left
-vim.keymap.set("n", "<leader>t<C-h>", "<cmd>tabmove -1<CR>", { desc = "Move Tab Left" })
+vim.keymap.set("n", "<C-t><C-h>", "<cmd>tabmove -1<CR>", { desc = "Move Tab Left" })
 -- Move tab to the right
-vim.keymap.set("n", "<leader>t<C-l>", "<cmd>tabmove +1<CR>", { desc = "Move Tab Right" })
+vim.keymap.set("n", "<C-t><C-l>", "<cmd>tabmove +1<CR>", { desc = "Move Tab Right" })
 
 -- Save file/buffer using CTRL + s (same as using :w command)
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<CR><ESC>", { desc = "Save File" })
@@ -59,7 +59,7 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Up", silent = tr
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Keymap to clear Search Highlight, CommamdLine, and also Redraws UI
-vim.keymap.set("n", "<leader>fr", "<cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>", { desc = "Redraw / Clear hlsearch / Diff Update" })
+vim.keymap.set("n", "<C-f>r", "<cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>", { desc = "Redraw / Clear hlsearch / Diff Update" })
 
 -- Keymaps for easier navigation in search results
 -- Makes n key to move your cursor to the next search result

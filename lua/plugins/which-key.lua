@@ -86,29 +86,30 @@ return {
             },
         },
         -- Table with custom names and icons for groups of keymaps
-        -- For example <leader>fg gonna be in group of <leader>f keymaps
+        -- For example <C-f>g gonna be in group of <C-f> keymaps
         spec = {
             -- [ Telescope Related ]
-            { "<leader>f", group = "[Find]", icon = { icon = "", color = "blue" } },
-            { "<leader>fk", icon = { icon = "󰌌", color = "blue" } },
-            { "<leader>fg", icon = { icon = "󰱼", color = "orange" } },
-            { "<leader>fd", icon = { icon = "󱎸", color = "red" } },
-            { "<leader>fh", icon = { icon = "󰋗", color = "blue" } },
-            { "<leader>ft", icon = { icon = "󱇧", color = "green" } },
-            { "<leader>ff", icon = { icon = "󰈞", color = "blue" } },
-            { "<leader>fn", icon = { icon = "", color = "green" } },
+            { "<C-f>", group = "[Find]", icon = { icon = "", color = "blue" } },
+            { "<C-f>k", icon = { icon = "󰌌", color = "blue" } },
+            { "<C-f>g", icon = { icon = "󰱼", color = "orange" } },
+            { "<C-f>d", icon = { icon = "󱎸", color = "red" } },
+            { "<C-f>h", icon = { icon = "󰋗", color = "blue" } },
+            { "<C-f>t", icon = { icon = "󱇧", color = "green" } },
+            { "<C-f>f", icon = { icon = "󰈞", color = "blue" } },
+            { "<C-f>n", icon = { icon = "", color = "green" } },
+            { "<C-f><leader>", icon = { icon = "", color = "blue" } },
             -- [ Harpoon Related ]
             { "<leader>h", group = "[Harpoon]", icon = { icon = "", color = "yellow" } },
             { "<leader>hh", icon = { icon = "󰙵", color = "purple" } },
             { "<leader>hn", icon = { icon = "", color = "yellow" } },
             -- [ Tabs Related ]
-            { "<leader>t", group = "[Tabs]", icon = { icon = "󰓩", color = "purple" } },
-            { "<leader>th", icon = { icon = "", color = "cyan" } },
-            { "<leader>tj", icon = { icon = "󰭌", color = "red" } },
-            { "<leader>tk", icon = { icon = "󰝜", color = "green" } },
-            { "<leader>tl", icon = { icon = "", color = "cyan" } },
-            { "<leader>t<C-h>", icon = { icon = "", color = "orange" } },
-            { "<leader>t<C-l>", icon = { icon = "", color = "orange" } },
+            { "<C-t>", group = "[Tabs]", icon = { icon = "󰓩", color = "purple" } },
+            { "<C-t>h", icon = { icon = "", color = "cyan" } },
+            { "<C-t>j", icon = { icon = "󰭌", color = "red" } },
+            { "<C-t>k", icon = { icon = "󰝜", color = "green" } },
+            { "<C-t>l", icon = { icon = "", color = "cyan" } },
+            { "<C-t><C-h>", icon = { icon = "", color = "orange" } },
+            { "<C-t><C-l>", icon = { icon = "", color = "orange" } },
             -- [ Diagnostics Related ]
             { "<leader>d", group = "[Diagnostics]", icon = { icon = "󰃤", color = "red" } },
             { "<leader>db", icon = { icon = "", color = "green" } },
@@ -140,7 +141,7 @@ return {
             { "<leader>gv", icon = { icon = "󱖫", color = "green" } },
             -- [ Other ]
             { "<leader>dq", icon = { icon = "", color = "cyan" } },
-            { "<leader>fr", icon = { icon = "󰑓", color = "yellow" } }, -- Clear search, redraw and etc
+            { "<C-f>r", icon = { icon = "󰑓", color = "yellow" } }, -- Clear search, redraw and etc
             { "<C-p>", icon = { icon = "󰅍", color = "cyan" } }, -- Open NeoClip
         },
     },

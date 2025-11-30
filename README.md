@@ -159,7 +159,7 @@ For Advanced users like Me it's really big headache to work with
 </details>
 
 <details>
-  <summary>Docker Container and Alpine Linux</summary>
+  <summary>Alpine Linux</summary>
 
 - First install Dependencies through apk:
 

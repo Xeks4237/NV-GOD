@@ -49,7 +49,7 @@ return {
             vimgrep_arguments = {
                 -- Arguments for ripgrep in live_grep
                 "rg",
-                "--color=always",
+                "--color=never", -- NOTE: Coloring of ripgrep breaks telescope menu, that's why it's turned off
                 "--no-heading",
                 "--with-filename",
                 "--line-number",

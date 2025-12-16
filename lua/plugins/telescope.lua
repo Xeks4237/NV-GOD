@@ -60,7 +60,7 @@ return {
             wrap_results = true, -- Don’t wrap result text
             scroll_strategy = "cycle", -- Cycle through results when scrolling (options: cycle, limit)
             history = { -- Command history settings
-                path = "~/.local/share/nvim/telescope_history", -- History file path
+                path = vim.fs.joinpath(vim.fn.stdpath "config", "lua", "telescope-history"), -- History file path
                 limit = 1000, -- Max history entries
             },
             -- Mappings for Telescope

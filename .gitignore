@@ -5,3 +5,7 @@ lazy-lock.json
 # .conform files are used by conform plugin in moments when it processes formatting on file(s) 
 # NOTE: Added it here to ensure I don't accidentally stack it when fast working 
 .conform.*
+
+# telescope plugin's history file
+telescope-history
+telescope_history

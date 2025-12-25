@@ -4,10 +4,10 @@ return {
     lazy = true,
     event = { "InsertEnter", "BufReadPre", "BufNewFile" },
     opts = {
-        "*", -- Makes nvim-colorizer to atta<h to the all file types
+        "*", -- Makes nvim-colorizer to attach to the all file types
         -- If you want some different way to color text in sertain filetypes
         -- For example in html:
-        html = { mode = "foreground" },
+        -- html = { mode = "foreground" },
 
         DEFAULT_OPTIONS = {
             RGB = true, -- #RGB hex codes

@@ -22,6 +22,8 @@ return {
             html = { "prettierd" }, -- For html
             markdown = { "prettierd", "markdownlint" }, -- For markdown
             yaml = { "prettierd" },
+            json = { "prettierd" },
+            jsonc = { "prettierd" },
             nix = { "nixfmt" }, -- For nix
             -- Use the "*" filetype to run formatters on all filetypes.
             -- for example for spell checker

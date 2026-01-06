@@ -66,11 +66,11 @@ vim.keymap.set("n", "<C-f>r", "<cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><
 -- Makes N key to move your cursor to the previous search result
 -- Read more about it: https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
 vim.keymap.set("n", "n", "v:searchforward ? 'n' : 'N'", { expr = true, desc = "Next Search Result" })
-vim.keymap.set("n", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Prev Search Result" })
+vim.keymap.set("n", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Previous Search Result" })
 vim.keymap.set("x", "n", "v:searchforward ? 'n' : 'N'", { expr = true, desc = "Next Search Result" })
-vim.keymap.set("x", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Prev Search Result" })
+vim.keymap.set("x", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Previous Search Result" })
 vim.keymap.set("o", "n", "v:searchforward ? 'n' : 'N'", { expr = true, desc = "Next Search Result" })
-vim.keymap.set("o", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Prev Search Result" })
+vim.keymap.set("o", "N", "v:searchforward ? 'N' : 'n'", { expr = true, desc = "Previous Search Result" })
 
 -- Add undo break-points
 -- Makes some symbols be a points where undo(u key) takes break
@@ -94,3 +94,7 @@ vim.keymap.set("t", "<c-_>", "<cmd>close<CR>", { desc = "which_key_ignore" })
 
 -- Keymap to open quickfix list
 vim.keymap.set("n", "<leader>dq", "<cmd>copen><CR>", { desc = "Open QuickFix List" })
+
+-- Some keymaps to fix behavior of "Home" and "End" keys while being in tmux window/pane
+vim.keymap.set({ "n", "v" }, "<Find>", "0")
+vim.keymap.set({ "n", "v" }, "<Select>", "$")

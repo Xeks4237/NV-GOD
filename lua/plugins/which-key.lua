@@ -104,12 +104,12 @@ return {
             { "<leader>hn", icon = { icon = "", color = "yellow" } },
             -- [ Tabs Related ]
             { "<C-t>", group = "[Tabs]", icon = { icon = "󰓩", color = "purple" } },
-            { "<C-t>h", icon = { icon = "", color = "cyan" } },
+            { "<C-[>", icon = { icon = "", color = "cyan" } },
             { "<C-t>j", icon = { icon = "󰭌", color = "red" } },
             { "<C-t>k", icon = { icon = "󰝜", color = "green" } },
-            { "<C-t>l", icon = { icon = "", color = "cyan" } },
-            { "<C-t><C-h>", icon = { icon = "", color = "orange" } },
-            { "<C-t><C-l>", icon = { icon = "", color = "orange" } },
+            { "<C-]>", icon = { icon = "", color = "cyan" } },
+            { "<C-t><C-[>", icon = { icon = "", color = "orange" } },
+            { "<C-t><C-]>", icon = { icon = "", color = "orange" } },
             -- [ Diagnostics Related ]
             { "<leader>d", group = "[Diagnostics]", icon = { icon = "󰃤", color = "red" } },
             { "<leader>db", icon = { icon = "", color = "green" } },

@@ -27,6 +27,7 @@ vim.keymap.set("n", "<C-t>j", "<cmd>tabclose<CR>", { desc = "Close Tab" })
 vim.keymap.set("n", "<C-t>k", "<cmd>tabnew<CR>", { desc = "New Tab" })
 -- Move focus to the right/next tab
 vim.keymap.set("n", "<C-]>", "<cmd>tabnext<CR>", { desc = "Next Tab" })
+vim.keymap.set("n", "<Tab>", "<cmd>tabnext<CR>", { desc = "Next Tab" })
 -- Close all other tabs (not current one)
 vim.keymap.set("n", "<C-t>x", "<cmd>tabonly<CR>", { desc = "Close All Other Tabs" })
 -- Move tab to the left

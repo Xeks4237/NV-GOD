@@ -108,6 +108,7 @@ return {
             { "<C-t>j", icon = { icon = "󰭌", color = "red" } },
             { "<C-t>k", icon = { icon = "󰝜", color = "green" } },
             { "<C-]>", icon = { icon = "", color = "cyan" } },
+            { "<Tab>", icon = { icon = "", color = "cyan" } },
             { "<C-t><C-[>", icon = { icon = "", color = "orange" } },
             { "<C-t><C-]>", icon = { icon = "", color = "orange" } },
             -- [ Diagnostics Related ]

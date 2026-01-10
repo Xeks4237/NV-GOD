@@ -105,6 +105,7 @@ return {
             -- [ Tabs Related ]
             { "<C-t>", group = "[Tabs]", icon = { icon = "󰓩", color = "purple" } },
             { "<C-[>", icon = { icon = "", color = "cyan" } },
+            { "<S-Tab>", icon = { icon = "", color = "cyan" } },
             { "<C-t>j", icon = { icon = "󰭌", color = "red" } },
             { "<C-t>k", icon = { icon = "󰝜", color = "green" } },
             { "<C-]>", icon = { icon = "", color = "cyan" } },

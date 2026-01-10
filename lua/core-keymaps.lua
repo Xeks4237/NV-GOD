@@ -21,6 +21,7 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Horizo
 -- In NeoVim "Ctrl [" sometimes used instead of Esc, unmap it for the next keymap
 -- Move focus to the left/previous tab
 vim.keymap.set("n", "<C-[>", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
+vim.keymap.set("n", "<S-Tab>", "<cmd>tabprevious<CR>", { desc = "Previous Tab" })
 -- Close current tab
 vim.keymap.set("n", "<C-t>j", "<cmd>tabclose<CR>", { desc = "Close Tab" })
 -- Open New tab

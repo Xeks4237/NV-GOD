@@ -63,7 +63,7 @@ vim.o.scrolloff = 4
 vim.o.sidescrolloff = 8
 
 -- Set relative numbered lines
-vim.o.relativenumber = true
+vim.o.relativenumber = false
 
 -- Set number column width to 2 {default 4}
 vim.o.numberwidth = 4

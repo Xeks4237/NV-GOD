@@ -13,6 +13,7 @@ return {
             lua = { "stylua" }, -- for lua
             go = { "goimports" }, -- for go
             python = { "black" }, -- for python
+            sh = { "beautysh" }, -- for bash
             bash = { "beautysh" }, -- for bash
             zsh = { "beautysh" }, -- for zsh
             c = { "clang_format" }, -- for c

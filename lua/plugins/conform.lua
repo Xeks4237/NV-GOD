@@ -10,13 +10,14 @@ return {
         -- and also you can choose multiple formatters for one filetype
         -- You can use a function here to determine the formatters dynamically
         formatters_by_ft = {
-            lua = { "stylua" }, -- for lua
-            go = { "goimports" }, -- for go
-            python = { "black" }, -- for python
-            sh = { "beautysh" }, -- for bash
-            bash = { "beautysh" }, -- for bash
-            zsh = { "beautysh" }, -- for zsh
-            c = { "clang_format" }, -- for c
+            lua = { "stylua" }, -- For lua
+            go = { "goimports" }, -- For go
+            python = { "black" }, -- For python
+            sh = { "beautysh" }, -- For bash
+            bash = { "beautysh" }, -- For bash
+            zsh = { "beautysh" }, -- For zsh
+            c = { "clang_format" }, -- For c
+            rust = { "rustfmt" }, -- For Rust
             javascript = { "prettierd" }, -- For javascript
             typescript = { "prettierd" }, -- For typescript
             css = { "prettierd" }, -- For css

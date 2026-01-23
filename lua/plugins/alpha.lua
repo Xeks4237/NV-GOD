@@ -17,7 +17,7 @@ return {
             "   ██║╚██╗██║╚██╗ ██╔╝╚════╝██║   ██║██║   ██║██║   ██║  ",
             "   ██║ ╚████║ ╚████╔╝       ████████║████████║███████╔╝  ",
             "   ╚═╝  ╚═══╝  ╚═══╝        ╚═══════╝╚═══════╝╚══════╝   ",
-            "   by Xeks4237                                   v0.0.1  ",
+            "   by Xeks4237                                  meow :3  ",
         }
 
         -- Sets buttons which gonna be shown below the logo with their icons

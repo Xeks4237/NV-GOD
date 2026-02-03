@@ -6,10 +6,10 @@ vim.o.hlsearch = true
 vim.wo.number = true
 
 -- Enable mouse, Can be usefull to resize splits
-vim.o.mouse = "a"
+vim.o.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.
-vim.o.clipboard = "unnamedplus"
+vim.o.clipboard = 'unnamedplus'
 
 -- Says NeoVim you have nerd font installed
 vim.g.have_nerd_font = true
@@ -27,7 +27,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Keep signcolumn on by default
-vim.wo.signcolumn = "yes"
+vim.wo.signcolumn = 'yes'
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -42,22 +42,22 @@ vim.o.backup = false
 vim.o.writebackup = false
 
 -- Set completeopt to have a better completion experience
-vim.o.completeopt = "menuone,noselect"
+vim.o.completeopt = 'menuone,noselect'
 
 -- Set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
 -- Makes that cursor can't travel to next line after end of current one
-vim.o.whichwrap = ""
+vim.o.whichwrap = ''
 
 -- Display lines as one long line
 vim.o.wrap = true
 
 -- Companion to wrap don't split words
-vim.o.linebreak = true
+vim.o.linebreak = false
 
 -- Minimal number of screen lines to keep above and below the cursor
-vim.o.scrolloff = 4
+vim.o.scrolloff = 2
 
 -- Minimal number of screen columns either side of cursor if wrap is `false`
 vim.o.sidescrolloff = 8
@@ -78,7 +78,7 @@ vim.o.tabstop = 4
 vim.o.softtabstop = 4
 
 -- Convert tabs to spaces
-vim.o.expandtab = true
+vim.o.expandtab = false
 
 -- Highlight the current line
 vim.o.cursorline = true
@@ -102,13 +102,13 @@ vim.o.showmode = true
 vim.o.showtabline = 2
 
 -- Allow backspace on
-vim.o.backspace = "indent,eol,start"
+vim.o.backspace = 'indent,eol,start'
 
 -- Pop up menu height
 vim.o.pumheight = 10
 
 -- The encoding written to a file
--- vim.o.fileencoding = "utf-8"
+vim.o.fileencoding = 'utf-8'
 
 -- More space in the neovim command line for displaying messages
 vim.o.cmdheight = 1
@@ -126,17 +126,17 @@ vim.o.cmdheight = 0
 vim.opt.list = true
 
 -- Don't give |ins-completion-menu| messages
-vim.opt.shortmess:append "c"
+vim.opt.shortmess:append 'c'
 
 -- Hyphenated words recognized by searches
-vim.opt.iskeyword:append "-"
+vim.opt.iskeyword:append '-'
 
 -- Don't insert the current comment leader automatically for auto-wrapping comments using "textwidth", hitting <Enter> in insert mode, or hitting "o" or "O" in normal mode.
-vim.opt.formatoptions:remove { "c", "r", "o" }
+vim.opt.formatoptions:remove { 'c', 'r', 'o' }
 
 -- Separate vim plugins from neovim in case vim still in use
-vim.opt.runtimepath:remove "/usr/share/vim/vimfiles"
-vim.opt.runtimepath:remove "$PREFIX/share/vim/vimfiles"
+vim.opt.runtimepath:remove '/usr/share/vim/vimfiles'
+vim.opt.runtimepath:remove '$PREFIX/share/vim/vimfiles'
 
 -- Enables floating vistual text for code diagnoctics
 vim.diagnostic.config { virtual_text = true }

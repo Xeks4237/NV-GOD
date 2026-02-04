@@ -19,25 +19,25 @@ vim.keymap.set(
 -- by holding CTRL and pressing arrow keys
 vim.keymap.set(
 	'n',
-	'<C-Up>',
+	'<C-w><C-Up>',
 	'<cmd>resize -2<CR>',
 	{ desc = 'Vertical Resize Up' }
 )
 vim.keymap.set(
 	'n',
-	'<C-Down>',
+	'<C-w><C-Down>',
 	'<cmd>resize +2<CR>',
 	{ desc = 'Vertical Resize Down' }
 )
 vim.keymap.set(
 	'n',
-	'<C-Left>',
+	'<C-w><C-Left>',
 	'<cmd>vertical resize -2<CR>',
 	{ desc = 'Horizontal Resize' }
 )
 vim.keymap.set(
 	'n',
-	'<C-Right>',
+	'<C-w><C-Right>',
 	'<cmd>vertical resize +2<CR>',
 	{ desc = 'Horizontal Resize' }
 )
@@ -52,10 +52,10 @@ vim.keymap.set(
 
 -- Just quit everything
 -- gonna give error if you have not saved changes
-vim.keymap.set('n', '<C-q>', '<cmd>qa<CR>', { desc = 'Quit NVim' })
+vim.keymap.set('n', '<C-q>', '<cmd>qa<CR>', { desc = 'Quit NeoVim' })
 
 -- Force Quit everything
--- gonna ignore not saved changes, Can make lost of data!
+-- WARN: Gonna ignore not saved changes, Can make lost of data!
 vim.keymap.set(
 	'n',
 	'<C-S-q>',
@@ -163,24 +163,8 @@ vim.keymap.set('i', '.', '.<c-g>u')
 vim.keymap.set('i', ';', ';<c-g>u')
 
 -- Makes indenting in visual mode easier
-vim.keymap.set('v', '<', '<gv')
-vim.keymap.set('v', '>', '>gv')
-
--- Keymaps for better commenting lines
--- For example: "gco" combination gonna add new below the cursor and make it commented
-vim.keymap.set(
-	'n',
-	'gco',
-	'o<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>',
-	{ desc = 'Add Comment Below' }
-)
--- Same think but for above the cursor
-vim.keymap.set(
-	'n',
-	'gcO',
-	'O<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>',
-	{ desc = 'Add Comment Above' }
-)
+vim.keymap.set('v', '<', '<gv', { desc = 'Indent left' })
+vim.keymap.set('v', '>', '>gv', { desc = 'Indent right' })
 
 -- Keymap to hide a Terminal
 vim.keymap.set(
@@ -205,5 +189,5 @@ vim.keymap.set(
 )
 
 -- Some keymaps to fix behavior of "Home" and "End" keys while being in tmux window/pane
-vim.keymap.set({ 'n', 'v' }, '<Find>', '0')
-vim.keymap.set({ 'n', 'v' }, '<Select>', '$')
+vim.keymap.set({ 'n', 'v', 'i' }, '<Find>', '0')
+vim.keymap.set({ 'n', 'v', 'i' }, '<Select>', '$')

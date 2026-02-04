@@ -65,13 +65,13 @@ vim.o.sidescrolloff = 8
 -- Set relative numbered lines
 vim.o.relativenumber = false
 
--- Set number column width to 2 {default 4}
+-- Set number column width to 4 {default 4}
 vim.o.numberwidth = 4
 
 -- The number of spaces inserted for each indentation
 vim.o.shiftwidth = 4
 
--- Insert n spaces for a tab
+-- Changes amount of space tab characters take in n characters
 vim.o.tabstop = 4
 
 -- Number of spaces that a tab counts for while performing editing operations

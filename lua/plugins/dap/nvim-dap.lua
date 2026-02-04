@@ -47,9 +47,7 @@ return {
 		{
 			'<leader>dB',
 			function()
-				require('dap').set_breakpoint(
-					vim.fn.input 'Breakpoint condition: '
-				)
+				require('dap').set_breakpoint(vim.fn.input 'Breakpoint condition: ')
 			end,
 			desc = 'set [B]reakpoint',
 		},
@@ -78,21 +76,14 @@ return {
 			}
 		for type, icon in pairs(breakpoint_icons) do
 			local tp = 'Dap' .. type
-			local hl = (type == 'Stopped') and 'DapStop'
-				or 'DapBreak'
-			vim.fn.sign_define(
-				tp,
-				{ text = icon, texthl = hl, numhl = hl }
-			)
+			local hl = (type == 'Stopped') and 'DapStop' or 'DapBreak'
+			vim.fn.sign_define(tp, { text = icon, texthl = hl, numhl = hl })
 		end
 
 		-- Make some events work better
-		dap.listeners.after.event_initialized['dapui_config'] =
-			dapui.open
-		dap.listeners.before.event_terminated['dapui_config'] =
-			dapui.close
-		dap.listeners.before.event_exited['dapui_config'] =
-			dapui.close
+		dap.listeners.after.event_initialized['dapui_config'] = dapui.open
+		dap.listeners.before.event_terminated['dapui_config'] = dapui.close
+		dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
 		-- NOTE: If you added additional nvim-dap plugin for other language
 		-- Then add require("plugun-name").setup() for this plugin here:

@@ -10,8 +10,7 @@ return {
 		-- Enables real-time synchronization of clipboard across NeoVim instances
 		-- requires "sessionizer" like plugin
 		continuous_sync = true,
-		db_path = vim.fn.stdpath 'data'
-			.. '/databases/neoclip.sqlite3', -- File path for storing persistent clipboard history
+		db_path = vim.fn.stdpath 'data' .. '/databases/neoclip.sqlite3', -- File path for storing persistent clipboard history
 		filter = nil, -- Optional function to filter clipboard entries (nil means no filtering)
 		preview = true, -- Shows a preview of clipboard entries when browsing
 		prompt = nil, -- Custom prompt for the clipboard picker (nil uses default)

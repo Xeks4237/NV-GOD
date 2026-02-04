@@ -161,10 +161,7 @@ return {
 			formatting = {
 				fields = { 'kind', 'abbr', 'menu' },
 				format = function(entry, vim_item)
-					vim_item.kind = string.format(
-						'%s',
-						kind_icons[vim_item.kind] or vim_item.kind
-					)
+					vim_item.kind = string.format('%s', kind_icons[vim_item.kind] or vim_item.kind)
 					vim_item.menu = ({
 						nvim_lsp = '[LSP]',
 						path = '[Path]',
@@ -236,8 +233,7 @@ return {
 		})
 
 		-- LSP capabilities
-		local capabilities =
-			require('cmp_nvim_lsp').default_capabilities()
+		local capabilities = require('cmp_nvim_lsp').default_capabilities()
 		-- Apply to all LSP servers
 		-- vim.lsp.enable("*", { capabilities = capabilities })
 	end,

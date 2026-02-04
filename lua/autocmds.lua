@@ -2,10 +2,7 @@
 
 -- Highlight pieces of text which was yanked/copied
 vim.api.nvim_create_autocmd('TextYankPost', {
-	group = vim.api.nvim_create_augroup(
-		'highlight_yank',
-		{ clear = true }
-	),
+	group = vim.api.nvim_create_augroup('highlight_yank', { clear = true }),
 	pattern = '*',
 	desc = 'highlight selection on yank',
 	callback = function()
@@ -49,10 +46,7 @@ vim.api.nvim_create_autocmd('VimResized', {
 
 -- IDE like highlight of text segments when stopping cursor on them
 vim.api.nvim_create_autocmd('CursorMoved', {
-	group = vim.api.nvim_create_augroup(
-		'LspReferenceHighlight',
-		{ clear = true }
-	),
+	group = vim.api.nvim_create_augroup('LspReferenceHighlight', { clear = true }),
 	desc = 'Highlight references under cursor',
 	callback = function()
 		-- Only run if the cursor is not in insert mode
@@ -60,9 +54,7 @@ vim.api.nvim_create_autocmd('CursorMoved', {
 			local clients = vim.lsp.get_clients { bufnr = 0 }
 			local supports_highlight = false
 			for _, client in ipairs(clients) do
-				if
-					client.server_capabilities.documentHighlightProvider
-				then
+				if client.server_capabilities.documentHighlightProvider then
 					supports_highlight = true
 					break -- Found a supporting client, no need to check others
 				end

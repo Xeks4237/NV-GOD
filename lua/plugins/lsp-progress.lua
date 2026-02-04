@@ -61,34 +61,20 @@ return {
 			-- Format series message.
 			--
 			-- By default it looks like: "formatting isort (100%) - done".
-			series_format = function(
-				title,
-				message,
-				percentage,
-				done
-			)
+			series_format = function(title, message, percentage, done)
 				local builder = {}
 				local has_title = false
 				local has_message = false
-				if
-					type(title) == 'string'
-					and string.len(title) > 0
-				then
+				if type(title) == 'string' and string.len(title) > 0 then
 					table.insert(builder, title)
 					has_title = true
 				end
-				if
-					type(message) == 'string'
-					and string.len(message) > 0
-				then
+				if type(message) == 'string' and string.len(message) > 0 then
 					table.insert(builder, message)
 					has_message = true
 				end
 				if percentage and (has_title or has_message) then
-					table.insert(
-						builder,
-						string.format('(%.0f%%)', percentage)
-					)
+					table.insert(builder, string.format('(%.0f%%)', percentage))
 				end
 				if done and (has_title or has_message) then
 					table.insert(builder, '- done')
@@ -100,16 +86,9 @@ return {
 			--
 			-- By default it looks like:
 			-- "[null-ls] ⣷ formatting isort (100%) - done, formatting black (50%)".
-			client_format = function(
-				client_name,
-				spinner,
-				series_messages
-			)
+			client_format = function(client_name, spinner, series_messages)
 				return #series_messages > 0
-						and ('[' .. client_name .. '] ' .. spinner .. ' ' .. table.concat(
-							series_messages,
-							', '
-						))
+						and ('[' .. client_name .. '] ' .. spinner .. ' ' .. table.concat(series_messages, ', '))
 					or nil
 			end,
 
@@ -121,9 +100,7 @@ return {
 				-- icon: nf-fa-gear \uf013
 				local sign = ' LSP'
 				if #client_messages > 0 then
-					return sign
-						.. ' '
-						.. table.concat(client_messages, ' ')
+					return sign .. ' ' .. table.concat(client_messages, ' ')
 				end
 				if #api.lsp_clients() > 0 then
 					return sign
@@ -148,11 +125,7 @@ return {
 		}
 
 		local function setup(option)
-			local config = vim.tbl_deep_extend(
-				'force',
-				vim.deepcopy(Defaults),
-				option or {}
-			)
+			local config = vim.tbl_deep_extend('force', vim.deepcopy(Defaults), option or {})
 			return config
 		end
 

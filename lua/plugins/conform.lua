@@ -55,6 +55,12 @@ return {
 		-- Conform will notify you when no formatters are available for the buffer
 		notify_no_formatters = true,
 		-- Custom formatters and overrides for built-in formatters if needed
-		formatters = {},
+		formatters = {
+			-- For example:
+			-- Make beautysh formatter to use tabs instead of spaces
+			beautysh = {
+				args = { '--tab', '$FILENAME' },
+			},
+		},
 	},
 }

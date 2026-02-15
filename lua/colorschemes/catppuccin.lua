@@ -31,9 +31,9 @@ return {
 					information = { 'undercurl' },
 				},
 				virtual_text = {
-					errors = { 'italic' },
+					errors = { 'bold' },
 					hints = { 'bold' },
-					warnings = { 'italic' },
+					warnings = { 'bold' },
 					information = { 'bold' },
 				},
 			},
@@ -53,8 +53,8 @@ return {
 		styles = {
 			comments = {},
 			conditionals = {},
-			loops = { 'italic', 'bold' },
-			functions = {},
+			loops = { 'bold' },
+			functions = { 'bold' },
 			keywords = {},
 			strings = {},
 			variables = {},
@@ -62,7 +62,7 @@ return {
 			booleans = { 'bold' },
 			properties = {},
 			types = {},
-			operators = { 'italic' },
+			operators = { 'bold' },
 			-- Forgetted about white mode users...
 			-- sidebars = "dark",
 			-- floats = "dark",

@@ -59,7 +59,14 @@ return {
 			-- For example:
 			-- Make beautysh formatter to use tabs instead of spaces
 			beautysh = {
-				args = { '--tab', '$FILENAME' },
+				prepend_args = { '--tab' },
+			},
+			-- Make prettierd amd prettier formatters to use tabs instead of spaces
+			prettierd = {
+				prepend_args = { '--use-tabs' },
+			},
+			prettier = {
+				prepend_args = { '--use-tabs' },
 			},
 		},
 	},

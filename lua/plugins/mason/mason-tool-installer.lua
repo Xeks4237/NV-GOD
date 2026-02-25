@@ -18,10 +18,10 @@ return {
 			'beautysh', -- Formatter for zsh
 			-- 'bash-debug-adapter', -- Debug adapter for bash
 			-- [ C and C++ Related ]
-			'clangd', -- LSP for c and c++
-			'clang-format', -- Formatter for c and c++
-			'cpplint', -- Linter for c and c++
-			'cpptools', -- DAP for c and c++
+			-- 'clangd', -- LSP for c and c++
+			-- 'clang-format', -- Formatter for c and c++
+			-- 'cpplint', -- Linter for c and c++
+			-- 'cpptools', -- DAP for c and c++
 			-- [ For Everything ]
 			'prettierd', -- Formatter for many languages
 			'codebook', -- LSP for spell checking...

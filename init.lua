@@ -3,20 +3,23 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Setting options
-require 'options' -- Sources lua/options.lua file
+-- Sources lua/options.lua file
+require 'options'
 
 -- Basic Keymaps
-require 'core-keymaps' -- Sources lua/core-keymaps.lua file
+-- Sources lua/core-keymaps.lua file
+require 'core-keymaps'
 
 -- Install "lazy.nvim" plugin manager
-require 'lazy.lazy-bootstrap' -- Sources lua/lazy/lazy-bootstrap.lua file
+-- Sources lua/lazy/lazy-bootstrap.lua file
+-- require 'lazy.lazy-bootstrap'
 
 -- Extra Keymaps related to plugins
-require 'extra-keymaps' -- Sources lua/extra-keymaps.lua file
-
--- Snippet for last-color.nvim plugin to make NeoVim remember last chosen colorscheme
-local theme = require('last-color').recall() or 'catppuccin-mocha'
-vim.cmd.colorscheme(theme)
+-- Sources lua/extra-keymaps.lua file
+require 'extra-keymaps'
 
 -- Load file which contains autocmds for NV-GOD
 require 'autocmds'
+
+-- Set colorscheme to catppuccin-mocha
+-- vim.cmd.colorscheme 'catppuccin-mocha'

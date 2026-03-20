@@ -10,10 +10,6 @@ require 'options'
 -- Sources lua/core-keymaps.lua file
 require 'core-keymaps'
 
--- Install "lazy.nvim" plugin manager
--- Sources lua/lazy/lazy-bootstrap.lua file
--- require 'lazy.lazy-bootstrap'
-
 -- Extra Keymaps related to plugins
 -- Sources lua/extra-keymaps.lua file
 require 'extra-keymaps'
@@ -22,4 +18,4 @@ require 'extra-keymaps'
 require 'autocmds'
 
 -- Set colorscheme to catppuccin-mocha
--- vim.cmd.colorscheme 'catppuccin-mocha'
+vim.cmd.colorscheme 'catppuccin-mocha'

@@ -9,7 +9,6 @@ vim.pack.add {
 -- Configuration for catppuccin
 require('catppuccin').setup {
 	integrations = {
-		auto_integrations = true, -- only with lazy.nvim
 		aerial = true,
 		alpha = true,
 		cmp = true,

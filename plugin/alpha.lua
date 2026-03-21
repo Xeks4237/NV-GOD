@@ -3,7 +3,7 @@ vim.pack.add {
 	{
 		src = 'https://github.com/goolord/alpha-nvim',
 		name = 'alpha-nvim',
-	}
+	},
 }
 
 -- Configuration for alpha-nvim
@@ -25,7 +25,6 @@ dashboard.section.header.val = {
 -- Sets buttons which gonna be shown below the logo with their icons
 dashboard.section.buttons.val = {
 	dashboard.button('n', '  New File', '<cmd>ene | startinsert<CR>'), -- Opens a new file
-	dashboard.button('l', '󰒲  Lazy', '<cmd>Lazy<CR>'), -- Opens ui of lazy.nvim package maneger
 	dashboard.button('m', '  Mason', '<cmd>Mason<CR>'), -- Opens ui of mason.nvim
 	-- dashboard.button("q", " Get Help", ""), -- Future documentation gonna go here
 	dashboard.button('?', '  Keymaps', "<cmd>lua require('which-key').show('', { mode = 'n' })<CR>"), -- Shows popup of which-key plugin with most the keymaps

@@ -3,7 +3,6 @@ vim.pack.add {
 	{
 		src = 'https://github.com/marko-cerovac/material.nvim',
 		name = 'material',
-		lazy = true,
 	},
 }
 

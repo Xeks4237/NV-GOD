@@ -92,51 +92,6 @@ require('which-key').setup {
 	-- Table with custom names and icons for groups of keymaps
 	-- For example <C-f>g gonna be in group of <C-f> keymaps
 	spec = {
-		-- [ Telescope Related ]
-		{
-			'<C-f>',
-			group = '[Find]',
-			icon = { icon = '', color = 'blue' },
-		},
-		{ '<C-f>k', icon = { icon = '󰌌', color = 'blue' } },
-		{ '<C-f>g', icon = { icon = '󰱼', color = 'orange' } },
-		{ '<C-f>d', icon = { icon = '󱎸', color = 'red' } },
-		{ '<C-f>h', icon = { icon = '󰋗', color = 'blue' } },
-		{ '<C-f>t', icon = { icon = '󱇧', color = 'green' } },
-		{ '<C-f>f', icon = { icon = '󰈞', color = 'blue' } },
-		{ '<C-f>n', icon = { icon = '', color = 'green' } },
-		{
-			'<C-f><leader>',
-			icon = { icon = '', color = 'blue' },
-		},
-		-- [ Harpoon Related ]
-		{
-			'<leader>h',
-			group = '[Harpoon]',
-			icon = { icon = '', color = 'yellow' },
-		},
-		{
-			'<leader>hh',
-			icon = { icon = '󰙵', color = 'purple' },
-		},
-		{
-			'<leader>hn',
-			icon = { icon = '', color = 'yellow' },
-		},
-		-- [ Diagnostics Related ]
-		{
-			'<leader>d',
-			group = '[Diagnostics]',
-			icon = { icon = '󰃤', color = 'red' },
-		},
-		{
-			'<leader>db',
-			icon = { icon = '', color = 'green' },
-		},
-		{
-			'<leader>dB',
-			icon = { icon = '󰛿', color = 'yellow' },
-		},
 		-- [ UI Related ]
 		{
 			'<leader>u',
@@ -217,24 +172,5 @@ require('which-key').setup {
 			'<leader>g]',
 			icon = { icon = '', color = 'cyan' },
 		},
-		{
-			'<leader>gl',
-			icon = { icon = '󰒲', color = 'blue' },
-		}, -- Open LazyGit
-		{
-			'<leader>gh',
-			icon = { icon = '', color = 'cyan' },
-		},
-		{
-			'<leader>gv',
-			icon = { icon = '󱖫', color = 'green' },
-		},
-		-- [ Other ]
-		{
-			'<leader>dq',
-			icon = { icon = '', color = 'cyan' },
-		},
-		{ '<C-f>r', icon = { icon = '󰑓', color = 'yellow' } }, -- Clear search, redraw and etc
-		{ '<C-p>', icon = { icon = '󰅍', color = 'cyan' } }, -- Open NeoClip
 	},
 }

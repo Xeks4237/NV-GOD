@@ -1,8 +1,8 @@
 vim.pack.add {
 	{
-		'ellisonleao/gruvbox.nvim',
+		src = 'https://github.com/ellisonleao/gruvbox.nvim',
 		name = 'gruvbox',
-	}
+	},
 }
 
 -- Configuration for gruvbox colorscheme

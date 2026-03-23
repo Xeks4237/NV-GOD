@@ -1,4 +1,4 @@
--- alpha: Plugin what add custom greeting screen to NeoVim
+-- alpha: Plugin which adds custom greeting screen to NeoVim
 vim.pack.add {
 	{
 		src = 'https://github.com/goolord/alpha-nvim',
@@ -31,5 +31,5 @@ dashboard.section.buttons.val = {
 	dashboard.button('q', '  Quit', '<cmd>qa<CR>'), -- Quits nvim
 }
 
--- Send/Setup config of alpha-nvim
+-- Send/Setup config of alpha
 require('alpha').setup(dashboard.opts)

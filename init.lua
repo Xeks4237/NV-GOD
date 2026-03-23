@@ -45,6 +45,8 @@ require 'plugin.treesitter'
 require 'plugin.which-key'
 require 'plugin.nvim-cmp'
 
+vim.keymap.set('n', '<C-e>', '<cmd>Ex<CR>')
+
 vim.pack.add { 'https://github.com/vimpostor/vim-tpipeline' }
 vim.pack.add { 'https://github.com/MunifTanjim/nui.nvim' }
 vim.lsp.enable 'lua_ls'

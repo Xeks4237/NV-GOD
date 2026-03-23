@@ -4,7 +4,7 @@
 
 NV-GOD is created by Me [Xeks4237](https://codeberg.org/Xeks4237/NV-GOD) because other distros of NeoVim like LazyVim, AstroNVim and NVCHAD are bloated
 
-- Complies with UNIX philosophy: "One tool should do one thing and do it right" - Becuase of this statement NV-GOD don't uses plugins like telescope or neotree, because everything what they do can be replaced with external tools
+- Complies with UNIX philosophy: "One tool should do one thing and do it right" - Because of this statement NV-GOD don't uses plugins like telescope or neotree, because everything what they do can be replaced with external tools
 
 - Distro by self is hosted, updated, and improved on [codeberg](https://codeberg.org/Xeks4237/NV-GOD) with read only mirrors of it on [gitlab](https://gitlab.com/Xeks4237/NV-GOD) and [github](https://github.com/Xeks4237/NV-GOD)
 

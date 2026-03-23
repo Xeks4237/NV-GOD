@@ -15,8 +15,8 @@ require('conform').setup {
 	formatters_by_ft = {
 		lua = { 'stylua' }, -- For lua
 		sh = { 'shfmt' }, -- For bash
-		bash = { 'shfmt' }, -- For bash
 		zsh = { 'beautysh' }, -- For zsh
+		bash = { 'shfmt' }, -- For bash
 		c = { 'clang_format' }, -- For c
 		rust = { 'rustfmt' }, -- For Rust
 		markdown = { 'prettierd', 'markdownlint' }, -- For markdown

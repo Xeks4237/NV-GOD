@@ -1,9 +1,9 @@
--- nvim-autopairs: plugin for auto closing () {} [] and etc
+-- nvim-autopairs: Plugin for auto closing () {} [] and etc with extra logic
 vim.pack.add {
 	{
 		src = 'https://github.com/windwp/nvim-autopairs',
 		name = 'nvim-autopairs',
-	}
+	},
 }
 
 -- Configuration for nvim-autopairs
@@ -12,7 +12,7 @@ require('nvim-autopairs').setup {
 	disable_filetype = {
 		-- For Example:
 		-- "TelescopePrompt",
-		'spectre_panel',
+		-- 'spectre_panel',
 	},
 
 	-- Disable when recording or executing a macro

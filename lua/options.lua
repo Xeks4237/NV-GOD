@@ -1,11 +1,11 @@
--- [ Core/Builtin options ]
+-- [ Core/Builtin options of NeoVim ]
 -- Set highlight on search
 vim.o.hlsearch = true
 
 -- Make line numbers default
 vim.wo.number = true
 
--- Enable mouse, Can be usefull to resize splits
+-- Enable mouse, Can be useful to resize splits
 vim.o.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.

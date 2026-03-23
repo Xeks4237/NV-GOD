@@ -47,6 +47,6 @@ require 'plugin.nvim-cmp'
 
 vim.pack.add { 'https://github.com/vimpostor/vim-tpipeline' }
 vim.pack.add { 'https://github.com/MunifTanjim/nui.nvim' }
-
+vim.lsp.enable 'lua_ls'
 -- Set colorscheme to catppuccin-mocha
 vim.cmd.colorscheme 'catppuccin-mocha'

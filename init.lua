@@ -10,10 +10,6 @@ require 'options'
 -- Sources lua/core-keymaps.lua file
 require 'core-keymaps'
 
--- Extra Keymaps related to plugins
--- Sources lua/extra-keymaps.lua file
-require 'extra-keymaps'
-
 -- Load file which contains autocmds for NV-GOD
 require 'autocmds'
 

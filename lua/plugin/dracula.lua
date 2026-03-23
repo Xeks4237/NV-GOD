@@ -3,7 +3,7 @@ vim.pack.add {
 	{
 		src = 'https://github.com/Mofiqul/dracula.nvim',
 		name = 'dracula',
-	}
+	},
 }
 -- Configuration for dracula colorscheme
 require('dracula').setup {

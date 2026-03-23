@@ -1,4 +1,4 @@
--- which-key: Plugin for showing slick popup menu which shows availible keymaps
+-- which-key: Plugin for showing slick popup menu which shows available keymaps
 vim.pack.add {
 	{
 		src = 'https://github.com/folke/which-key.nvim',

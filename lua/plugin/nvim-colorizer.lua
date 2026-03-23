@@ -9,7 +9,7 @@ vim.pack.add {
 -- Configuration for nvim-colorizer
 require('colorizer').setup {
 	'*', -- Makes nvim-colorizer to attach to the all file types
-	-- If you want some different way to color text in sertain filetypes
+	-- If you want some different way to color text in certain filetypes
 	-- For example in html:
 	-- html = { mode = "foreground" },
 

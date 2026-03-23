@@ -6,7 +6,7 @@
 vim.keymap.set('n', '<leader>um', '<cmd>Mason<CR>', { desc = 'Open Mason' })
 
 -- [ UI Toggle Keymaps ]
--- Toogle Line Numbers
+-- Toggle Line Numbers
 vim.keymap.set('n', '<leader>utn', '<cmd>set number! relativenumber!<CR>', { desc = '[t]oggle Line [n]umbers' })
 -- Toggle relative line numbers
 vim.keymap.set('n', '<leader>utr', '<cmd>set relativenumber!<CR>', { desc = '[t]oggle [r]elative Numbers' })

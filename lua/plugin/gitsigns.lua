@@ -3,7 +3,7 @@ vim.pack.add {
 	{
 		src = 'https://github.com/lewis6991/gitsigns.nvim',
 		name = 'gitsigns',
-	}
+	},
 }
 
 -- Configuration for gitsigns
@@ -16,7 +16,7 @@ require('gitsigns').setup {
 		delete = { text = '_' },
 		topdelete = { text = '‾' },
 		changedelete = { text = '~' },
-	}
+	},
 }
 
 -- Navigation

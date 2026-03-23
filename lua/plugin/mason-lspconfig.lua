@@ -9,7 +9,7 @@ vim.pack.add {
 
 -- Configuration for mason-lspconfig
 require('mason-lspconfig').setup {
-	-- NOTE: "ensure_inatalled = {}" is unneded,
+	-- NOTE: "ensure_inatalled = {}" is unneeded,
 	-- Because LSP servers are included in mason-tool-installer
 	ensure_installed = {}, -- Leave it empty
 

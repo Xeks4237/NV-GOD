@@ -64,7 +64,7 @@ require('cmp').setup {
 				'╰',
 				'│',
 			},
-			col_offset = 1, -- Offset of a popup of a cursor by colums
+			col_offset = 1, -- Offset of a popup of a cursor by columns
 			side_padding = 1, -- Amount of paddings in sides of completions popup
 		},
 		-- Look of completions documentation popup

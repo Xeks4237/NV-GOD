@@ -1,4 +1,4 @@
--- mason-tool-installer: Allows to easyly install tools using mason automaticly
+-- mason-tool-installer: Allows to easily install tools using mason automatically
 vim.pack.add {
 	{
 		src = 'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim',

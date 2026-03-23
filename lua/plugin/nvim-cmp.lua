@@ -36,6 +36,7 @@ local kind_icons = {
 	TypeParameter = '󰊄',
 }
 
+local cmp = require 'cmp'
 require('cmp').setup {
 	-- Enable completion
 	enabled = true,
@@ -232,4 +233,4 @@ require('cmp').setup.cmdline(':', {
 -- LSP capabilities
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Apply to all LSP servers
-vim.lsp.enable('*', { capabilities = capabilities })
+-- vim.lsp.enable('*', { capabilities = capabilities })

@@ -1,7 +1,3 @@
--- NOTE: This two options sets <leader> key of NeoVim to Space
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -- Setting options
 -- Sources lua/options.lua file
 require 'options'

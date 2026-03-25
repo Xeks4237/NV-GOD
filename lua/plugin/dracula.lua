@@ -19,14 +19,14 @@ require('dracula').setup {
 	overrides = {},
 	-- You can use overrides as table like this
 	-- overrides = {
-	--     NonText = { fg = "white" }, -- set NonText fg to white
-	--     NvimTreeIndentMarker = { link = "NonText" }, -- link to NonText highlight
-	--     Nothing = {}, -- clear highlight of Nothing
+	-- 	NonText = { fg = 'white' }, -- set NonText fg to white
+	-- 	NvimTreeIndentMarker = { link = 'NonText' }, -- link to NonText highlight
+	-- 	Nothing = {}, -- clear highlight of Nothing
 	-- },
 	-- Or you can also use it like a function to get color from theme
 	-- overrides = function(colors)
-	--     return {
-	--         NonText = { fg = colors.white }, -- set NonText fg to white of theme
-	--     }
+	-- 	return {
+	-- 		NonText = { fg = colors.white }, -- set NonText fg to white of theme
+	-- 	}
 	-- end,
 }

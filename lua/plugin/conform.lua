@@ -13,24 +13,25 @@ require('conform').setup {
 	-- and also you can choose multiple formatters for one filetype
 	-- You can use a function here to determine the formatters dynamically
 	formatters_by_ft = {
-		lua = { 'stylua' }, -- For lua
-		sh = { 'shfmt' }, -- For bash
-		zsh = { 'beautysh' }, -- For zsh
-		bash = { 'shfmt' }, -- For bash
-		c = { 'clang_format' }, -- For c
-		rust = { 'rustfmt' }, -- For Rust
-		markdown = { 'prettierd', 'markdownlint' }, -- For markdown
-		yaml = { 'prettierd' }, -- For yaml
-		json = { 'prettierd' }, -- For json
-		jsonc = { 'prettierd' }, -- For jsonc
-		nix = { 'nixfmt' }, -- For nix
+		lua = { 'stylua' },
+		sh = { 'shfmt' },
+		zsh = { 'beautysh' },
+		bash = { 'shfmt' },
+		c = { 'clang_format' },
+		rust = { 'rustfmt' },
+		markdown = { 'prettierd', 'markdownlint' },
+		yaml = { 'prettierd' },
+		kdl = { 'kdlfmt' },
+		json = { 'prettierd' },
+		jsonc = { 'prettierd' },
+		nix = { 'nixfmt' },
 		-- Use the "*" filetype to run formatters on all filetypes.
 		-- for example for spell checker
 		['*'] = { 'codespell' },
 		-- Use the "_" filetype to run formatters on
 		-- filetypes that don't have other formatters configured.
 		-- for example:
-		-- ["_"] = { "ast-grep" },
+		['_'] = { 'prettierd' },
 	},
 	-- Set this to change the default values when calling conform.format()
 	-- This will also affect the default values for format_on_save/format_after_save
@@ -60,11 +61,10 @@ require('conform').setup {
 	-- Custom formatters and overrides for built-in formatters if needed
 	formatters = {
 		-- For example:
-		-- Make beautysh formatter to use tabs instead of spaces
+		-- Make some formatters to use tabs instead of spaces
 		beautysh = {
 			prepend_args = { '--tab' },
 		},
-		-- Make prettierd amd prettier formatters to use tabs instead of spaces
 		prettierd = {
 			prepend_args = { '--use-tabs' },
 		},

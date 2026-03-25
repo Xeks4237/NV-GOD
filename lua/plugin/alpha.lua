@@ -2,7 +2,7 @@
 vim.pack.add {
 	{
 		src = 'https://github.com/goolord/alpha-nvim',
-		name = 'alpha-nvim',
+		name = 'alpha',
 	},
 }
 

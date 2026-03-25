@@ -13,12 +13,6 @@ vim.keymap.set('n', 'x', '"_x', { desc = 'Delete symbhol under the cursor' })
 -- Save file/buffer using CTRL + s (same as using :w command)
 vim.keymap.set({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<CR><ESC>', { desc = 'Write Changes' })
 
--- Keymap for doing quitting stuff
-vim.keymap.set('n', 'q', '<cmd>qa<CR>', { desc = 'Quit NeoVim' })
-
--- Quit everything
-vim.keymap.set('n', '<C-q>', '<cmd>qa<CR>', { desc = 'Quit NeoVim' })
-
 -- Keymaps to move selected lines of code by using ALT + j OR k
 -- In Normal mode:
 vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', { desc = 'Move Down', silent = true })

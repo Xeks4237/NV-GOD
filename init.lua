@@ -17,6 +17,7 @@ require 'plugin.dracula'
 require 'plugin.gitsigns'
 require 'plugin.gruvbox'
 require 'plugin.lualine'
+require 'plugin.vim-tpipeline'
 require 'plugin.mason'
 require 'plugin.mason-lspconfig'
 require 'plugin.mason-tool-installer'
@@ -39,7 +40,6 @@ require 'plugin.nvim-cmp'
 
 vim.keymap.set('n', '<C-e>', '<cmd>Ex<CR>')
 
-vim.pack.add { 'https://github.com/vimpostor/vim-tpipeline' }
 vim.pack.add { { src = 'https://github.com/MunifTanjim/nui.nvim', name = 'nui' } }
 
 vim.lsp.enable 'lua_ls'

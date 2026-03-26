@@ -20,11 +20,11 @@ require('lualine').setup {
 		ignore_focus = {},
 		always_divide_middle = true,
 		always_show_tabline = true,
-		globalstatus = false,
+		globalstatus = true,
 		refresh = {
-			statusline = 1000,
-			tabline = 1000,
-			winbar = 1000,
+			statusline = 500,
+			tabline = 500,
+			winbar = 500,
 			refresh_time = 16, -- ~60fps
 			events = {
 				'WinEnter',
@@ -41,23 +41,24 @@ require('lualine').setup {
 		},
 	},
 	sections = {
-		lualine_a = { 'mode' },
-		lualine_b = { 'branch', 'diff' },
-		lualine_c = { 'diagnostics' },
-		lualine_x = { 'encoding', 'fileformat' },
-		lualine_y = { 'filename' },
-		lualine_z = { 'location' },
+		-- NOTE: I use winbar instead of this to make my status line be at top
+		-- lualine_a = { 'mode' },
+		-- lualine_b = { 'location', 'branch', 'diff', 'diagnostics', 'filename', 'fileformat' },
+		-- lualine_c = {},
+		-- lualine_x = {},
+		-- lualine_y = {},
+		-- lualine_z = {},
 	},
-	inactive_sections = {
-		lualine_a = {},
-		lualine_b = {},
+	inactive_sections = {},
+	tabline = {},
+	winbar = {
+		lualine_a = { 'mode' },
+		lualine_b = { 'location', 'branch', 'diff', 'diagnostics', 'filename', 'fileformat' },
 		lualine_c = {},
 		lualine_x = {},
 		lualine_y = {},
 		lualine_z = {},
 	},
-	tabline = {},
-	winbar = {},
 	inactive_winbar = {},
 	extensions = {},
 }

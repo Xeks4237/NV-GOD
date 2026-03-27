@@ -93,84 +93,26 @@ require('which-key').setup {
 	-- For example <C-f>g gonna be in group of <C-f> keymaps
 	spec = {
 		-- [ UI Related ]
-		{
-			'<leader>u',
-			group = '[User Interface]',
-			icon = '󰈈',
-		},
-		{
-			'<leader>uc',
-			icon = { icon = '', color = 'white' },
-		},
+		{ '<leader>u', group = '[User Interface]', icon = '󰈈' },
+		{ '<leader>uc', icon = { icon = '', color = 'white' } },
 		--[ UI Toggle Options ]
-		{
-			'<leader>ut',
-			group = '[Toggle Options]',
-			icon = { icon = '', color = 'yellow' },
-		},
-		{
-			'<leader>utc',
-			icon = { icon = '', color = 'yellow' },
-		},
+		{ '<leader>ut', group = '[Toggle Options]', icon = { icon = '', color = 'yellow' } },
+		{ '<leader>utc', icon = { icon = '', color = 'yellow' } },
 		-- [ Git Related ]
-		{
-			'<leader>g',
-			group = '[Git]',
-			icon = { icon = '', color = 'red' },
-		},
-		{
-			'<leader>gt',
-			group = '[Toggle Options]',
-			icon = { icon = '', color = 'yellow' },
-		},
-		{
-			'<leader>gtb',
-			icon = { icon = ' ', color = 'yellow' },
-		},
-		{
-			'<leader>gtd',
-			icon = { icon = ' ', color = 'yellow' },
-		},
-		{
-			'<leader>gb',
-			icon = { icon = '󰊢', color = 'cyan' },
-		},
-		{
-			'<leader>gd',
-			icon = { icon = '󰌒', color = 'yellow' },
-		},
-		{
-			'<leader>gD',
-			icon = { icon = '', color = 'yellow' },
-		},
-		{
-			'<leader>gp',
-			icon = { icon = '󰛔', color = 'green' },
-		},
+		{ '<leader>g', group = '[Git]', icon = { icon = '', color = 'red' } },
+		{ '<leader>gt', group = '[Toggle Options]', icon = { icon = '', color = 'yellow' } },
+		{ '<leader>gtb', icon = { icon = ' ', color = 'yellow' } },
+		{ '<leader>gtd', icon = { icon = ' ', color = 'yellow' } },
+		{ '<leader>gb', icon = { icon = '󰊢', color = 'cyan' } },
+		{ '<leader>gd', icon = { icon = '󰌒', color = 'yellow' } },
+		{ '<leader>gD', icon = { icon = '', color = 'yellow' } },
+		{ '<leader>gp', icon = { icon = '󰛔', color = 'green' } },
 		{ '<leader>gr', icon = { icon = '', color = 'red' } },
-		{
-			'<leader>gR',
-			icon = { icon = '󰣜', color = 'red' },
-		},
-		{
-			'<leader>gs',
-			icon = { icon = '󰄳', color = 'green' },
-		},
-		{
-			'<leader>gS',
-			icon = { icon = '󰩍', color = 'green' },
-		},
-		{
-			'<leader>gu',
-			icon = { icon = '󰕌', color = 'red' },
-		},
-		{
-			'<leader>g[',
-			icon = { icon = '', color = 'cyan' },
-		},
-		{
-			'<leader>g]',
-			icon = { icon = '', color = 'cyan' },
-		},
+		{ '<leader>gR', icon = { icon = '󰣜', color = 'red' } },
+		{ '<leader>gs', icon = { icon = '󰄳', color = 'green' } },
+		{ '<leader>gS', icon = { icon = '󰩍', color = 'green' } },
+		{ '<leader>gu', icon = { icon = '󰕌', color = 'red' } },
+		{ '<leader>g[', icon = { icon = '', color = 'cyan' } },
+		{ '<leader>g]', icon = { icon = '', color = 'cyan' } },
 	},
 }

@@ -6,10 +6,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Makes x key don't copy symbhol under a cursor after deleting it
--- Someone likes it, someone not, just choose if you want it
-vim.keymap.set('n', 'x', '"_x', { desc = 'Delete symbhol under the cursor' })
-
 -- Keymaps to move selected lines of code by using ALT + j OR k
 -- In Normal mode:
 vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', { desc = 'Move Down', silent = true })

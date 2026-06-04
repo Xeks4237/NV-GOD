@@ -41,17 +41,6 @@ require('lualine').setup {
 		},
 	},
 	sections = {
-		-- NOTE: I use winbar instead of this to make my status line be at top
-		-- lualine_a = { 'mode' },
-		-- lualine_b = { 'location', 'branch', 'diff', 'diagnostics', 'filename', 'fileformat' },
-		-- lualine_c = {},
-		-- lualine_x = {},
-		-- lualine_y = {},
-		-- lualine_z = {},
-	},
-	inactive_sections = {},
-	tabline = {},
-	winbar = {
 		lualine_a = { 'mode' },
 		lualine_b = { 'location', 'branch', 'diff', 'diagnostics', 'filename', 'fileformat' },
 		lualine_c = {},
@@ -59,6 +48,9 @@ require('lualine').setup {
 		lualine_y = {},
 		lualine_z = {},
 	},
+	inactive_sections = {},
+	tabline = {},
+	winbar = {},
 	inactive_winbar = {},
 	extensions = {},
 }

@@ -91,7 +91,7 @@ require('noice').setup {
 			position = { row = '30%', col = '50%' },
 			size = { width = '60%', height = 'auto' },
 			border = {
-				style = 'rounded',
+				style = 'single',
 				padding = { 0, 1 },
 				text = { top = ' Command ', top_align = 'center' },
 			},
@@ -105,14 +105,14 @@ require('noice').setup {
 			relative = 'editor',
 			position = { row = 12, col = '30%' },
 			size = { width = 60, height = 10 },
-			border = { style = 'rounded', padding = { 1, 1 } },
+			border = { style = 'single', padding = { 1, 1 } },
 			win_options = { winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder' },
 		},
 
 		notify = {
 			replace = true,
 			size = { width = 50, height = 'auto' },
-			border = { style = 'rounded' },
+			border = { style = 'single' },
 			win_options = { winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder' },
 		},
 

@@ -53,7 +53,8 @@ require('cmp').setup {
 		-- Look of completions menu
 		completion = cmp.config.window.bordered {
 			-- Characters which makes border of completions popup
-			border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
+			-- border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
+			border = 'single',
 			-- Offset of a popup of a cursor by columns
 			col_offset = 1,
 			-- Amount of paddings in sides of completions popup
@@ -62,7 +63,8 @@ require('cmp').setup {
 
 		-- Look of completions documentation popup
 		documentation = cmp.config.window.bordered {
-			border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
+			-- border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
+			border = 'single',
 			-- Max width of documentation popup
 			max_width = 80,
 			-- Max hight of documentation popup

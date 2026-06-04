@@ -28,7 +28,7 @@ require('mason').setup {
 		check_outdated_packages_on_open = true,
 
 		-- Border style for Mason UI window
-		border = 'rounded', -- Options: "none", "single", "double", "rounded", "solid", "shadow"
+		border = 'single', -- Options: "none", "single", "double", "rounded", "solid", "shadow"
 
 		-- Window dimensions
 		width = 0.9,
